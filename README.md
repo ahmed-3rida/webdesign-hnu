@@ -11,7 +11,8 @@ Made by [Ahmed Salman](https://dev.uniskills.pro/).
 - A practice quiz per lecture (answer and explanation after every question, options shuffled each attempt).
 - A final exam generated from a bank of about 250 questions: 30 questions, 6 per lecture, random order and shuffled options.
   Every exam has a 6-character code, so two people can take the same exam.
-- Light and dark themes (follows the device, with a toggle).
+- Light and dark modes (Auto follows the device) with 6 color palettes per mode: Arcade, Matcha, Ocean, Sunset, Sakura, Mono.
+  The choice is saved on the device. Palettes live in `tools/palettes.py`; edit there and run `python3 tools/palettes.py`.
 
 ## Structure
 
