@@ -1,0 +1,1266 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Final Exam | اختبار شامل Web Design بيتولد كل مرة</title>
+<meta name="description" content="اختبار شامل 30 سؤال على المحاضرات الخمسة، بيتولد مختلف كل مرة من بنك 250 سؤال، مع تحليل الدرجة لكل محاضرة.">
+<meta name="author" content="Ahmed Salman">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#05070d">
+<link rel="canonical" href="https://webdesign-hnu.vercel.app/exam/">
+<link rel="icon" type="image/png" sizes="64x64" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="author" href="https://dev.uniskills.pro/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Web Design Pixel Quest">
+<meta property="og:locale" content="ar_EG">
+<meta property="og:title" content="Final Exam | اختبار شامل Web Design بيتولد كل مرة">
+<meta property="og:description" content="اختبار شامل 30 سؤال على المحاضرات الخمسة، بيتولد مختلف كل مرة من بنك 250 سؤال، مع تحليل الدرجة لكل محاضرة.">
+<meta property="og:url" content="https://webdesign-hnu.vercel.app/exam/">
+<meta property="og:image" content="https://webdesign-hnu.vercel.app/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Web Design Pixel Quest - pixel character and title">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Final Exam | اختبار شامل Web Design بيتولد كل مرة">
+<meta name="twitter:description" content="اختبار شامل 30 سؤال على المحاضرات الخمسة، بيتولد مختلف كل مرة من بنك 250 سؤال، مع تحليل الدرجة لكل محاضرة.">
+<meta name="twitter:image" content="https://webdesign-hnu.vercel.app/og.png">
+<meta name="mmd-route" content="exam">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Quiz","name":"Final Exam","description":"اختبار شامل 30 سؤال على المحاضرات الخمسة، بيتولد مختلف كل مرة من بنك 250 سؤال، مع تحليل الدرجة لكل محاضرة.","url":"https://webdesign-hnu.vercel.app/exam/","inLanguage":["ar","en"],"learningResourceType":"Practice quiz","educationalLevel":"University, Level 3","isAccessibleForFree":true,"author":{"@type":"Person","name":"Ahmed Salman","url":"https://dev.uniskills.pro/"},"isPartOf":{"@type":"Course","name":"Web Design (Multimedia Software)","description":"شرح مادة Web Design بالعربي والمصطلحات إنجليزي: 5 محاضرات، كويز تدريبي على كل محاضرة، واختبار شامل 30 سؤال بيتولد مختلف كل مرة من بنك 250 سؤال.","inLanguage":["ar","en"],"url":"https://webdesign-hnu.vercel.app/","provider":{"@type":"Person","name":"Ahmed Salman","url":"https://dev.uniskills.pro/"},"isAccessibleForFree":true}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Web Design","item":"https://webdesign-hnu.vercel.app/"},{"@type":"ListItem","position":2,"name":"Final Exam","item":"https://webdesign-hnu.vercel.app/exam/"}]}</script>
+<style>:root{padding:env(safe-area-inset-top,0px) 0 env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<script>try{var __t=localStorage.getItem("wd:theme");if(__t==="light"||__t==="dark")document.documentElement.setAttribute("data-theme",__t)}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=JetBrains+Mono:wght@400;600&family=IBM+Plex+Sans+Arabic:wght@400;600;700&display=swap">
+<style>
+/* Layout: arcade "world map" home → level pages (lesson + quiz) → generated final exam. Light + dark, portfolio palette. */
+:root{
+  --bg:#f5f4f0; --panel:#ffffff; --panel2:#f1efe9; --line:#d8d5ca; --pxsh:#0b0d12;
+  --ink:#0b0d12; --muted:#5d6474;
+  --hl:#a35f00; --acc:#4b55e8; --acc2:#d97a08; --rose:#d6304f; --ok:#12804a;
+  --okbg:#e3f5ea; --badbg:#fde8ec; --pickbg:#fff3c4; --tipbg:#fff8de; --defbg:#eef0ff; --deftx:#1d2350;
+  --hero:#1b2160; --herosh:#b9c0ff; --herospan:#e08a00; --herospansh:#0b0d12;
+  --star1:#c9c5b8; --star2:#e6e3da; --grid:#4b55e833; --ground:#0b0d12; --canvas:#ece9e1;
+  --f-pixel:"Press Start 2P","IBM Plex Sans Arabic",monospace;
+  --f-term:"JetBrains Mono",ui-monospace,monospace;
+  --f-body:"IBM Plex Sans Arabic","Segoe UI",Tahoma,sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#05070d; --panel:#0d111c; --panel2:#151b2c; --line:#262d45; --pxsh:#262d45;
+  --ink:#eef1f8; --muted:#8a93a8;
+  --hl:#ffd23f; --acc:#7c88ff; --acc2:#ffb547; --rose:#ff4d6d; --ok:#3ddc97;
+  --okbg:#0f3a2c; --badbg:#3a1220; --pickbg:#2e2810; --tipbg:#1a1708; --defbg:#0a0d16; --deftx:#d6dbff;
+  --hero:#dfe3ff; --herosh:#4b55e8; --herospan:#ffd23f; --herospansh:#a86f00;
+  --star1:#8a93a8; --star2:#262d45; --grid:#7c88ff55; --ground:#ffffff; --canvas:#0a0d16;
+  color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#05070d; --panel:#0d111c; --panel2:#151b2c; --line:#262d45; --pxsh:#262d45;
+  --ink:#eef1f8; --muted:#8a93a8;
+  --hl:#ffd23f; --acc:#7c88ff; --acc2:#ffb547; --rose:#ff4d6d; --ok:#3ddc97;
+  --okbg:#0f3a2c; --badbg:#3a1220; --pickbg:#2e2810; --tipbg:#1a1708; --defbg:#0a0d16; --deftx:#d6dbff;
+  --hero:#dfe3ff; --herosh:#4b55e8; --herospan:#ffd23f; --herospansh:#a86f00;
+  --star1:#8a93a8; --star2:#262d45; --grid:#7c88ff55; --ground:#ffffff; --canvas:#0a0d16;
+  color-scheme:dark}
+*{box-sizing:border-box}
+html,body{background:var(--bg)}
+body{color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.85;margin:0;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 120px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+#stars{position:fixed;inset:0;width:100%;height:100%;z-index:-1;image-rendering:pixelated}
+.floor{position:fixed;left:0;right:0;bottom:0;height:22vh;z-index:-1;pointer-events:none;perspective:220px;overflow:hidden;-webkit-mask-image:linear-gradient(transparent,#000 70%);mask-image:linear-gradient(transparent,#000 70%)}
+.floor i{position:absolute;left:-50%;right:-50%;top:0;height:200%;transform-origin:top;transform:rotateX(62deg);background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:40px 40px;animation:floor 2.4s linear infinite}
+@keyframes floor{to{background-position:0 40px}}
+a{color:var(--acc)}
+.wrap{max-width:980px;margin:0 auto}
+h1,h2,h3{font-family:var(--f-pixel);font-weight:400;line-height:1.6;text-wrap:balance;margin:0}
+h1{font-size:clamp(18px,4vw,30px)}
+h2{font-size:clamp(14px,2.6vw,18px);color:var(--hl)}
+h3{font-size:12px;color:var(--acc);letter-spacing:.5px}
+p{margin:.4em 0}
+.ltr{direction:ltr;text-align:left}
+.t{font-family:var(--f-term);font-size:.9em;font-weight:600;color:var(--hl);letter-spacing:.2px;unicode-bidi:isolate;overflow-wrap:anywhere}
+.t.m{color:var(--acc)}
+.sec h2,.sec h3{unicode-bidi:plaintext;text-align:right}
+
+/* top bar */
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:4px solid var(--line);
+  display:flex;align-items:center;gap:12px;padding-block:10px;margin-inline:calc(-1 * max(16px,env(safe-area-inset-left,0px)));
+  padding-inline:max(16px,env(safe-area-inset-left,0px))}
+.bar .logo{font-family:var(--f-pixel);font-size:11px;color:var(--hl);text-decoration:none;white-space:nowrap}
+.bar .logo b{color:var(--acc);font-weight:400}
+.bar nav{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;min-width:0}
+.bar nav a{font-family:var(--f-term);font-size:13px;color:var(--muted);text-decoration:none;padding:2px 8px;border:2px solid transparent;white-space:nowrap}
+.bar nav a.on,.bar nav a:hover{color:var(--ink);border-color:var(--line);background:var(--panel)}
+.tools{margin-inline-start:auto;display:flex;align-items:center;gap:10px}
+.xp{font-family:var(--f-pixel);font-size:10px;color:var(--hl);white-space:nowrap;display:flex;align-items:center;gap:6px}
+.coin{width:12px;height:12px;background:#ffd23f;border:1px solid #000;box-shadow:inset -3px -3px 0 #c99a00;display:inline-block}
+#themeB{font-family:var(--f-pixel);font-size:8px;background:var(--panel);color:var(--ink);border:2px solid var(--line);padding:6px 8px;cursor:pointer;white-space:nowrap;box-shadow:2px 2px 0 var(--pxsh)}
+
+/* pixel panel + buttons (portfolio pixel-btn) */
+.px{background:var(--panel);border:2px solid var(--line);box-shadow:4px 4px 0 0 var(--pxsh);border-radius:6px;position:relative}
+.btn{font-family:var(--f-pixel);font-size:10px;line-height:1.4;background:#ffd23f;color:#0b0d12;border:3px solid #000;padding:11px 14px;cursor:pointer;
+  box-shadow:inset -4px -4px #c99a00,inset 4px 4px #fff3b0,4px 4px #000;text-decoration:none;display:inline-block;transition:transform 80ms}
+.btn:hover{transform:translate(-1px,-1px)} .btn:active{transform:translate(3px,3px);box-shadow:inset -4px -4px #c99a00,inset 4px 4px #fff3b0}
+.btn[disabled]{opacity:.45;cursor:default;transform:none}
+.btn.g{background:#7c88ff;box-shadow:inset -4px -4px #4b55e8,inset 4px 4px #b9c0ff,4px 4px #000}
+.btn.b{background:#ffb547;box-shadow:inset -4px -4px #d97a08,inset 4px 4px #ffe0b0,4px 4px #000}
+.btn.o{background:var(--panel2);color:var(--ink);box-shadow:inset -4px -4px var(--line),4px 4px #000}
+:focus-visible{outline:3px dashed var(--acc);outline-offset:3px}
+
+/* hero */
+.hero{padding-block:28px 10px;display:grid;gap:14px}
+.eyebrow{font-family:var(--f-term);font-size:12px;color:var(--acc);letter-spacing:2px;text-transform:uppercase}
+.hero h1{color:var(--hero);text-shadow:3px 3px 0 var(--herosh)}
+.hero h1 span{color:var(--herospan);text-shadow:3px 3px 0 var(--herospansh)}
+.hero p{color:var(--muted);max-width:62ch}
+a.me{color:var(--hl);text-decoration:none;border-bottom:2px solid var(--hl)}
+.stage{height:150px;position:relative;overflow:hidden;margin-top:6px;border-bottom:6px solid var(--ground);box-shadow:0 3px 0 #000}
+.stage::after{content:"";position:absolute;left:0;right:0;bottom:0;height:8px;background:repeating-linear-gradient(90deg,#ffd23f 0 14px,#c99a00 14px 16px)}
+.stage canvas{position:absolute;bottom:8px;image-rendering:pixelated;filter:drop-shadow(0 0 14px rgba(124,136,255,.45))}
+.stage .block{position:absolute;bottom:104px;width:32px;height:32px;background:#ffd23f;border:2px solid #000;box-shadow:inset -4px -4px 0 #c99a00,inset 4px 4px 0 #fff3b0;
+  font-family:var(--f-pixel);font-size:12px;color:#8a5a00;display:grid;place-items:center}
+
+/* map */
+.map{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:18px;margin-top:22px}
+.lvl{padding:16px;display:grid;gap:10px;align-content:start}
+.lvl .no{font-family:var(--f-pixel);font-size:10px;color:#05070d;background:#7c88ff;border:2px solid #000;padding:4px 8px;justify-self:start}
+.lvl.boss{grid-column:1/-1}
+.lvl.boss .no{background:#ff4d6d;color:#fff}
+.lvl h3{color:var(--ink);font-size:12px;line-height:1.7}
+.lvl p{color:var(--muted);font-size:14px;line-height:1.7}
+.lvl p span{display:block;margin-top:2px;font-size:12.5px;opacity:.85}
+.lvl .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.best{font-family:var(--f-term);font-size:12px;color:var(--hl)}
+.stats{display:flex;gap:10px;flex-wrap:wrap}
+.stat{font-family:var(--f-term);font-size:12px;border:2px solid var(--line);padding:2px 8px;color:var(--muted)}
+.stat b{color:var(--ink)}
+
+/* lesson */
+.page-head{padding-block:26px 10px;display:grid;gap:8px}
+.lesson{display:grid;gap:22px;margin-top:12px}
+.sec{padding:20px}
+.sec > h2{margin-bottom:10px}
+.def{direction:ltr;text-align:left;border-left:6px solid var(--acc);background:var(--defbg);padding:10px 14px;margin:10px 0;color:var(--deftx);font-size:15px;line-height:1.7}
+.def b{color:var(--acc)}
+.tip{border:2px solid var(--hl);border-radius:4px;padding:10px 14px;margin:12px 0;background:var(--tipbg);display:grid;gap:2px}
+.tip::before{content:"EXAM TIP";font-family:var(--f-pixel);font-size:9px;color:var(--hl)}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin:10px 0}
+.card{background:var(--panel2);border:3px solid var(--line);padding:12px;min-width:0;overflow-wrap:anywhere}
+.card .k{font-family:var(--f-term);font-weight:600;font-size:16px;color:var(--acc);direction:ltr;display:block}
+.card p{font-size:14.5px;line-height:1.7;margin:0}
+.tbl{overflow-x:auto;margin:10px 0}
+table{border-collapse:collapse;width:100%;min-width:480px;font-size:14.5px}
+th,td{border:3px solid var(--line);padding:8px 10px;text-align:start;vertical-align:top;overflow-wrap:anywhere}
+th{background:var(--panel2);font-family:var(--f-term);font-size:14px;font-weight:600;color:var(--hl)}
+ul.l,ol.l{margin:6px 0;padding-inline-start:22px}
+ul.l li,ol.l li{margin:3px 0}
+ul.l li::marker{content:"▪ ";color:var(--acc)}
+.pipe{display:flex;flex-wrap:wrap;gap:8px;align-items:stretch;margin:12px 0}
+.pipe .st{background:var(--panel2);border:3px solid var(--line);padding:8px 10px;min-width:0;flex:1 1 140px;overflow-wrap:anywhere}
+.pipe .st small{font-family:var(--f-pixel);font-size:8px;color:var(--muted);display:block}
+.pipe .st b{font-family:var(--f-term);font-size:15px;font-weight:600;color:var(--ink);direction:ltr;display:block}
+.demo{background:var(--bg);border:3px solid var(--line);padding:14px;margin:12px 0;display:grid;gap:10px}
+.demo .lab{font-family:var(--f-pixel);font-size:9px;color:var(--acc)}
+.chips{display:flex;gap:8px;flex-wrap:wrap;direction:ltr}
+.chip{font-family:var(--f-term);font-size:13px;background:var(--panel);color:var(--ink);border:2px solid var(--line);padding:4px 10px;cursor:pointer}
+.chip[aria-pressed=true]{background:#7c88ff;color:#05070d;border-color:#000}
+.g12{display:grid;grid-template-columns:repeat(12,1fr);gap:6px;direction:ltr;position:relative;padding:10px;background:var(--canvas);border:2px dashed var(--line)}
+.g12 .col{height:120px;background:var(--grid);grid-row:1;}
+.g12 .blk{grid-row:1;height:120px;background:#7c88ff;border:2px solid #000;display:grid;place-items:center;font-family:var(--f-pixel);font-size:10px;color:#05070d;z-index:1}
+.g12 .blk:nth-child(even){background:#ffd23f}
+.sl{display:grid;grid-template-columns:auto 1fr 4em;gap:10px;align-items:center;direction:ltr;font-family:var(--f-term);font-size:14px}
+.sl input{width:100%;accent-color:#7c88ff}
+.spdemo{background:var(--canvas);border:2px dashed var(--line);display:flex;flex-wrap:wrap;direction:ltr}
+.spdemo .cardx{background:var(--panel);border:2px solid var(--line);flex:1 1 120px;min-width:0}
+.spdemo .ph{height:48px;background:var(--grid)}
+.spdemo .tx{font-family:var(--f-term);font-size:12px;color:var(--muted)}
+.tscale{direction:ltr;display:grid;gap:4px;background:var(--canvas);border:2px dashed var(--line);padding:12px}
+.tscale div{display:flex;gap:12px;align-items:baseline;line-height:1.25;flex-wrap:wrap}
+.tscale small{font-family:var(--f-term);font-size:11px;color:var(--muted);min-width:7em}
+code,kbd{font-family:var(--f-term);font-size:.88em;color:var(--acc);direction:ltr;unicode-bidi:isolate}
+kbd{border:1px solid var(--line);border-bottom-width:3px;padding:0 5px;border-radius:3px;background:var(--panel2);color:var(--ink)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.two > div{min-width:0}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:6px}
+.sw{display:inline-block;width:14px;height:14px;border:1px solid #000;vertical-align:middle;margin-inline:2px}
+
+/* quiz */
+.qwrap{margin-top:16px;display:grid;gap:16px}
+.qtop{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between}
+.hpbar{height:16px;border:3px solid var(--line);background:var(--bg);flex:1 1 200px;position:relative}
+.hpbar i{position:absolute;inset:0 auto 0 0;background:repeating-linear-gradient(90deg,#ffd23f 0 10px,#c99a00 10px 12px);transition:width .3s steps(6)}
+.qcount,.timer{font-family:var(--f-pixel);font-size:10px;color:var(--muted)}
+.qcard{padding:20px;direction:ltr;text-align:left;overflow-wrap:anywhere}
+.qsec{font-family:var(--f-pixel);font-size:9px;color:var(--acc2);margin-bottom:8px}
+.qtext{font-size:18px;font-weight:600;line-height:1.6;margin-bottom:14px}
+.qtext .n{font-family:var(--f-pixel);font-size:12px;color:var(--hl);margin-right:8px}
+.opts{display:grid;gap:10px}
+.opt{display:flex;gap:12px;align-items:flex-start;text-align:left;background:var(--panel2);color:var(--ink);border:3px solid var(--line);padding:10px 12px;
+  font:inherit;font-size:15.5px;line-height:1.55;cursor:pointer;width:100%}
+.opt:hover:not([disabled]){border-color:var(--acc);transform:translateX(3px)}
+.opt .L{font-family:var(--f-pixel);font-size:10px;background:var(--bg);color:var(--hl);padding:5px 7px;flex:none;margin-top:1px;border:1px solid var(--line)}
+.opt[disabled]{cursor:default}
+.opt.ok{border-color:var(--ok);background:var(--okbg)}
+.opt.ok .L{background:var(--ok);color:#fff}
+.opt.bad{border-color:var(--rose);background:var(--badbg)}
+.opt.bad .L{background:var(--rose);color:#fff}
+.opt.pick{border-color:var(--hl);background:var(--pickbg)}
+.opt.pick .L{background:#ffd23f;color:#0b0d12}
+.exp{direction:rtl;text-align:right;margin-top:14px;border:3px solid var(--ok);padding:12px 14px;background:var(--okbg);font-size:15px}
+.exp.wr{border-color:var(--rose);background:var(--badbg)}
+.exp .h{font-family:var(--f-pixel);font-size:9px;color:var(--ok);display:block;margin-bottom:4px;direction:ltr;text-align:right}
+.exp.wr .h{color:var(--rose)}
+.exp .body{unicode-bidi:plaintext}
+.qnav{display:flex;gap:10px;justify-content:space-between;flex-wrap:wrap}
+.dots{display:flex;flex-wrap:wrap;gap:5px;direction:ltr}
+.dots button{width:26px;height:26px;font-family:var(--f-term);font-size:11px;border:2px solid var(--line);background:var(--panel);color:var(--muted);cursor:pointer;padding:0}
+.dots button.done{background:#7c88ff;color:#05070d;border-color:#000}
+.dots button.cur{outline:2px solid var(--hl);outline-offset:1px}
+.result{padding:24px;text-align:center;display:grid;gap:12px;justify-items:center}
+.rank{font-family:var(--f-pixel);font-size:56px;color:var(--hl);text-shadow:6px 6px 0 var(--pxsh)}
+.score{font-family:var(--f-pixel);font-size:14px}
+.brk{width:100%;max-width:520px;display:grid;gap:8px;direction:ltr;text-align:left}
+.brk div{display:grid;grid-template-columns:7.5em 1fr 3.5em;gap:10px;align-items:center;font-family:var(--f-term);font-size:12.5px}
+.brk i{display:block;height:12px;background:var(--panel2);border:2px solid var(--line);position:relative}
+.brk i b{position:absolute;inset:0 auto 0 0;background:#7c88ff}
+.key{display:grid;gap:12px}
+.krow{padding:14px 16px;direction:ltr;text-align:left;background:var(--panel);border:3px solid var(--line);overflow-wrap:anywhere}
+.krow .q{font-weight:600;margin-bottom:6px}
+.krow .q .n{font-family:var(--f-pixel);font-size:10px;color:var(--hl);margin-right:6px}
+.krow .a{color:var(--ok)}
+.krow .a.x{color:var(--rose);text-decoration:line-through}
+.krow .ex{direction:rtl;text-align:right;color:var(--muted);font-size:14.5px;margin-top:6px;border-top:2px dashed var(--line);padding-top:6px;unicode-bidi:plaintext}
+.modes{display:flex;gap:8px;flex-wrap:wrap}
+.modes button[aria-pressed=true]{background:#7c88ff;color:#0b0d12;box-shadow:inset -4px -4px #4b55e8,inset 4px 4px #b9c0ff,4px 4px #000}
+.allq{margin-top:10px;border:2px dashed var(--line);border-radius:6px;padding:10px 12px}
+.allq summary{cursor:pointer;font-weight:700;color:var(--hl)}
+.allq .key{margin-top:12px}
+.codebox{display:flex;gap:8px;flex-wrap:wrap;align-items:center;direction:ltr}
+.codebox input{font-family:var(--f-pixel);font-size:12px;letter-spacing:2px;text-transform:uppercase;width:11em;padding:10px;border:3px solid var(--line);background:var(--bg);color:var(--ink)}
+.excode{font-family:var(--f-pixel);font-size:11px;color:var(--acc);border:2px dashed var(--acc);padding:4px 8px;direction:ltr;display:inline-block}
+
+/* guide character */
+#guide{position:fixed;left:max(12px,env(safe-area-inset-left,0px));bottom:max(10px,env(safe-area-inset-bottom,0px));z-index:20;display:flex;align-items:flex-end;gap:8px;pointer-events:none}
+#guide canvas{image-rendering:pixelated;pointer-events:auto;cursor:pointer;width:72px;height:108px;filter:drop-shadow(0 0 14px rgba(124,136,255,.45))}
+#bubble{pointer-events:auto;max-width:min(300px,64vw);background:#ffd23f;color:#0b0d12;font-size:14px;line-height:1.6;padding:10px 12px;
+  border:3px solid #000;box-shadow:4px 4px 0 #000;margin-bottom:70px;position:relative;direction:rtl;font-weight:600}
+#bubble::before{content:"";position:absolute;left:-12px;bottom:10px;border:6px solid transparent;border-right-color:#000;border-bottom-color:#000}
+#bubble .x{position:absolute;top:-12px;right:-10px;width:22px;height:22px;background:#ff4d6d;color:#fff;border:0;font-family:var(--f-pixel);font-size:9px;cursor:pointer;box-shadow:2px 2px 0 #000}
+.jump{animation:jump .5s steps(5)} @keyframes jump{0%,100%{transform:translateY(0)}40%{transform:translateY(-26px)}}
+.shake{animation:shake .4s steps(4)} @keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+.pop{animation:pop .25s steps(3)} @keyframes pop{from{transform:scale(.6)}to{transform:scale(1)}}
+.fade{animation:fade .35s steps(4)} @keyframes fade{from{opacity:.2;transform:translateY(8px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+footer{margin-top:40px;color:var(--muted);text-align:center;font-family:var(--f-pixel);font-size:10px;padding-block:20px}
+footer a{color:var(--hl);text-decoration:none;border-bottom:2px solid var(--hl)}
+@media (max-width:640px){
+  body{font-size:15px;line-height:1.8;padding-bottom:110px}
+  .bar{gap:8px;padding-block:8px}
+  .bar .logo{font-size:9px}
+  .bar nav a{font-size:12px;padding:2px 6px}
+  .xp{display:none}
+  .hero{padding-block:18px 4px}
+  .hero p{font-size:14.5px}
+  .stage{height:130px}
+  .map{gap:14px;margin-top:16px;grid-template-columns:1fr}
+  .lvl{padding:14px}
+  .page-head{padding-block:18px 4px}
+  .lesson{gap:16px}
+  .sec{padding:14px}
+  .sec h2{font-size:13px;line-height:1.7}
+  .cards{grid-template-columns:1fr 1fr;gap:8px}
+  .card{padding:10px}
+  .card .k{font-size:13.5px}
+  .card p{font-size:13.5px;line-height:1.65}
+  .two{grid-template-columns:1fr}
+  .def{font-size:14px;padding:8px 12px}
+  .tip{font-size:14px}
+  table{min-width:0;font-size:13px}
+  th,td{padding:6px 7px}
+  th{font-size:12px}
+  .pipe .st{flex:1 1 calc(50% - 8px);padding:8px}
+  .pipe .st b{font-size:13px}
+  .g12{gap:3px;padding:6px}
+  .g12 .blk{font-size:8px}
+  .qcard{padding:14px}
+  .qtext{font-size:16px}
+  .opt{font-size:14.5px;padding:9px 10px;gap:10px}
+  .qtop{gap:8px}
+  .qtop .btn,.qnav .btn{padding:9px 11px;font-size:9px}
+  .btn{font-size:9px;padding:10px 12px}
+  .rank{font-size:44px}
+  .krow{padding:12px}
+  #guide canvas{width:44px;height:66px}
+  #bubble{margin-bottom:44px;font-size:12.5px;padding:8px 10px;max-width:min(260px,68vw)}
+}
+@media (max-width:360px){.cards{grid-template-columns:1fr}}
+</style>
+
+<canvas id="stars" aria-hidden="true"></canvas><div class="floor" aria-hidden="true"><i></i></div>
+<header class="bar" dir="ltr">
+  <a class="logo" href="#home">WEB<b>DESIGN</b>.QUEST</a>
+  <nav id="nav"></nav>
+  <div class="tools"><button id="themeB" type="button" aria-label="Switch color theme">LIGHT</button><div class="xp" title="XP from correct answers"><span class="coin"></span><span id="xp">0</span> XP</div></div>
+</header>
+<main class="wrap" id="app" dir="rtl"><section class="page-head"><span class="eyebrow" dir="ltr">FINAL BOSS · 30 QUESTIONS · 252 IN THE BANK</span><h1 dir="ltr">Final Exam</h1><p style="color:var(--muted)">الاختبار الشامل على المحاضرات الخمسة</p></section>
+  <div class="qwrap fade">
+   <section class="sec px"><h2>إزاي بيشتغل؟</h2>
+    <ul class="l"><li>كل مرة تدوس START بيتولد امتحان جديد بكود خاص بيه.</li><li><b>30 سؤال</b>: 6 من كل محاضرة، بترتيب عشوائي، والاختيارات كمان بتتلخبط.</li><li>وضع <b>Exam</b>: الإجابات والدرجة في الآخر، مع تحليل لكل محاضرة. ووضع <b>Practice</b>: الإجابة بعد كل سؤال.</li><li>عايز تحل نفس امتحان صاحبك؟ ابعتله الكود ويدخله تحت.</li></ul>
+    <div class="cta" dir="ltr"><button class="btn" id="go">START NEW EXAM</button></div>
+   </section>
+   <section class="sec px"><h2>عندك كود امتحان؟</h2>
+    <div class="codebox"><label for="codeIn" class="lab" style="font-family:var(--f-pixel);font-size:9px;color:var(--acc)">CODE</label><input id="codeIn" maxlength="6" placeholder="ABC123" value="" autocomplete="off" spellcheck="false"><button class="btn g" id="load">LOAD</button></div>
+    <p id="codeErr" style="color:var(--rose);margin:6px 0 0" hidden=""></p>
+   </section>
+  </div></main>
+<div id="guide"><canvas id="hero" width="48" height="72" aria-label="Ahmed, the pixel guide"></canvas><div id="bubble" role="status"><button class="x" aria-label="Hide message">X</button><span id="say"></span></div></div>
+
+<script>
+/* ============ routing mode (hash in preview, real paths when self-hosted) ============ */
+const ROUTE_META=document.querySelector('meta[name="mmd-route"]');
+const STATIC=!!ROUTE_META;
+const U=h=>STATIC?(h==="home"?"/":"/"+h+"/"):"#"+h;
+
+/* ============ storage ============ */
+const store={get(k,d){try{const v=localStorage.getItem("wd:"+k);return v==null?d:JSON.parse(v)}catch(e){return d}},
+  set(k,v){try{localStorage.setItem("wd:"+k,JSON.stringify(v))}catch(e){}}};
+let XP=store.get("xp",0);
+const xpEl=document.getElementById("xp"); xpEl.textContent=XP;
+function addXP(n){XP+=n;store.set("xp",XP);xpEl.textContent=XP}
+
+/* ============ theme ============ */
+const themeB=document.getElementById("themeB");
+function curTheme(){const t=document.documentElement.getAttribute("data-theme");return t||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")}
+function syncThemeB(){const t=curTheme();themeB.textContent=t==="dark"?"LIGHT":"DARK";themeB.setAttribute("aria-label",t==="dark"?"Switch to light theme":"Switch to dark theme");starCols()}
+themeB.onclick=()=>{const n=curTheme()==="dark"?"light":"dark";document.documentElement.setAttribute("data-theme",n);try{localStorage.setItem("wd:theme",n)}catch(e){}syncThemeB();
+  say(n==="dark"?"وضع الليل اشتغل. ذاكر براحتك.":"الوضع الفاتح اشتغل.","talk")};
+matchMedia("(prefers-color-scheme: dark)").addEventListener?.("change",syncThemeB);
+
+/* ============ Ahmed pixel character ============ */
+const AHMED=(function(){const X={};const e={s(a){for(let i=0;i<a.length;i+=3)X[a[i]]=a[i+2]}};"use strict";let t="#24160f",r="#4d2f20",n="#eab089",a="#cf8f68",o="#f7cca8",l="#e8907a",s="#2a1a12",i="#2b1b13",c="#a24e44",u="#ffffff",f="#0f0f14",d="#3a2f55",p="#a593db",h="#d9dce4",m="#2a3f82",g="#1d2c60",b="#dde2f4",w="#e2672c",y="#b44b1c",v="#f79c5d",x=(e,t)=>{let r=43758.5453*Math.sin(127.1*e+311.7*t);return r-Math.floor(r)};e.s(["H",0,72,"o",0,{idle:{armL:[[12,48],[13,55]],armR:[[36,48],[35,55]],glasses:"face",eyes:"open",mouth:"smile",bob:0},wave1:{armL:[[8,35],[7,27]],armR:[[36,48],[35,55]],glasses:"face",eyes:"open",mouth:"grin",bob:0},wave2:{armL:[[8,35],[10,27]],armR:[[36,48],[35,55]],glasses:"face",eyes:"open",mouth:"grin",bob:0},point:{armL:[[8,42],[2,41]],armR:[[36,48],[35,55]],glasses:"face",eyes:"open",mouth:"grin",bob:0},peek:{armL:[[12,48],[13,55]],armR:[[36,48],[35,55]],glasses:"low",eyes:"open",mouth:"smile",brows:"up",bob:0},reach:{armL:[[9,39],[15,27]],armR:[[36,48],[35,55]],glasses:"face",eyes:"open",mouth:"smile",bob:0},hold:{armL:[[8,47],[9,41]],armR:[[36,48],[35,55]],glasses:"hand",eyes:"open",mouth:"grin",brows:"up",bob:0},wink:{armL:[[8,47],[9,41]],armR:[[36,48],[35,55]],glasses:"hand",eyes:"wink",mouth:"grin",brows:"up",bob:0},blinkOff:{armL:[[8,47],[9,41]],armR:[[36,48],[35,55]],glasses:"hand",eyes:"blink",mouth:"grin",brows:"up",bob:0},thumb:{armL:[[12,48],[13,55]],armR:[[40,44],[36,37]],glasses:"face",eyes:"open",mouth:"grin",bob:0,thumbUp:!0},cheer:{armL:[[8,34],[10,26]],armR:[[40,34],[38,26]],glasses:"face",eyes:"open",mouth:"grin",bob:0},walk1:{armL:[[11,47],[15,53]],armR:[[37,47],[33,55]],glasses:"face",eyes:"open",mouth:"smile",bob:0,legs:"walkA"},walk2:{armL:[[13,48],[10,54]],armR:[[35,48],[38,53]],glasses:"face",eyes:"open",mouth:"smile",bob:0,legs:"walkB"},type1:{armL:[[12,48],[19,52]],armR:[[36,48],[30,53]],glasses:"face",eyes:"open",mouth:"smile",bob:0,prop:"laptop"},type2:{armL:[[12,48],[19,53]],armR:[[36,48],[30,52]],glasses:"face",eyes:"open",mouth:"smile",bob:0,prop:"laptop"},typeGrin:{armL:[[12,48],[19,53]],armR:[[36,48],[30,53]],glasses:"face",eyes:"open",mouth:"grin",bob:0,prop:"laptop"},idleNight:{armL:[[12,48],[13,55]],armR:[[36,48],[35,55]],glasses:"none",eyes:"open",mouth:"smile",bob:0},sleep:{armL:[[12,49],[14,55]],armR:[[36,49],[34,55]],glasses:"low",eyes:"blink",mouth:"o",bob:0,sleeping:!0},talk:{armL:[[12,48],[13,55]],armR:[[38,46],[34,50]],glasses:"face",eyes:"open",mouth:"open",bob:0},present:{armL:[[7,44],[3,46]],armR:[[41,44],[45,46]],glasses:"face",eyes:"open",mouth:"grin",bob:0},think:{armL:[[12,48],[13,55]],armR:[[36,44],[27,37]],glasses:"face",eyes:"open",mouth:"smile",brows:"up",bob:0},shrug:{armL:[[7,42],[5,37]],armR:[[41,42],[43,37]],glasses:"low",eyes:"open",mouth:"smile",brows:"up",bob:0},surprised:{armL:[[8,38],[12,31]],armR:[[40,38],[36,31]],glasses:"low",eyes:"open",mouth:"o",brows:"up",bob:0},phone:{armL:[[12,48],[13,55]],armR:[[38,44],[33,40]],glasses:"face",eyes:"open",mouth:"grin",bob:0,prop:"phone"},mic:{armL:[[11,44],[17,37]],armR:[[36,48],[35,55]],glasses:"face",eyes:"open",mouth:"open",bob:0,prop:"mic"},trophy:{armL:[[9,33],[12,25]],armR:[[40,36],[38,28]],glasses:"face",eyes:"open",mouth:"grin",bob:0,prop:"trophy"},map:{armL:[[11,47],[16,46]],armR:[[37,47],[32,46]],glasses:"face",eyes:"open",mouth:"grin",bob:0,prop:"map"},coinShow:{armL:[[12,48],[13,55]],armR:[[39,42],[36,36]],glasses:"low",eyes:"wink",mouth:"grin",brows:"up",bob:0,prop:"coin"},love:{armL:[[11,48],[20,46]],armR:[[37,48],[28,46]],glasses:"face",eyes:"open",mouth:"grin",bob:0,prop:"heart",blush:!0}},"W",0,48,"G",0,function(e,t,r){let n=(e,t)=>[e[0]+(t[0]-e[0])*r,e[1]+(t[1]-e[1])*r];return{...r<.5?e:t,armL:[n(e.armL[0],t.armL[0]),n(e.armL[1],t.armL[1])],armR:[n(e.armR[0],t.armR[0]),n(e.armR[1],t.armR[1])],bob:e.bob}},"O",0,function(e,k){let R=new Map,M=(e,t)=>48*t+e,j=k.bob,L=(e,t,r)=>{e=Math.round(e),t=Math.round(t),e<0||t<0||e>=48||t>=72||R.set(M(e,t),r)},S=(e,t,r,n,a)=>{for(let o=t;o<=n;o++)for(let t=e;t<=r;t++)L(t,o,"string"==typeof a?a:a(t,o))},T=(e,t,r,n,a)=>{for(let o=Math.floor(t-n);o<=Math.ceil(t+n);o++)for(let l=Math.floor(e-r);l<=Math.ceil(e+r);l++)((l-e)/r)**2+((o-t)/n)**2<=1&&L(l,o,"string"==typeof a?a:a(l,o))},E=(e,t,r,n)=>T(e,t,r,r,n),C=(e,t,r,n)=>{let a=2*Math.max(Math.abs(t[0]-e[0]),Math.abs(t[1]-e[1]))+1;for(let o=0;o<=a;o++){let l=o/a;E(e[0]+(t[0]-e[0])*l,e[1]+(t[1]-e[1])*l,r,(e,t)=>n(e,t,l))}},A=e=>e+j,P=(e,t,r)=>{S(e+t,57,e+6+t,67-r,r=>r>=e+5+t?"#253354":"#34476f"),S(e-1+1.5*t,68-r,e+6+1.5*t,69-r,"#f3f3f3"),S(e-1+1.5*t,70-r,e+6+1.5*t,70-r,"#2a2a30")},_=k.legs??"stand";P(17,"walkA"===_?-2:+("walkB"===_),+("walkB"===_)),P(25,"walkA"===_?1:"walkB"===_?-2:0,+("walkA"===_));let $=k.outfit??"default",N="gdgoc"===$?{base:"#eef0f3",sh:"#c9ced6",cuff:"#202124"}:"eduskills"===$?{base:"#2fa36b",sh:"#22825a",cuff:"#2fa36b"}:{base:w,sh:y,cuff:m};if("gdgoc"===$){S(13,A(38),35,A(57),e=>e>=31?"#c9ced6":"#eef0f3"),T(24,A(38),8,2.2,"#c9ced6"),S(21,A(39),21,A(44),"#202124"),S(27,A(39),27,A(44),"#202124"),T(14,A(40),3.5,2.5,"#eef0f3"),T(34,A(40),3.5,2.5,"#eef0f3");let e=A(49);S(19,e-2,20,e-2,"#ea4335"),S(18,e-1,19,e-1,"#ea4335"),S(17,e,18,e,"#4285f4"),S(18,e+1,19,e+1,"#4285f4"),S(19,e+2,20,e+2,"#4285f4"),S(28,e-2,29,e-2,"#34a853"),S(29,e-1,30,e-1,"#34a853"),S(30,e,31,e,"#34a853"),S(29,e+1,30,e+1,"#fbbc04"),S(28,e+2,29,e+2,"#fbbc04"),S(13,A(56),35,A(57),"#c9ced6")}else if("eduskills"===$)S(14,A(38),34,A(57),e=>e>=31?"#22825a":"#2fa36b"),T(24,A(37.5),5,1.6,"#22825a"),T(14.5,A(40),3.3,2.5,"#2fa36b"),T(33.5,A(40),3.3,2.5,"#2fa36b"),S(21,A(44),23,A(51),"#ffffff"),S(24,A(44),27,A(45),"#ffffff"),S(24,A(47),26,A(48),"#ffffff"),S(24,A(50),27,A(51),"#ffffff"),S(14,A(56),34,A(57),"#22825a");else{S(15,A(38),33,A(57),e=>e>=30?g:m),S(21,A(39),21,A(45),b),S(27,A(39),27,A(45),b),T(24,A(38),8,2.2,g);let e=(e,t,r)=>{let n=(t-A(38))%4;return 3===n?y:0===n&&e!==r?v:w};S(12,A(39),19,A(58),(t,r)=>19===t?y:e(t,r,19)),S(29,A(39),36,A(58),(t,r)=>t>=35||29===t?y:e(t,r,29)),T(14,A(40),3.5,2.5,w),T(34,A(40),3.5,2.5,w),S(16,A(37),18,A(38),v),S(30,A(37),32,A(38),w),"ramadan"===k.season&&(L(31,A(42),"#ffd23f"),L(32,A(43),"#ffd23f"),L(31,A(44),"#ffd23f"))}S(21,A(35),27,A(37),e=>e>=26?a:n),T(13.5,A(26),1.8,2.6,a),T(34.5,A(26),1.8,2.6,a),T(24,A(25.5),10,10.5,(e,t)=>e>=31||t>A(33)?a:n),L(17,A(25),o),L(18,A(25),o),L(17,A(30),l),L(31,A(30),l),k.blush&&(S(16,A(29),18,A(30),l),S(30,A(29),32,A(30),l));let O=(e,n)=>{let a=x(Math.floor(e/2),Math.floor(n/2)),o=(e+2*n+Math.floor(3*a))%5;return 0===o&&a>.35?r:1===o&&a>.86?"#70472f":t};T(24,A(13.8),11.6,6.2,O),T(22.5,A(11.6),8.6,4.6,O),T(28,A(12.6),6.8,4,O);for(let e=0;e<=12;e++){let r=1.08*Math.PI+e/12*Math.PI*.84;x(e,5)>.45&&L(24+11.2*Math.cos(r),A(13.4)+6.6*Math.sin(r),t)}S(14,A(15),34,A(17),O);for(let e=16;e<=32;e++)x(e,3)>.6&&L(e,A(18),t);S(13,A(15),14,A(23),(e,n)=>x(e,n)>.45?t:r),S(34,A(15),35,A(23),(e,n)=>x(e,n)>.45?t:r),S(14,A(19),14,A(25),t),S(34,A(19),34,A(25),t);let q="up"===k.brows?A(19):A(20);S(16,q,21,q+1,s),S(27,q,32,q+1,s),L(16,q+2,s),L(32,q+2,s);let I=(e,t)=>{t?S(e,A(25),e+4,A(25),s):(S(e,A(24),e+4,A(25),"#ffffff"),S(e+1,A(23),e+3,A(25),"#7a4428"),S(e+2,A(24),e+2,A(25),"#1c0f0a"),L(e+1,A(23),"#c48a5e"),S(e-1,A(22),e+5,A(22),s),L(e+5,A(23),s))},z="face"!==k.glasses;k.sleeping&&(k={...k,eyes:"blink"}),z&&(I(17,"blink"===k.eyes),I(27,"blink"===k.eyes||"wink"===k.eyes)),S(24,A(27),24,A(29),a),L(23,A(30),a),L(25,A(30),a),S(20,A(31),28,A(32),i),L(19,A(33),i),L(29,A(33),i),"grin"===k.mouth?(S(21,A(33),27,A(34),c),S(22,A(33),26,A(33),u)):"open"===k.mouth?(S(21,A(33),27,A(35),c),S(22,A(34),26,A(34),"#5a1e1a"),S(22,A(33),26,A(33),u)):"o"===k.mouth?(S(23,A(33),25,A(35),c),L(24,A(34),"#5a1e1a")):(S(21,A(33),27,A(33),c),L(20,A(32),c),L(28,A(32),c)),S(24,A(35),24,A(35),i),S(22,A(36),26,A(37),i),S(23,A(38),25,A(38),i);for(let e=16;e<=32;e++)x(e,7)>.5&&L(e,A(34)+(e<19||e>29?-1:0),a);let B=(e,t,r=!1)=>{if(r){S(e,t,e+4,t+3,f),S(e+6,t,e+10,t+3,f),S(e+1,t+1,e+3,t+2,d),S(e+7,t+1,e+9,t+2,d),L(e+1,t+1,p),L(e+7,t+1,p),S(e+5,t,e+5,t,h);return}S(e,t,e+7,t+5,f),S(e+10,t,e+17,t+5,f),S(e+1,t+1,e+6,t+4,(e,r)=>r>=t+3?"#5c4c83":d),S(e+11,t+1,e+16,t+4,(e,r)=>r>=t+3?"#5c4c83":d),L(e+2,t+1,p),L(e+3,t+1,p),L(e+12,t+1,p),L(e+13,t+1,p),S(e+8,t,e+9,t,h),S(e+8,t+2,e+9,t+2,f),S(e-1,t,e-1,t,h),S(e+18,t,e+18,t,h),S(e-2,t+1,e-1,t+1,h),S(e+18,t+1,e+19,t+1,h)};if("face"===k.glasses){B(15,A(22));let e=k.glint??-1;if(e>=0){let t=15+Math.round(24*e)-4;for(let e=0;e<4;e++)for(let r of[16,26]){let n=t+e,a=A(23)+3-e;n>=r&&n<=r+5&&L(n,a,"#ffffff"),n+1>=r&&n+1<=r+5&&L(n+1,a,"#d8cff5")}}}"low"===k.glasses&&B(15,A(25));let V=(e,[t,r],o)=>{let l=[e[0],A(e[1])],s=[t[0],A(t[1])],i=[r[0],A(r[1])],c=(e,t,r)=>"default"===$?Math.round(9*r)%3==0?N.sh:N.base:r>.55?N.sh:N.base;C(l,s,1.9,c),C(s,i,1.7,c),E(s[0]+(i[0]-s[0])*.82,s[1]+(i[1]-s[1])*.82,1.5,()=>N.cuff),T(i[0],i[1],1.8,1.8,e=>e>i[0]?a:n),o&&B(i[0]-3,i[1]-5,!0)};if(V([14,40],k.armL,"hand"===k.glasses),V([34,40],k.armR,!1),k.thumbUp&&(L(k.armR[1][0],A(k.armR[1][1])-2,n),L(k.armR[1][0],A(k.armR[1][1])-3,n)),k.armL[1][0]<=3&&L(k.armL[1][0]-2,A(k.armL[1][1]),n),"laptop"===k.prop&&(S(15,A(45),33,A(55),(e,t)=>t===A(45)?"#e9ecf2":e>=31?"#9aa1b0":"#c3c8d3"),L(22,A(50),"#7c88ff"),L(23,A(49),"#7c88ff"),L(23,A(51),"#7c88ff"),L(25,A(48),"#ffb547"),L(24,A(52),"#ffb547"),L(26,A(50),"#7c88ff"),L(25,A(49),"#7c88ff"),L(25,A(51),"#7c88ff"),S(13,A(56),35,A(57),"#7d8494")),"eid"===k.season){for(let e=0;e<7;e++)S(26-Math.floor(e/2),A(1+e),26+Math.floor(e/2),A(1+e),e%2?"#ff4d6d":"#ffd23f");L(26,A(0),"#7c88ff")}if("ramadan"===k.season&&!k.prop&&k.armR[1][1]>50){let e=Math.round(k.armR[1][0])+2,t=Math.round(A(k.armR[1][1]))+1;S(e-1,t,e+1,t,"#c99a00"),S(e-2,t+1,e+2,t+5,(e,t)=>(e+t)%2?"#ffd23f":"#ffb547"),S(e-1,t+2,e+1,t+4,"#fff3b0"),S(e-2,t+6,e+2,t+6,"#c99a00")}let U=[Math.round(k.armL[1][0]),Math.round(A(k.armL[1][1]))],Z=[Math.round(k.armR[1][0]),Math.round(A(k.armR[1][1]))];if("phone"===k.prop&&(S(Z[0]-3,Z[1]-9,Z[0]+1,Z[1]-1,"#111318"),S(Z[0]-2,Z[1]-8,Z[0],Z[1]-2,(e,t)=>(e+t)%3==0?"#ff2c55":"#25f4ee")),"mic"===k.prop&&(S(U[0]-1,U[1]-6,U[0]+1,U[1]-1,"#2a2a30"),S(U[0]-2,U[1]-9,U[0]+2,U[1]-6,"#c9ccd4"),L(U[0]-1,U[1]-8,"#ffffff")),"trophy"===k.prop&&(S(U[0]-4,U[1]-10,U[0]+4,U[1]-6,"#ffd23f"),S(U[0]-5,U[1]-10,U[0]-5,U[1]-8,"#c99a00"),S(U[0]+5,U[1]-10,U[0]+5,U[1]-8,"#c99a00"),S(U[0]-1,U[1]-5,U[0]+1,U[1]-3,"#c99a00"),S(U[0]-3,U[1]-2,U[0]+3,U[1]-1,"#8a6a00"),L(U[0]-2,U[1]-9,"#fff3b0")),"map"===k.prop&&(S(U[0],U[1]-6,Z[0],Z[1]-1,(e,t)=>(7*e+3*t)%11==0?"#c0392b":(e+t)%5==0?"#d9b26a":"#f1d9a0"),S(U[0]+3,U[1]-4,U[0]+6,U[1]-4,"#8a5a2b"),L(Math.round((U[0]+Z[0])/2)+2,U[1]-3,"#c0392b")),"coin"===k.prop&&(S(Z[0]-2,Z[1]-7,Z[0]+2,Z[1]-3,"#ffd23f"),S(Z[0]-1,Z[1]-6,Z[0]-1,Z[1]-4,"#fff3b0"),S(Z[0]+1,Z[1]-6,Z[0]+1,Z[1]-4,"#c99a00")),"heart"===k.prop){let e=A(44);for(let[t,r]of[[-3,-1],[-2,-2],[-1,-1],[1,-1],[2,-2],[3,-1],[-3,0],[3,0],[-2,1],[2,1],[-1,2],[1,2],[0,3]])L(24+t,e+r,"#ff4d6d");S(22,e-1,26,e+1,"#ff4d6d"),S(23,e+2,25,e+2,"#ff4d6d"),L(22,e-1,"#ffb3c1")}let D=new Map(R);for(let e of R.keys()){let t=e%48,r=Math.floor(e/48);for(let[e,n]of[[1,0],[-1,0],[0,1],[0,-1]]){let a=t+e,o=r+n;a<0||o<0||a>=48||o>=72||R.has(M(a,o))||D.set(M(a,o),"#150d1d")}}for(let[t,r]of(e.clearRect(0,0,48,72),D))e.fillStyle=r,e.fillRect(t%48,Math.floor(t/48),1,1)}]);return X})();
+function drawPose(cv,name,extra){const x=cv.getContext("2d");x.imageSmoothingEnabled=false;AHMED.O(x,{...AHMED.o[name],...(extra||{})})}
+const G=document.getElementById("hero"), bubble=document.getElementById("bubble"), sayEl=document.getElementById("say");
+let gState="idle", gTimer=0, gTick=0, hideT=0;
+const ANIM={idle:["idle"],talk:["talk","idle"],happy:["cheer","trophy","cheer","thumb"],sad:["shrug","surprised"],think:["think"],wave:["wave1","wave2"],type:["type1","type2"]};
+function setG(st,ms){gState=st;gTick=0;clearTimeout(gTimer);if(ms)gTimer=setTimeout(()=>gState="idle",ms)}
+setInterval(()=>{gTick++;const seq=ANIM[gState]||ANIM.idle;let p=seq[Math.floor(gTick/3)%seq.length];
+  if(gState==="sad")p=seq[0];
+  if(gState==="idle"&&gTick%40===0)p="peek";
+  drawPose(G,p,{glint:gState==="idle"?((gTick%25)/6):-1})},120);
+function say(t,mood){sayEl.innerHTML=t;bubble.hidden=false;clearTimeout(hideT);hideT=setTimeout(()=>bubble.hidden=true,innerWidth<640?4500:6500);
+  bubble.classList.remove("pop");void bubble.offsetWidth;bubble.classList.add("pop");
+  G.classList.remove("jump","shake");void G.offsetWidth;
+  if(mood==="happy"){setG("happy",1800);G.classList.add("jump")}else if(mood==="sad"){setG("sad",1800);G.classList.add("shake")}
+  else if(mood==="think"){setG("think",1800)}else if(mood==="wave"){setG("wave",2000)}else if(mood==="type"){setG("type",2400)}else{setG("talk",1500)}}
+bubble.querySelector(".x").onclick=()=>bubble.hidden=true;
+const TIPS=["المصطلحات الملونة دي اللي بتيجي في الامتحان بالنص.","حل كويز المحاضرة بعد ما تخلص شرحها على طول.","الاختبار الشامل كل مرة بيطلعلك 30 سؤال مختلفين، جربه أكتر من مرة.","احفظ أرقام الـ 12-column grid والـ 8px system كويس.","اضغط عليا تاني لو عايز نصيحة جديدة."];
+let tipI=0; G.onclick=()=>say(TIPS[tipI++%TIPS.length],"think");
+
+/* ============ starfield ============ */
+let SC=["#8a93a8","#262d45"];
+function starCols(){const cs=getComputedStyle(document.documentElement);SC=[cs.getPropertyValue("--star1").trim()||"#8a93a8",cs.getPropertyValue("--star2").trim()||"#262d45"]}
+(function(){const c=document.getElementById("stars"),x=c.getContext("2d");let st=[];
+ function rs(){c.width=Math.ceil(innerWidth/4);c.height=Math.ceil(innerHeight/4);st=Array.from({length:70},()=>({x:Math.random()*c.width,y:Math.random()*c.height,p:Math.random()*6,s:Math.random()<.15}))}
+ rs();addEventListener("resize",rs);
+ const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
+ function t(ts){x.clearRect(0,0,c.width,c.height);st.forEach(s=>{const on=Math.sin(ts/600+s.p)>-.3;x.fillStyle=s.s?"#ffb547":(on?SC[0]:SC[1]);x.fillRect(Math.floor(s.x),Math.floor(s.y),1,1)});if(!reduce)requestAnimationFrame(t)}
+ requestAnimationFrame(t)})();
+syncThemeB();
+
+/* ============ content ============ */
+const T=(s,c="")=>`<b class="t ${c}">${s}</b>`;
+const LECS={
+"1":{title:"Introduction to Web Design",ar:"مقدمة في تصميم المواقع",sub:"Web Design vs Development · UI vs UX · Website Components · Types · 5 Design Stages",
+hello:"أول محاضرة: يعني إيه Web Design، والفرق بين UI و UX، ومراحل التصميم الخمسة.",
+html:`
+<section class="sec px"><h2>1. Course Overview</h2>
+<p>المادة مش هدفها إنك تعمل صفحة شكلها حلو وخلاص. الهدف إنك تفهم الموقع مكون من إيه، والديزاينر بيفكر إزاي، وإزاي الفكرة بتتحول لـ ${T("interactive website interface")}.</p>
+<h3>أهداف المادة</h3>
+<ol class="l">
+<li>فهم مفهوم الـ Web Design ومكوناته الأساسية.</li>
+<li>تطبيق أسس ومبادئ الـ ${T("graphic design")} على صفحات الويب.</li>
+<li>استخدام ${T("Photoshop")} و ${T("Illustrator")} و ${T("Adobe XD")} في تصميم المواقع.</li>
+<li>تصميم الـ ${T("visual identity")} وعناصر الـ ${T("user interface")}.</li>
+<li>فهم أسس الـ ${T("responsive design")} لأحجام الشاشات المختلفة.</li>
+<li>تنمية التفكير الإبداعي وحل مشاكل التصميم.</li>
+<li>تنفيذ ${T("integrated web project")} يطبق كل المهارات.</li>
+</ol>
+<p>أساس الـ Web Design 3 أفكار: ${T("the idea")} (الموقع معمول ليه)، ${T("the interface")} (شكله واليوزر بيتعامل معاه إزاي)، و${T("the user experience")} (إحساس الاستخدام).</p>
+</section>
+
+<section class="sec px"><h2>2. What Happens When You Open a Website?</h2>
+<p>لما حد يفتح موقع بيحصل 4 حاجات بالترتيب:</p>
+<div class="pipe"><div class="st"><small>1</small><b>Sees</b>بيشوف الصفحة</div><div class="st"><small>2</small><b>Understands</b>بيفهم هي بتقدم إيه</div><div class="st"><small>3</small><b>Navigates</b>بيروح للي محتاجه</div><div class="st"><small>4</small><b>Interacts</b>بيتفاعل معاها</div></div>
+<p>الصفحة غالباً مكونة من: logo، menu، images، buttons و text.</p>
+<p>اليوزر بيشوف الموقع ${T("one complete whole")}، لكن الديزاينر بيشوفه عناصر متخططة ومترتبة بقصد: كل button ليه function، كل صورة ليها role، مكان العنوان مش عشوائي، وحتى الـ ${T("empty spaces")} ليها هدف.</p>
+</section>
+
+<section class="sec px"><h2>3. What Is Web Design?</h2>
+<div class="def"><b>Web design</b> is the planning and design of the visual interfaces of websites, with the aim of presenting content and services in a way that is <b>clear, attractive and easy to use</b>.</div>
+<p>يعني هو عملية تنظيم الـ ${T("content")} والـ ${T("visual elements")} والـ ${T("interactive elements")} جوه الموقع.</p>
+<div class="tip">الـ Web Design <b>مش Photoshop بس</b> ومش رسم صفحة على الكمبيوتر. الـ web designer بيصمم <b>تجربة كاملة</b> لليوزر.</div>
+<h3>Web Design vs Website Development</h3>
+<div class="tbl"><table>
+<tr><th></th><th>Web Design</th><th>Website Development</th></tr>
+<tr><td>الاهتمام الأساسي</td><td>Appearance & experience</td><td>Technical construction & operation</td></tr>
+<tr><td>المواضيع</td><td class="ltr">Appearance (look) · Layout (planning) · Interaction · User experience</td><td class="ltr">Programming · Functions · Databases · Running the website</td></tr>
+</table></div>
+<p>الاتنين <b>مختلفين لكن مكملين لبعض</b>: الديزاينر بيقرر الموقع شكله إيه وبيشتغل إزاي، والـ developer بيبني التكنولوجيا اللي بتشغله.</p>
+<h3>Web Design vs Graphic Design</h3>
+<p>الـ web designer محتاج أساس قوي في الـ graphic design، لأن قواعده بتتستخدم تاني: ${T("color, typography, composition, images, identity")}. الفرق إن الـ web design <b>مش static</b>؛ اليوزر بيتفاعل معاه، فلازم يتصمم للاستخدام والحركة.</p>
+</section>
+
+<section class="sec px"><h2>4. UI and UX</h2>
+<div class="two">
+<div class="card"><span class="k">UI · User Interface</span><p>كل حاجة اليوزر بيشوفها وبيتفاعل معاها: colors, fonts, buttons, images, spaces. بنقيسها بـ 3 أسئلة:<br><b>Visual:</b> الشكل والهوية؟<br><b>Interaction:</b> إيه اللي يتداس عليه؟<br><b>Clarity:</b> الرسالة واضحة؟</p></div>
+<div class="card"><span class="k">UX · User Experience</span><p>اليوزر بيحس بإيه وهو بيستخدم الموقع، وبيوصل لهدفه بسهولة وثقة ولا لأ. صفاته:<br>Ease of understanding · Ease of navigation · Speed of reaching the goal · Comfort & trust</p></div>
+</div>
+<div class="tbl"><table>
+<tr><th></th><th>UI</th><th>UX</th></tr>
+<tr><td>Key question</td><td class="ltr">How does the website look?</td><td class="ltr">How does the experience work?</td></tr>
+<tr><td>Focus</td><td class="ltr">Form · color · interaction</td><td class="ltr">Understanding · movement · reaching the goal</td></tr>
+<tr><td>Activities</td><td class="ltr">Visual design, colors, graphic design, layouts, typography</td><td class="ltr">User research, scenarios, information architecture, wireframes & prototypes, interaction design</td></tr>
+</table></div>
+<div class="tip">interface حلوة من غير experience واضحة ممكن تلخبط اليوزر، و experience كويسة محتاجة interface تعبر عنها. <b>الموقع الناجح محتاج الاتنين.</b></div>
+</section>
+
+<section class="sec px"><h2>5. Components of a Website</h2>
+<div class="tbl"><table>
+<tr><th>Component</th><th>Role</th><th>الوصف</th></tr>
+<tr><td class="ltr">Header</td><td class="ltr">Start of the page & identity</td><td>أعلى الصفحة، فيه الـ logo واسم الموقع.</td></tr>
+<tr><td class="ltr">Navigation</td><td class="ltr">Moving between pages</td><td>المنيو اللي بتنقلك بين الصفحات.</td></tr>
+<tr><td class="ltr">Hero Section</td><td class="ltr">The first message</td><td>أول مساحة كبيرة الزائر بيشوفها؛ بتوصل الرسالة الأساسية.</td></tr>
+<tr><td class="ltr">Call to Action (CTA)</td><td class="ltr">The next step</td><td>button أو link بيدعي اليوزر ياخد الخطوة الجاية.</td></tr>
+<tr><td class="ltr">Footer</td><td class="ltr">Closing information</td><td>آخر الصفحة: معلومات ختامية و secondary links.</td></tr>
+</table></div>
+</section>
+
+<section class="sec px"><h2>6. Types of Websites</h2>
+<p>كل موقع ليه ${T("goal")} و ${T("target user")}، والتصميم لازم يمشي وراهم.</p>
+<div class="cards">
+<div class="card"><span class="k">Portfolio</span><p>عرض الشغل والهوية.</p></div>
+<div class="card"><span class="k">Business</span><p>تقديم شركة أو خدمة.</p></div>
+<div class="card"><span class="k">E-commerce</span><p>بيع وشراء المنتجات.</p></div>
+<div class="card"><span class="k">Educational</span><p>التعليم ونشر المعرفة.</p></div>
+<div class="card"><span class="k">Non-profit</span><p>خدمة قضية أو مجتمع مش ربح.</p></div>
+<div class="card"><span class="k">Media</span><p>نشر الأخبار والمحتوى الإعلامي.</p></div>
+<div class="card"><span class="k">Entrepreneur (Infopreneur)</span><p>خدمة رواد الأعمال، غالباً ببيع معلومات أو خبرة.</p></div>
+</div>
+<h3>E-commerce: Purchase Journey</h3>
+<div class="pipe"><div class="st"><small>1</small><b>Browse</b>تتفرج على المنتجات</div><div class="st"><small>2</small><b>Compare</b>تقارن الاختيارات</div><div class="st"><small>3</small><b>Add to cart</b>تضيف للسلة</div><div class="st"><small>4</small><b>Checkout</b>تكمل الشراء</div></div>
+<h3>Educational: Student Journey</h3>
+<div class="pipe"><div class="st"><small>1</small><b>Discover</b>يدور على الموضوع</div><div class="st"><small>2</small><b>Learn</b>يتابع الدرس</div><div class="st"><small>3</small><b>Practice</b>يطبق اللي اتعلمه</div></div>
+<div class="tip">e-commerce = <b>4 خطوات</b> (Browse → Compare → Add to cart → Checkout)، و educational = <b>3 خطوات</b> (Discover → Learn → Practice).</div>
+</section>
+
+<section class="sec px"><h2>7. Stages of Website Design</h2>
+<p>5 مراحل، كل مرحلة بتجاوب على سؤال، ولو نطيت مرحلة غالباً هيحصل لخبطة بعدين.</p>
+<div class="tbl"><table>
+<tr><th>#</th><th>Stage</th><th>Purpose</th><th>Main question</th></tr>
+<tr><td>1</td><td class="ltr">Research</td><td>فهم المشروع واليوزر</td><td class="ltr">Who? Why? What?</td></tr>
+<tr><td>2</td><td class="ltr">Structure</td><td>تنظيم المحتوى</td><td class="ltr">How are the pages organized?</td></tr>
+<tr><td>3</td><td class="ltr">Wireframe</td><td>رسم هيكل الصفحات</td><td class="ltr">Where does each element go?</td></tr>
+<tr><td>4</td><td class="ltr">Visual Design</td><td>بناء الشكل</td><td class="ltr">How should it look?</td></tr>
+<tr><td>5</td><td class="ltr">Prototype</td><td>اختبار التفاعل</td><td class="ltr">Is the path understandable and usable?</td></tr>
+</table></div>
+<h3>1. Research</h3>
+<p>قبل ما ترسم أي شاشة: ${T("Who?")} مين اليوزر، ${T("Why?")} الهدف إيه، ${T("What?")} محتاجين أنهي content و functions.</p>
+<div class="tip">"Good design starts with good questions, <b>not with opening the design software</b>."</div>
+<h3>2. Structure</h3>
+<p>المعلومات بتتحول لـ ${T("site map")}: إيه الصفحات الرئيسية؟ مربوطة ببعض إزاي؟ إيه الأولوية في كل شاشة؟ مسار اليوزر المتوقع إيه؟</p>
+<h3>3. Wireframe</h3>
+<p>${T("simplified sketch")} بيركز على الـ structure والـ content <b>قبل الألوان والصور</b>. بيتعامل مع 3 حاجات: ${T("Layout")} (كل عنصر فين)، ${T("Hierarchy")} (بنشوف إيه الأول)، ${T("Flow")} (بنتحرك بين الصفحات إزاي). ممكن يبقى hand-drawn أو digital.</p>
+<h3>4. Visual Design</h3>
+<div class="tbl"><table>
+<tr><th>Program</th><th>Main use</th><th>Details</th></tr>
+<tr><td class="ltr">Adobe Photoshop</td><td class="ltr">Image & visual processing</td><td>تحسين الصور، الـ mood والألوان.</td></tr>
+<tr><td class="ltr">Adobe Illustrator</td><td class="ltr">Logos & vector graphics</td><td>logo و identity، icons و illustrations، عناصر vector واضحة في أي size.</td></tr>
+<tr><td class="ltr">Adobe XD</td><td class="ltr">Interfaces & interactive models</td><td>تصميم الشاشة، ربط الشاشات، واختبار المسار.</td></tr>
+</table></div>
+<h3>5. Prototype</h3>
+<p>في XD: ${T("Design")} the screen → ${T("Link")} the screens → ${T("Test")} the path.</p>
+<div class="two">
+<div class="card"><span class="k">Static Design</span><p>صورة ثابتة بتوري الشكل النهائي. بتختبر الـ <b>appearance</b>.</p></div>
+<div class="card"><span class="k">Prototype</span><p>نسخة clickable بتوري الحركة والتفاعل. بتختبر إن المسار <b>understandable and usable</b>.</p></div>
+</div>
+<div class="tip">الـ prototype <b>مش بيختبر الجمال بس</b>؛ بيختبر هل مسار اليوزر مفهوم وقابل للاستخدام.</div>
+</section>
+
+<section class="sec px"><h2>8. Case Study: Museum Website</h2>
+<p>سؤال المحاضرة: لو بتصمم موقع متحف، إيه أول عنصر تحطه في الـ Hero؟ الاختيارات كانت: صورة ${T("artifact")}، أو مواعيد الزيارة، أو المعرض الحالي.</p>
+<p>الهدف: الزائر ${T("discovers the exhibition")}، ${T("understands the piece")}، و${T("plans the visit")}.</p>
+<div class="tbl"><table>
+<tr><th>Component</th><th>Content for the museum website</th></tr>
+<tr><td class="ltr">Hero</td><td class="ltr">The current exhibition, distinguished pieces, the museum building</td></tr>
+<tr><td class="ltr">Navigation</td><td class="ltr">Exhibitions · Visit · Collections</td></tr>
+<tr><td class="ltr">Content</td><td class="ltr">The story of each piece, with its images</td></tr>
+<tr><td class="ltr">CTA</td><td class="ltr">Book your visit</td></tr>
+</table></div>
+</section>
+
+<section class="sec px"><h2>9. The Semester Plan</h2>
+<div class="pipe"><div class="st"><small>1</small><b>Photoshop</b>Images & visual assets</div><div class="st"><small>2</small><b>Illustrator</b>Vector graphics & icons</div><div class="st"><small>3</small><b>Adobe XD</b>UI & prototyping</div><div class="st"><small>FINAL</small><b>Final Project</b>Design a complete website</div></div>
+</section>`},
+
+"2":{title:"Web Layout & Structural Design",ar:"الـ Layout والهيكل باستخدام Illustrator",sub:"Workflow · Web Layout · Page Components · Grid System · Layout Types · Visual Hierarchy · Illustrator",
+hello:"المحاضرة دي عن الهيكل قبل الألوان. جرب الـ 12-column grid demo تحت.",
+html:`
+<section class="sec px"><h2>1. Workflow: From Idea to Web Page</h2>
+<div class="pipe"><div class="st"><small>1</small><b>Idea</b>فكرة الموقع</div><div class="st"><small>2</small><b>Structure</b>تحديد المحتوى</div><div class="st"><small>3</small><b>Layout</b>تنظيم الصفحة</div><div class="st"><small>4</small><b>Visual Design</b>الشكل</div><div class="st"><small>5</small><b>Prototype</b>التفاعل</div></div>
+<p>مفيش موقع ناجح بيبدأ بالألوان والصور. بيبدأ بفهم المحتوى وتنظيمه. مرحلة الـ ${T("Layout")} بتيجي <b>بعد فهم المحتوى</b> و<b>قبل اختيار الـ fonts والألوان والصور النهائية</b>.</p>
+<p>المصطلحات الأساسية: ${T("Web Layout")}، ${T("Grid System")}، ${T("Page Structure")}، ${T("Visual Hierarchy")}، ${T("Structural Layout")}.</p>
+</section>
+
+<section class="sec px"><h2>2. What Is Web Layout?</h2>
+<div class="def"><b>Web Layout</b> is the way in which the elements inside a web page are <b>organized and distributed</b> to achieve clarity and ease of browsing. It is the <b>visual structure</b> of the page.</div>
+<h3>The 5 pillars</h3>
+<div class="cards">
+<div class="card"><span class="k">Position</span><p>كل عنصر متحط فين.</p></div>
+<div class="card"><span class="k">Size</span><p>حجم كل عنصر.</p></div>
+<div class="card"><span class="k">Spacing</span><p>المسافة بين وحوالين العناصر.</p></div>
+<div class="card"><span class="k">Alignment</span><p>العناصر مترصصة مع بعض إزاي.</p></div>
+<div class="card"><span class="k">Hierarchy</span><p>ترتيب الأهمية بين العناصر.</p></div>
+</div>
+<div class="tip">الديزاينر مش بيسأل "هنحط إيه في الصفحة؟"، بيسأل 3 أسئلة: <b>هيتحط فين؟ هيبقى حجمه قد إيه؟ علاقته بباقي العناصر إيه؟</b></div>
+</section>
+
+<section class="sec px"><h2>3. Components of a Web Page</h2>
+<div class="tbl"><table>
+<tr><th>Component</th><th>Role</th></tr>
+<tr><td class="ltr">Header</td><td>أعلى الصفحة: الهوية والأدوات الأساسية (logo, brand name, search, user actions). أول حاجة اليوزر بيشوفها فلازم تبقى واضحة.</td></tr>
+<tr><td class="ltr">Navigation</td><td>التنقل بين الصفحات: تتنقل، تعرف انت فين في الموقع، وتوصل للمحتوى بسهولة.</td></tr>
+<tr><td class="ltr">Hero Section</td><td>منطقة بارزة في أول الصفحة فيها الرسالة الأساسية.</td></tr>
+<tr><td class="ltr">Main Content</td><td>المنطقة الأساسية للمعلومات.</td></tr>
+<tr><td class="ltr">Sidebar</td><td>منطقة جانبية لمعلومات إضافية أو navigation إضافي.</td></tr>
+<tr><td class="ltr">Footer</td><td>links ومعلومات إضافية و social media ووسائل التواصل.</td></tr>
+</table></div>
+<div class="tip">مش كل موقع لازم يبقى فيه كل الأجزاء دي. والفرق: <b>Header = identity & tools</b>، و <b>Navigation = يساعد الزائر يلاقي طريقه</b>.</div>
+<h3>Hero Section</h3>
+<p>ممكن يكون فيها: ${T("Main image")}، ${T("Headline")}، ${T("Short description")}، و ${T("Call to Action (CTA)")}.</p>
+<p>الـ Hero <b>مش مجرد صورة كبيرة</b>؛ هي منطقة ليها function: بتقدم فكرة الموقع أو أهم رسالة. مثال موقع سياحي: صورة المكان، اسمه، جملة تعريفية، وزرار اشتراك.</p>
+</section>
+
+<section class="sec px"><h2>4. Grid System</h2>
+<p>الـ grid بيساعد الديزاينر: ينظم العناصر، يحقق alignment، يتحكم في الـ spacing، يحقق consistency، ويخلي الصفحة أسهل في القراءة. هو ${T("invisible network")}؛ اليوزر مش بيشوفه لكن بيحس بنتيجته.</p>
+<div class="tbl"><table>
+<tr><th>Term</th><th>Meaning</th></tr>
+<tr><td class="ltr">Columns</td><td>التقسيمات الرأسية اللي المحتوى بيتحط فيها.</td></tr>
+<tr><td class="ltr">Rows</td><td>الشرايط الأفقية للمحتوى.</td></tr>
+<tr><td class="ltr">Gutters</td><td>المسافات <b>بين</b> الأعمدة.</td></tr>
+<tr><td class="ltr">Margins</td><td>المسافة بين المحتوى و<b>أطراف</b> الصفحة.</td></tr>
+</table></div>
+<h3>The 12-column grid</h3>
+<p>الـ 12-column grid <b>مش معناه</b> إنك لازم تحط 12 عنصر. ده نظام ${T("flexible")} بيسمح تقسم المساحة بطرق مختلفة وتحافظ على الـ alignment.</p>
+<div class="demo"><span class="lab">DEMO: DIVIDE THE 12 COLUMNS</span>
+<div class="chips" id="gchips"></div>
+<div class="g12" id="g12"></div>
+<p id="gnote" style="margin:0"></p></div>
+<div class="tip">أي تقسيمة لازم مجموعها <b>12</b>: 6+6، 4+8، 3+9، 4+4+4، 3+6+3.</div>
+<h3>Negative space</h3>
+<p>من أشهر أخطاء المبتدئين إنه يقرب العناصر من بعض زيادة. المسافات <b>مش فراغ ضايع</b>؛ الـ ${T("negative spaces")} (margins, gutters, padding) هي ${T("functional visual design tools")}.</p>
+</section>
+
+<section class="sec px"><h2>5. Types of Web Page Layouts</h2>
+<p>الاختيار بيعتمد على طبيعة المحتوى: صفحة مقال غير صفحة متجر، وصفحة gallery غير صفحة مؤسسة.</p>
+<div class="cards">
+<div class="card"><span class="k">Single Column</span><p>عمود واحد لمحتوى متسلسل.</p></div>
+<div class="card"><span class="k">Two Column</span><p>main content + sidebar.</p></div>
+<div class="card"><span class="k">Three Column</span><p>توزيع أوسع للمحتوى.</p></div>
+<div class="card"><span class="k">Grid Layout</span><p>grid مرن لعناصر كتير.</p></div>
+<div class="card"><span class="k">Card-based</span><p>قطع محتوى مستقلة جوه cards.</p></div>
+</div>
+<p>أنواع تانية في الصورة: split screen, asymmetrical, F-shape, Z-shape, featured image, masonry, magazine, fixed navigation, hidden navigation, interactive.</p>
+</section>
+
+<section class="sec px"><h2>6. Visual Hierarchy</h2>
+<div class="def"><b>Visual hierarchy</b> is arranging the elements according to their <b>visual importance</b>. The eye moves between elements according to the importance the designer created.</div>
+<div class="tbl"><table>
+<tr><th>Tool</th><th>Effect</th></tr>
+<tr><td class="ltr">Size</td><td>العنصر الأكبر بيشد العين الأول.</td></tr>
+<tr><td class="ltr">Position</td><td>مكان العنصر بيأثر على إمتى يتلاحظ.</td></tr>
+<tr><td class="ltr">Contrast</td><td>الاختلاف بيبرز الأولوية.</td></tr>
+<tr><td class="ltr">Spacing</td><td>المسافة بتنظم المجموعات.</td></tr>
+<tr><td class="ltr">Typography</td><td>الخط بيوجه القراءة.</td></tr>
+<tr><td class="ltr">Image</td><td>الصورة بتعمل نقطة جذب.</td></tr>
+</table></div>
+</section>
+
+<section class="sec px"><h2>7. From Layout to Illustrator</h2>
+<div class="tbl"><table>
+<tr><th>Step</th><th>Action</th><th>Purpose</th></tr>
+<tr><td>01</td><td class="ltr">Create New Document</td><td>ملف جديد مناسب للمشروع.</td></tr>
+<tr><td>02</td><td class="ltr">Artboard</td><td>تحديد الـ artboard وحجم الصفحة.</td></tr>
+<tr><td>03</td><td class="ltr">Grid</td><td>عمل الـ grid وتحديد الـ margins.</td></tr>
+<tr><td>04</td><td class="ltr">Guides</td><td>guides للـ alignment.</td></tr>
+<tr><td>05</td><td class="ltr">Layers</td><td>تنظيم الـ layers عشان التعديل يبقى سهل.</td></tr>
+</table></div>
+<p>الـ ${T("Rectangular Grid Tool")} بيعمل grid من rows و columns تستخدمه كمرجع. والـ structure بيتبني بـ rectangles و simple shapes و guides و text placeholders.</p>
+<h3>Hands-on: Homepage</h3>
+<p>الأقسام: Header، Navigation، Hero، Content Sections، Cards، Footer.</p>
+<div class="pipe"><div class="st"><small>1</small><b>Artboard</b></div><div class="st"><small>2</small><b>Grid</b></div><div class="st"><small>3</small><b>Sections</b></div><div class="st"><small>4</small><b>Alignment</b></div><div class="st"><small>5</small><b>Spacing</b></div></div>
+<p>التمرين <b>مش</b> بيطلب ألوان وصور نهائية؛ بيطلب ${T("organized structure")} تتطور بعدين. ولو الصفحة طالعة unbalanced من غير grid، الحل ${T("establish a grid and use guides")} مش إنك تزود ألوان.</p>
+<h3>Assignment</h3>
+<p>اختار فكرة (Portfolio / Education / Museum) واعمل ${T("Homepage Structural Layout")} بـ Artboard, Grid, Guides, Shapes, Alignment, Spacing، <b>من غير ألوان ومن غير صور نهائية</b>.</p>
+<h3>Course workflow</h3>
+<p class="ltr">Illustrator structural layout → XD wireframe / prototype → Photoshop image preparation → Illustrator visual design → XD final interactive prototype</p>
+</section>
+
+<section class="sec px"><h2>8. Choosing the Layout by Context</h2>
+<p>مفيش layout واحد ينفع للكل: ${T("goal, audience, content")} هم اللي بيحددوا.</p>
+<div class="tbl"><table>
+<tr><th>Website</th><th>Priority</th><th>Layout decision</th></tr>
+<tr><td class="ltr">Museum</td><td>${T("Emotional visual experience")}: صور عالية الجودة، معلومات عملية (tickets, hours, prices, events)، virtual tours.</td><td>مساحة أكبر للصورة، ومسارات واضحة للزيارة والاستكشاف.</td></tr>
+<tr><td class="ltr">University</td><td>${T("Information architecture & comprehensiveness")}: جمهور متنوع، student portal و timetables، ${T("mega menus")}، و internal search.</td><td>الثقة بتيجي من الوضوح وسهولة الوصول.</td></tr>
+<tr><td class="ltr">Personal portfolio</td><td>${T("Identity & quick persuasion")}: gallery للشغل، CV و recommendations كـ ${T("social proof")}.</td><td>القصة: identity → evidence → next step، و CTA واحد واضح.</td></tr>
+</table></div>
+</section>`},
+
+"3":{title:"Website Elements & Visual Identity",ar:"عناصر الموقع والهوية البصرية",sub:"3 Layers · Interface Elements · Principles · 12-col · 8px · Containers · Breakpoints · Site Types · Illustrator",
+hello:"المحاضرة دي مليانة أرقام: 8px و breakpoints و containers. ركز في الجداول.",
+html:`
+<section class="sec px"><h2>1. From Structure to Element</h2>
+<div class="tbl"><table>
+<tr><th>Layer</th><th>Role</th></tr>
+<tr><td class="ltr">Visual structure</td><td>بيحدد <b>أماكن</b> العناصر.</td></tr>
+<tr><td class="ltr">Visual design</td><td>بيدي الـ logo والـ icons والـ buttons شكلها ووظيفتها.</td></tr>
+<tr><td class="ltr">Visual identity</td><td>بيـ<b>وحّد</b> الألوان والخطوط والعناصر في كل الصفحات.</td></tr>
+</table></div>
+</section>
+
+<section class="sec px"><h2>2. Elements of the Website Interface</h2>
+<div class="tbl"><table>
+<tr><th>Elements</th><th>Role</th></tr>
+<tr><td class="ltr">Logo · Navigation Menu</td><td>${T("point of recognition")} ومسار الوصول جوه الصفحة.</td></tr>
+<tr><td class="ltr">Buttons · Icons</td><td>${T("clear signals of action and function")}.</td></tr>
+<tr><td class="ltr">Cards · Headings & Typography</td><td>بينظموا المحتوى وبيحددوا ${T("what is read first")}.</td></tr>
+<tr><td class="ltr">Illustrations & Graphic Elements</td><td>بيدعموا الفكرة وبيدوا الـ interface ${T("visual presence")}.</td></tr>
+</table></div>
+<div class="tip">"A good element combines <b>visual clarity</b> with <b>ease of use</b>." الجملة دي متكررة في 3 محاضرات.</div>
+</section>
+
+<section class="sec px"><h2>3. One System: The Principles</h2>
+<div class="tbl"><table>
+<tr><th>#</th><th>Principle</th><th>Meaning</th></tr>
+<tr><td>01</td><td class="ltr">Unity and coherence</td><td>كل عنصر من نفس الـ visual language.</td></tr>
+<tr><td>02</td><td class="ltr">Contrast and visual hierarchy</td><td>الـ size واللون بيحددوا إيه يتشاف الأول.</td></tr>
+<tr><td>03</td><td class="ltr">Alignment and consistency</td><td>${T("Shared edges")} بتخلي الـ interface مقروءة.</td></tr>
+<tr><td>04</td><td class="ltr">White space</td><td>المساحة الفاضية بتوضح العلاقة بين العناصر.</td></tr>
+</table></div>
+<div class="tip">The working rule: مش كفاية كل عنصر يبقى حلو لوحده؛ <b>العناصر لازم تنتمي لـ system واحد</b>.</div>
+</section>
+
+<section class="sec px"><h2>4. The Layout System</h2>
+<h3>12-column grid</h3>
+<p>الأعمدة بتحدد عرض الـ cards والصور ومناطق المحتوى، والـ gutter والـ margin بيتحكموا في المسافات بين المناطق وأطراف الصفحة.</p>
+<div class="tbl"><table>
+<tr><th>Division</th><th>Use</th></tr>
+<tr><td>6+6</td><td>توزيع متوازن بين منطقتين.</td></tr>
+<tr><td>4+8</td><td>منطقة مساعدة جنب الـ main content.</td></tr>
+<tr><td>3+6+3</td><td>المحتوى في النص و side margins.</td></tr>
+<tr><td>4+4+4</td><td>3 cards متساوية.</td></tr>
+</table></div>
+<h3>Spacing system</h3>
+<div class="cards">
+<div class="card"><span class="k">Margin</span><p>المسافة <b>حوالين</b> منطقة المحتوى.</p></div>
+<div class="card"><span class="k">Gutter</span><p>المسافة <b>بين</b> الأعمدة.</p></div>
+<div class="card"><span class="k">Padding</span><p>المسافة <b>جوه</b> العنصر حوالين محتواه.</p></div>
+</div>
+<p>الـ ${T("8px system")}: القيم مضاعفات 8: <code>8 · 16 · 24 · 32 · 48 · 64</code> px. الـ fixed scale بيخلي الـ spacing consistent في الموقع كله.</p>
+<div class="demo"><span class="lab">DEMO: 8PX SPACING SCALE</span>
+<div class="sl"><span>gap</span><input type="range" id="spg" min="0" max="5" value="2" aria-label="Gap step"><span id="spgv">24px</span></div>
+<div class="sl"><span>padding</span><input type="range" id="spp" min="0" max="5" value="1" aria-label="Padding step"><span id="sppv">16px</span></div>
+<div class="spdemo" id="spd"></div></div>
+<div class="tbl"><table>
+<tr><th></th><th>Desktop</th><th>Mobile</th></tr>
+<tr><td class="ltr">Gutter</td><td>24px</td><td>16px</td></tr>
+<tr><td class="ltr">Margin</td><td>32px</td><td>20px</td></tr>
+</table></div>
+<h3>Container & breakpoints</h3>
+<p>الـ ${T("container")} = أقصى عرض لمنطقة المحتوى، والـ ${T("breakpoints")} = عروض الشاشة اللي الـ layout بيتغير عندها. القيم دي ${T("reference values","m")} <b>مش قواعد إجبارية</b>.</p>
+<div class="two">
+<div class="tbl"><table><tr><th>Container</th><th>Use</th></tr><tr><td>1140px</td><td class="ltr">Reading</td></tr><tr><td>1280px</td><td class="ltr">General layouts</td></tr><tr><td>1440px</td><td class="ltr">Image-dependent designs</td></tr></table></div>
+<div class="tbl"><table><tr><th>Breakpoint</th><th>Width</th></tr><tr><td class="ltr">Mobile</td><td>375px</td></tr><tr><td class="ltr">Tablet</td><td>768px</td></tr><tr><td class="ltr">Laptop</td><td>1024px</td></tr><tr><td class="ltr">Desktop</td><td>1280px</td></tr><tr><td class="ltr">Large screens</td><td>1440px</td></tr></table></div>
+</div>
+</section>
+
+<section class="sec px"><h2>5. Same Grid, Different Intent</h2>
+<div class="tbl"><table>
+<tr><th></th><th>Educational</th><th>Museum</th><th>Portfolio</th></tr>
+<tr><td>Priority</td><td>Clarity, organization, classification</td><td>Wide spaces, large images, immersive</td><td>Fewest distractions, work highlighted</td></tr>
+<tr><td>Container</td><td>≈1280px</td><td>≈1440px / full width</td><td>1320–1440px</td></tr>
+<tr><td>Header</td><td>64–72px</td><td>≈80px</td><td>72px</td></tr>
+<tr><td>Gutter</td><td>—</td><td>32px</td><td>16–20px</td></tr>
+<tr><td>Section spacing</td><td>—</td><td>120–200px</td><td>64–80px</td></tr>
+<tr><td>Patterns</td><td class="ltr">Sidebar + course grid; 8+4 course page</td><td class="ltr">Editorial, Archive Grid, Timeline</td><td class="ltr">Minimal Grid, List/Index, Full-Screen, Masonry</td></tr>
+</table></div>
+<h3>Educational website</h3>
+<p>Sidebar حوالي <b>280px</b>، و ${T("course card")}: image, title, instructor, rating. صفحة الكورس <b>8 + 4</b> والنص لحد <b>720px</b>.</p>
+<div class="cards">
+<div class="card"><span class="k">Marketplace</span><p>grid of courses with filters.</p></div>
+<div class="card"><span class="k">LMS Dashboard</span><p>fixed curriculum list.</p></div>
+<div class="card"><span class="k">Single Instructor</span><p>مدرس واحد وكورساته وآراء الطلبة.</p></div>
+<div class="card"><span class="k">Gamified Learning</span><p>interactive path of lessons.</p></div>
+</div>
+<h3>Museum website</h3>
+<div class="cards">
+<div class="card"><span class="k">Editorial</span><p>صورة ونص في visual narrative متدرج.</p></div>
+<div class="card"><span class="k">Archive Grid</span><p>grid منظم لاستكشاف الـ collection.</p></div>
+<div class="card"><span class="k">Timeline</span><p>تصفح الأعمال والأحداث عبر الزمن.</p></div>
+</div>
+<h3>Portfolio website</h3>
+<p>Structure: ${T("Work / About / Contact")}. <b>مشروعين في الصف، كل واحد 6 columns</b>.</p>
+<div class="cards">
+<div class="card"><span class="k">Minimal Grid</span><p>grid هادي يبرز الشغل.</p></div>
+<div class="card"><span class="k">List / Index</span><p>قائمة سريعة في التصفح.</p></div>
+<div class="card"><span class="k">Full-Screen</span><p>شغلانة واحدة مالية الشاشة.</p></div>
+<div class="card"><span class="k">Masonry / Brutalist</span><p>توزيع asymmetric بتقسيمة <b>8 + 4</b>.</p></div>
+</div>
+</section>
+
+<section class="sec px"><h2>6. Layout Design Checklist</h2>
+<div class="two">
+<div class="card"><span class="k">System</span><p>A clear grid · A suitable container · A fixed spacing system · <b>Choose the layout before the elements</b></p></div>
+<div class="card"><span class="k">Verification</span><p>Basic screen sizes · Consistency between pages · Review of alignment and rhythm</p></div>
+</div>
+</section>
+
+<section class="sec px"><h2>7. In Illustrator: Setting Up a Web Layout</h2>
+<div class="tbl"><table>
+<tr><th>Task</th><th>How</th></tr>
+<tr><td>New web document</td><td>تاب <b>Web</b> في New Document: <b>Web-Large 1920×1080</b> أو <b>1440×900</b>. الوحدة <b>Pixels</b>، الـ color mode <b>RGB</b>، و Raster Effects <b>72 ppi</b> (الـ 300 ppi للطباعة).</td></tr>
+<tr><td>Artboards</td><td>artboard لكل screen size (desktop و laptop مثلاً).</td></tr>
+<tr><td>Rulers</td><td><kbd>Ctrl/Cmd + R</kbd>، والـ guides بتتسحب منها: من الـ ruler اللي فوق للأفقي ومن اللي على الجنب للرأسي.</td></tr>
+<tr><td>Shape → guide</td><td>اختار الـ rectangle ثم <b>View &gt; Guides &gt; Make Guides</b> (و Release Guides يرجعها).</td></tr>
+<tr><td>Columns with gutters</td><td><b>Object &gt; Path &gt; Split Into Grid</b>: حدد عدد الأعمدة والـ Gutter. 12 عمود فيهم <b>11 gutter</b>.</td></tr>
+<tr><td>Document grid</td><td><b>View &gt; Show Grid</b> <kbd>Ctrl/Cmd + '</kbd>، والمسافات من <b>Preferences &gt; Guides &amp; Grid</b> (مثلاً 8px).</td></tr>
+<tr><td>Smart Guides</td><td><kbd>Ctrl/Cmd + U</kbd>: خطوط alignment ومقاسات وانت بتحرك.</td></tr>
+<tr><td>Lock guides</td><td><b>View &gt; Guides &gt; Lock Guides</b> عشان متحركهاش بالغلط.</td></tr>
+</table></div>
+<h3>Grayscale wireframe</h3>
+<ul class="l">
+<li>بيترسم <b>gray</b> الأول عشان تركز على الـ structure والـ spacing والـ hierarchy قبل الألوان.</li>
+<li>${T("Rectangle Tool")} للـ header و hero و footer، ${T("Rounded Rectangle")} للزرار، و ${T("Ellipse + Shift")} للـ avatar.</li>
+<li>الـ image placeholder = مستطيل gray وممكن بخطين متقاطعين.</li>
+<li>الـ hierarchy بتبان بفرق الـ <b>size</b> و<b>درجة الرمادي</b>.</li>
+<li>${T("Layers panel")} للأقسام (Header, Hero, Content, Footer)، و ${T("Align panel")} للـ align و distribute.</li>
+<li>الترتيب: grid & guides → big blocks → details (cards, buttons, text).</li>
+</ul>
+</section>`},
+
+"4":{title:"Logo Design",ar:"تصميم اللوجو",sub:"Definition · Strategy · Evolution · Criteria · Types · Ideas · Egyptian Museums · Stages · Illustrator",
+hello:"اللوجو: التعريف، الـ 10 معايير، والأنواع السبعة. الأنواع دي أهم حاجة.",
+html:`
+<section class="sec px"><h2>1. What Is a Logo?</h2>
+<div class="def">A <b>logo</b> is a symbol that expresses a <b>product, a company or a service</b>. It must deliver its message clearly to the target audience. It is also the <b>identity of the quality</b> of the service provided.</div>
+<p>المحاضرة بتبدأ أول عنصر من عناصر الـ interface (Logo · Navigation، Buttons · Icons، Cards · Typography، Illustrations).</p>
+</section>
+
+<section class="sec px"><h2>2. Logo Design Strategy</h2>
+<div class="cards">
+<div class="card"><span class="k">Understand the business</span><p>تفهم طبيعة شغل المؤسسة عشان تصمم بدقة.</p></div>
+<div class="card"><span class="k">Research the competitors</span><p>تعرف الـ visual identity بتاعتهم.</p></div>
+<div class="card"><span class="k">Know the target audience</span><p>تفهم الجمهور وتفضيلاته.</p></div>
+<div class="card"><span class="k">Think long term</span><p>اللوجو لازم يعيش سنين قدام التغيير والتطور.</p></div>
+</div>
+</section>
+
+<section class="sec px"><h2>3. The Evolution of Logos</h2>
+<p>التطور دايماً رايح ناحية ${T("simplicity and the ability to adapt")} عشان البراند يفضل في دماغ الناس.</p>
+<div class="two">
+<div class="card"><span class="k">Concord Museum</span><p>Concord, Massachusetts, USA. متحف تاريخ محلي + decorative arts. اتغير في <b>1990، 2003، 2023</b>: من emblem شبه الختم لـ typographic marks بسيطة.</p></div>
+<div class="card"><span class="k">Natural History Museum, London</span><p>مؤسسة علمية وتعليمية. 3 نسخ: <b>before 2004</b>، <b>2004–2023</b>، <b>2023–present</b>.</p></div>
+</div>
+</section>
+
+<section class="sec px"><h2>4. Criteria for Logo Design</h2>
+<div class="tbl"><table>
+<tr><th>Criterion</th><th>Meaning</th></tr>
+<tr><td class="ltr">Meaning (relevance)</td><td>يعبر بوضوح عن المنتج أو نشاط الشركة.</td></tr>
+<tr><td class="ltr">Simplicity</td><td>بسيط و<b>symbol واحد</b> مميز. الناس بتشوفه لحظة (ماشي أو في المواصلات).</td></tr>
+<tr><td class="ltr">One typeface</td><td><b>نوع خط واحد</b> للعربي أو الإنجليزي، والنص متناسق.</td></tr>
+<tr><td class="ltr">Limited color</td><td>لون واحد، أو اتنين بالكتير، <b>من غير gradients ولا shadows</b>.</td></tr>
+<tr><td class="ltr">Works on white and black</td><td>يتستخدم على خلفية بيضا وسودا.</td></tr>
+<tr><td class="ltr">Versatility</td><td>ينفع في أحجام كبيرة جداً (billboards) وصغيرة جداً (business cards, pins) من غير ما يخسر ملامحه.</td></tr>
+<tr><td class="ltr">Legibility</td><td>النص يتقري بسهولة من أول نظرة.</td></tr>
+<tr><td class="ltr">Distinctiveness</td><td>مميز ومختلف عشان يشد الانتباه.</td></tr>
+<tr><td class="ltr">Attracting attention</td><td>يلفت النظر من أول مرة ويسيب انطباع كويس.</td></tr>
+<tr><td class="ltr">Avoiding trends</td><td>متمشيش ورا الموضة عشان يتستخدم في أي وقت وأي مكان.</td></tr>
+</table></div>
+</section>
+
+<section class="sec px"><h2>5. Types of Logos</h2>
+<p>3 مجموعات: ${T("word-based")}، ${T("shape-based")}، و${T("word-and-shape")}.</p>
+<div class="tbl"><table>
+<tr><th>Group</th><th>Type</th><th>الوصف</th></tr>
+<tr><td rowspan="2" class="ltr">Word-based (Wordmark / Logotype)</td><td class="ltr">Word Mark</td><td>بيميز <b>اسم البراند</b> (Google, Coca-Cola).</td></tr>
+<tr><td class="ltr">Letter Mark</td><td>للبراندات ذات <b>الأسماء الطويلة</b> (IBM, CNN).</td></tr>
+<tr><td rowspan="2" class="ltr">Shape-based (Symbol / Logomark)</td><td class="ltr">Logo Symbol</td><td>مميز وسهل التعرف و<b>مش محتاج نص</b> (Apple, Twitter bird).</td></tr>
+<tr><td class="ltr">Abstract Mark</td><td>بيحرك المشاعر <b>من غير صورة معروفة</b>؛ للبراندات اللي عايزة تتميز (Pepsi, Nike).</td></tr>
+<tr><td rowspan="3" class="ltr">Word-and-shape (Combination)</td><td class="ltr">Combination Mark</td><td>بيقوي الـ visual identity ويضمن التعرف على البراند.</td></tr>
+<tr><td class="ltr">Emblem Logo</td><td>إحساس <b>traditional & trustworthy</b>؛ مدارس، جامعات، جهات حكومية (Harvard).</td></tr>
+<tr><td class="ltr">Mascot Logo</td><td>entertainment marketing؛ لـ <b>العيلات والأطفال</b> لأنه بيقرب البراند ويخليه friendly.</td></tr>
+</table></div>
+<div class="tip">الأسئلة بتجيب الوصف وتسألك النوع: "long names" = Letter Mark، "no text" = Logo Symbol، "no known image" = Abstract، "universities" = Emblem، "children" = Mascot.</div>
+</section>
+
+<section class="sec px"><h2>6. The Idea of the Logo</h2>
+<div class="cards">
+<div class="card"><span class="k">Direct · service</span><p>بيوري حاجة مرتبطة بالخدمة (فنجان قهوة لكافيه).</p></div>
+<div class="card"><span class="k">Direct · name</span><p>بيوري حاجة مرتبطة باسم البراند (تفاحة Apple).</p></div>
+<div class="card"><span class="k">Indirect idea</span><p>بيوصل فكرة معينة بشكل غير مباشر (FedEx, Amazon).</p></div>
+</div>
+</section>
+
+<section class="sec px"><h2>7. Egyptian Museum Logos</h2>
+<p>لوجو المتحف بيعكس الـ cultural & civilizational identity: طبيعة الـ collection، رسالة المتحف، أو شكل المبنى نفسه.</p>
+<div class="tbl"><table>
+<tr><th>Museum</th><th>Simplicity</th><th>Shape & color</th></tr>
+<tr><td class="ltr">Grand Egyptian Museum (GEM)</td><td><b>Very high</b>: شكل بسيط بلون واحد، سهل يتصغر ويتطبع ويتحرك.</td><td>abstract geometric مستوحى من <b>المسقط الأفقي للمبنى</b> (top view)، <b>برتقالي دافي</b> زي الشمس على هضبة الجيزة. أقوى international brand.</td></tr>
+<tr><td class="ltr">NMEC (Civilization)</td><td><b>Medium–high</b>: واضح لكن الـ <b>gold gradient</b> بيصعب الطباعة بلون واحد.</td><td><b>Wordmark</b> من غير symbol، navy و gold. الاختصار NMEC سهل كـ hashtag.</td></tr>
+<tr><td class="ltr">Egyptian Museum, Tahrir</td><td><b>Low</b>: التفاصيل والظلال بتضيع لما يصغر.</td><td>رسم تفصيلي للواجهة التاريخية بـ embossed effect، أقرب لـ illustration من logo.</td></tr>
+<tr><td class="ltr">Museum of Islamic Art, Cairo</td><td><b>Medium</b>: الـ symbol قوي لوحده كـ icon.</td><td><b>نجمة سداسية</b> بحلقات متداخلة من مبادئ الزخرفة الإسلامية.</td></tr>
+</table></div>
+</section>
+
+<section class="sec px"><h2>8. Stages of Logo Design</h2>
+<div class="pipe">
+<div class="st"><small>01</small><b>Mood Board</b>collage صور ولوجوهات وألوان وخامات (visual feeding).</div>
+<div class="st"><small>02</small><b>Several designs</b>ارسم أكتر من فكرة وقارن، متقفش على أول فكرة.</div>
+<div class="st"><small>03</small><b>Fonts</b>عربي وإنجليزي متناسقين (Google Fonts).</div>
+<div class="st"><small>04</small><b>Color palette</b>tool يطلع ألوان من صورة، أو Color Hunt.</div>
+</div>
+</section>
+
+<section class="sec px"><h2>9. In Illustrator: Building the Logo</h2>
+<div class="tbl"><table>
+<tr><th>Tool</th><th>Use</th></tr>
+<tr><td class="ltr">Pen Tool <kbd>P</kbd></td><td>paths دقيقة بالـ anchor points. <b>Click & drag</b> يعمل curve، <b>Shift</b> يقفل على 45°، والضغط على أول نقطة بيقفل الشكل.</td></tr>
+<tr><td class="ltr">Curvature Tool <kbd>Shift + ~</kbd></td><td>curves ناعمة بكليكات بسيطة؛ <b>double-click</b> يقلب النقطة smooth/corner.</td></tr>
+<tr><td class="ltr">Direct Selection <kbd>A</kbd></td><td>تعديل الـ anchor points والـ handles (الـ <kbd>V</kbd> بيحرك الشكل كله).</td></tr>
+<tr><td class="ltr">Anchor Point Tool <kbd>Shift + C</kbd></td><td>تحويل smooth ↔ corner.</td></tr>
+<tr><td class="ltr">Pathfinder</td><td><b>Window &gt; Pathfinder</b>: <b>Unite</b> يدمج، <b>Minus Front</b> يقص الأمامي من الخلفي، <b>Intersect</b> يسيب المنطقة المشتركة.</td></tr>
+<tr><td class="ltr">Shape Builder <kbd>Shift + M</kbd></td><td>اسحب على المناطق تدمجها، و <b>Alt/Option + click</b> تمسح منطقة.</td></tr>
+<tr><td class="ltr">Create Outlines <kbd>Shift + Ctrl/Cmd + O</kbd></td><td>النص يبقى vector shapes ومش معتمد على font متسطب.</td></tr>
+<tr><td class="ltr">Outline Stroke</td><td><b>Object &gt; Path &gt; Outline Stroke</b>: الـ strokes تبقى filled shapes قبل الـ Pathfinder.</td></tr>
+</table></div>
+<ul class="l"><li>اختبره على مستطيل أبيض ومستطيل أسود.</li><li>احفظه <b>vector</b> (AI, SVG, PDF) عشان يتكبر من غير ما يبوظ، وطلّع PNG/JPEG لما تحتاج.</li></ul>
+</section>`},
+
+"5":{title:"Designing Website Elements",ar:"تصميم عناصر الموقع",sub:"Menus · Buttons · Icons · Cards · Typography · Graphics · Visual Consistency · Museum Colors",
+hello:"آخر محاضرة: كل عنصر وقواعده. وفي الآخر ألوان المتاحف وعلم نفس الألوان.",
+html:`
+<section class="sec px"><h2>1. Elements of the Interface</h2>
+<p>الـ focus على الـ visual structure والـ layout <b>قبل الألوان</b>، وبعدين تصميم كل عنصر لوحده.</p>
+<div class="tbl"><table>
+<tr><th>Elements</th><th>Role</th></tr>
+<tr><td class="ltr">Logo · Navigation Menu</td><td>نقطة التعرف وطريقة التنقل في الموقع.</td></tr>
+<tr><td class="ltr">Buttons · Icons</td><td>clear signals of action and function.</td></tr>
+<tr><td class="ltr">Cards · Headings & Typography</td><td>تنظيم المحتوى وتحديد إيه يتقري الأول.</td></tr>
+<tr><td class="ltr">Illustrations & Graphic Elements</td><td>دعم الفكرة والـ visual presence.</td></tr>
+</table></div>
+</section>
+
+<section class="sec px"><h2>2. Navigation Menus & Buttons</h2>
+<div class="two">
+<div class="card"><span class="k">Navigation menus</span><p>بتنظم الـ links وتسهل الوصول لأقسام الموقع.</p></div>
+<div class="card"><span class="k">Buttons</span><p>بتوجه اليوزر يعمل <b>action محدد</b>.</p></div>
+</div>
+<ul class="l"><li>${T("Distinguish the primary element from the secondary elements")} عشان اليوزر يعرف الـ main action.</li><li>خلي بالك من الـ alignment والـ spacing والـ visual clarity.</li></ul>
+<p>أمثلة الـ nav bars: من صف links بسيط لحد bars فيها ${T("search field")} و ${T("call-to-action button")}.</p>
+</section>
+
+<section class="sec px"><h2>3. Icon Design</h2>
+<ul class="l">
+<li>${T("Express functions using simple symbols")}.</li>
+<li>${T("Unify the drawing style and the thickness of the lines")}.</li>
+<li>اهتم بالـ proportion والـ alignment.</li>
+<li>الأيقونة لازم تفضل واضحة <b>لما حجمها يصغر</b>.</li>
+</ul>
+<p>الـ icon set المتناسق: ${T("same line weight, style and proportions")} (profile, home, favorite, mail, search, settings, location).</p>
+</section>
+
+<section class="sec px"><h2>4. Card Design</h2>
+<p>الـ cards بتعرض ${T("independent pieces of content")} زي كورس تعليمي، أو artifact، أو معرض فني. الكارت فيه:</p>
+<div class="cards">
+<div class="card"><span class="k">Image</span><p>صورة أو عنصر مرئي.</p></div>
+<div class="card"><span class="k">Title + description</span><p>عنوان ووصف قصير.</p></div>
+<div class="card"><span class="k">Button / link</span><p>عشان يعرف أكتر.</p></div>
+<div class="card"><span class="k">Unified size & padding</span><p>أبعاد ومسافات داخلية موحدة.</p></div>
+</div>
+</section>
+
+<section class="sec px"><h2>5. Headings & Typography</h2>
+<ul class="l"><li>فرّق بين ${T("main heading")} و ${T("subheading")} و ${T("body text")}.</li><li>اختار sizes و weights مناسبة.</li><li>اظبط المسافة بين الحروف (letter spacing) وبين السطور (line spacing).</li><li>الهدف: ${T("readability")} و ${T("clear visual hierarchy")}.</li></ul>
+<div class="tscale">
+<div><small>H1 · 36px</small><span style="font-size:36px;font-weight:700">Main heading</span></div>
+<div><small>H2 · 28px</small><span style="font-size:28px;font-weight:600">Subheading</span></div>
+<div><small>Body · 16px</small><span style="font-size:16px">The main text of the page.</span></div>
+<div><small>Caption · 12px</small><span style="font-size:12px">Small supporting text</span></div>
+</div>
+<div class="tip">الـ font size بيعمل <b>visual priority and reading order</b>. احفظ: H1 36، H2 28، Body 16، Caption 12.</div>
+</section>
+
+<section class="sec px"><h2>6. Illustrations & Graphic Elements</h2>
+<p>بتدي الـ interface ${T("personality")}:</p>
+<ul class="l"><li>${T("geometric shapes and ornaments")}.</li><li>${T("repeating patterns")} و ${T("explanatory illustrations")}.</li><li>الألوان ${T("support the identity")} بتاعة الموقع.</li><li>${T("balance between graphics and content")}: الجرافيك ميغطيش على المحتوى.</li></ul>
+</section>
+
+<section class="sec px"><h2>7. Design Principles & Visual Consistency</h2>
+<div class="tbl"><table>
+<tr><th>Principle</th><th>What it means</th></tr>
+<tr><td class="ltr">Alignment and balance</td><td>العناصر بتشارك edges، والوزن موزع بالتساوي.</td></tr>
+<tr><td class="ltr">Contrast and hierarchy</td><td>فرق الـ size واللون والـ weight يوضح الأهم.</td></tr>
+<tr><td class="ltr">Unity and consistency</td><td>كل عنصر شكله من نفس الموقع.</td></tr>
+<tr><td class="ltr">White space</td><td>بيفصل العناصر ويدي الصفحة ${T("room to breathe")}.</td></tr>
+<tr><td class="ltr">Unified colors, shapes and spacing</td><td>نفس الـ palette ونفس الـ shape language ونفس قواعد الـ spacing.</td></tr>
+</table></div>
+<p>الـ ${T("design system")} بيجمع grid, colors, buttons, typography, icons, spacing في مرجع واحد.</p>
+<div class="tip">Conclusion: العنصر الكويس = <b>visual clarity + ease of use</b>، وشكله جزء من هوية الموقع.</div>
+</section>
+
+<section class="sec px"><h2>8. Museum Color Branding</h2>
+<p>اختيار الألوان في الـ branding ومواقع المتاحف <b>مش عشوائي</b>؛ مبني على ${T("Color Psychology")} عشان يجهز الزائر نفسياً ويقوي الهوية.</p>
+<div class="tbl"><table>
+<tr><th>Museum</th><th>Key colors</th><th>Impression</th></tr>
+<tr><td class="ltr">Art Museums</td><td><span class="sw" style="background:#000"></span><span class="sw" style="background:#fff"></span><span class="sw" style="background:#888"></span> Black, White, Gray</td><td>Modernity، إبراز المعروضات، absolute neutrality.</td></tr>
+<tr><td class="ltr">History & Antiquities</td><td><span class="sw" style="background:#6b4423"></span><span class="sw" style="background:#c8643b"></span><span class="sw" style="background:#d4a62a"></span><span class="sw" style="background:#f3e6c8"></span> Brown, Terracotta, Gold, Cream (+ Black, Navy, Gold)</td><td>Heritage، dignity، luxury، مرور الزمن.</td></tr>
+<tr><td class="ltr">Natural History</td><td><span class="sw" style="background:#2f8f4e"></span><span class="sw" style="background:#2a6fb0"></span><span class="sw" style="background:#7a5230"></span> Green, Blue, Brown</td><td>Life، sustainability، الارتباط بكوكب الأرض.</td></tr>
+<tr><td class="ltr">Science & Technology</td><td><span class="sw" style="background:#00c2e0"></span><span class="sw" style="background:#39ff14"></span><span class="sw" style="background:#000"></span> Cyan Blue, Neon, Black</td><td>The future، innovation، intelligence، الفضول العلمي.</td></tr>
+</table></div>
+</section>`}
+};
+
+/* ============ questions ============ */
+const DOCQ={"2": [{"q": "What is the main purpose of a Web Layout?", "o": ["To add animations to a website", "To organize and distribute elements within a web page", "To write HTML and CSS code", "To edit photographs"], "a": 1, "e": "A Web Layout determines how the elements of a webpage are organized, positioned, sized, and aligned to create a clear and functional structure."}, {"q": "Which of the following is commonly considered a major section of a webpage?", "o": ["Header", "Navigation", "Main Content", "All of the above"], "a": 3, "e": "A typical webpage may contain a Header, Navigation, Main Content, Hero Section, Sidebar, and Footer. Not every website must contain all of them."}, {"q": "What is the primary function of a Header?", "o": ["To display only photographs", "To provide the main visual and identification area of a website", "To replace the Footer", "To create animations"], "a": 1, "e": "The Header usually contains important elements such as the logo, brand name, navigation, search, or user-related actions."}, {"q": "What is the main purpose of Navigation in a website?", "o": ["To edit images", "To help users move between different pages or sections", "To change image resolution", "To create color palettes"], "a": 1, "e": "Navigation provides users with clear pathways to move through the website and access its different sections."}, {"q": "What is a Hero Section?", "o": ["A hidden section at the bottom of the page", "A prominent area usually located near the beginning of a webpage", "A section used only for coding", "A type of website footer"], "a": 1, "e": "The Hero Section is usually one of the most visually prominent areas of a webpage. It may contain an image, headline, description, and Call to Action."}, {"q": "What is the purpose of a Grid System in web design?", "o": ["To randomly position elements", "To organize elements and maintain alignment and consistency", "To add animations", "To compress images"], "a": 1, "e": "A Grid System provides a structured framework that helps designers organize content, maintain alignment, and create consistent spacing."}, {"q": "Which of the following are common components of a Grid System?", "o": ["Columns, Rows, and Gutters", "Brushes, Effects, and Filters", "Layers, Masks, and Channels", "Frames, Audio, and Video"], "a": 0, "e": "Columns, rows, gutters, and margins are fundamental components used to organize content within a layout."}, {"q": "What does a 12-column grid provide?", "o": ["Exactly 12 elements on every webpage", "A flexible structure for dividing the page into different proportions", "Twelve different colors", "Twelve mandatory sections"], "a": 1, "e": "A 12-column grid allows designers to create different combinations, such as 6+6, 4+8, or 3+6+3, while maintaining consistent alignment."}, {"q": "Which combination represents a valid 12-column grid division?", "o": ["4 + 4 + 4", "5 + 5 + 5", "7 + 7", "8 + 8"], "a": 0, "e": "4 + 4 + 4 equals 12 columns. This allows the designer to create three equal content areas."}, {"q": "What is a gutter?", "o": ["The space between columns in a grid", "The space inside a button", "The main webpage title", "The website footer"], "a": 0, "e": "A gutter is the space separating columns or grid areas. It prevents content from appearing crowded."}, {"q": "What is the difference between a margin and a gutter?", "o": ["A margin is between columns, while a gutter is outside the page", "A margin is the space around the content area, while a gutter separates columns", "They are exactly the same", "Neither is related to layout"], "a": 1, "e": "Margins define the space between the content and the edges of the layout, while gutters create separation between columns."}, {"q": "What is Visual Hierarchy?", "o": ["The random arrangement of visual elements", "The organization of elements according to their visual importance", "The process of exporting images", "The use of only large images"], "a": 1, "e": "Visual Hierarchy guides the viewer's attention by controlling factors such as size, position, contrast, spacing, typography, and imagery."}, {"q": "Which factor can be used to make an element more visually prominent?", "o": ["Size", "Contrast", "Position", "All of the above"], "a": 3, "e": "Size, contrast, position, spacing, typography, and imagery can all contribute to the visual hierarchy of a webpage."}, {"q": "What is the first step when creating a webpage layout in Adobe Illustrator?", "o": ["Add final photographs", "Create and set up the Artboard", "Add animations", "Export the website"], "a": 1, "e": "The Artboard provides the working area in which the webpage structure will be created. Its size should be determined according to the intended screen or design format."}, {"q": "Why is a Grid created in Adobe Illustrator when designing a webpage?", "o": ["To create random shapes", "To help organize and align webpage elements", "To automatically create HTML code", "To apply photographic effects"], "a": 1, "e": "The Grid acts as a visual framework that helps the designer position elements consistently and maintain alignment throughout the layout."}, {"q": "Which Illustrator feature can help create a structured grid for a webpage?", "o": ["Rectangular Grid Tool", "Eraser Tool", "Paintbrush Tool", "Blur Tool"], "a": 0, "e": "The Rectangular Grid Tool can be used to create a grid consisting of rows and columns, which can serve as a guide for building a web layout."}, {"q": "After creating the Artboard and Grid, what should the designer generally do next?", "o": ["Randomly add colors", "Establish the main structural sections of the webpage", "Export the file", "Add photographic filters"], "a": 1, "e": "The designer should first establish the main structure, such as Header, Navigation, Hero Section, Content Areas, and Footer, before focusing on detailed visual styling."}, {"q": "Which Illustrator elements can be used to construct the basic structure of a webpage?", "o": ["Rectangles and simple shapes", "Guides and grids", "Text objects", "All of the above"], "a": 3, "e": "Simple shapes, guides, grids, and text objects can all be used to construct a clear structural layout before applying the final visual design."}, {"q": "Why should Guides be used when creating a Visual Layout in Illustrator?", "o": ["To add animation", "To help maintain alignment and consistent positioning", "To improve image resolution", "To create website code"], "a": 1, "e": "Guides provide visual references that help the designer align elements and maintain consistent spacing throughout the page."}, {"q": "Which sequence is most appropriate for creating a basic Visual Layout in Illustrator?", "o": ["Colors → Photos → Export → Grid", "Artboard → Grid → Sections → Alignment → Spacing", "Export → Photos → Artboard → Grid", "Animation → Prototype → Grid → Artboard"], "a": 1, "e": "The structural workflow begins with setting up the Artboard, establishing the Grid, defining the main sections, aligning the elements, and controlling the spacing."}, {"q": "Why is it useful to create the structural layout before adding final colors and images?", "o": ["It makes the design easier to organize and revise", "It prevents the use of Illustrator", "It eliminates the need for typography", "It automatically creates the final website"], "a": 0, "e": "Building the structure first allows the designer to focus on composition, hierarchy, alignment, and spacing before becoming distracted by decorative details."}, {"q": "Which of the following is an appropriate way to represent a webpage section during the structural layout stage?", "o": ["Using simple rectangles to represent content areas", "Using random photographs", "Using animation effects", "Using final video files"], "a": 0, "e": "Simple shapes, especially rectangles, can represent areas such as images, cards, text blocks, and sections while the overall structure is being developed."}, {"q": "A designer creates a Homepage in Illustrator using an Artboard, Grid, Guides, rectangles, and text placeholders, but does not apply final colors or photographs. What has the designer created?", "o": ["A finished website", "A structural/visual layout", "A video prototype", "A coded webpage"], "a": 1, "e": "At this stage, the designer has established the visual and structural organization of the page without completing the final visual styling."}, {"q": "Why should Layers be organized when creating a webpage layout in Illustrator?", "o": ["To make the file easier to edit and manage", "To automatically publish the website", "To increase internet speed", "To create HTML code"], "a": 0, "e": "Organized layers make it easier to select, modify, hide, and manage different sections and elements of the webpage."}, {"q": "Which approach is most appropriate when designing the structural layout of a website in Illustrator?", "o": ["Place every element randomly and adjust it later", "Start with the page structure, establish the grid, then organize and align the elements", "Start with decorative effects", "Start by exporting the page"], "a": 1, "e": "A structured workflow produces a more consistent and professional layout and makes later stages, such as coloring and prototyping in Adobe XD, easier."}, {"q": "A student wants to design a portfolio website for an artist. Which layout would be most appropriate for presenting multiple artworks?", "o": ["A card-based or grid layout", "A text-only layout", "A footer-only layout", "A navigation-only layout"], "a": 0, "e": "A card-based or grid layout allows multiple artworks to be organized clearly while giving each artwork its own visual area."}, {"q": "A student places the logo, navigation, hero image, and content sections without using a grid or alignment guides. The page looks visually unbalanced. What is the most appropriate solution?", "o": ["Add more colors", "Add more images", "Establish a Grid and use Guides for alignment", "Remove the Header"], "a": 2, "e": "The problem is structural rather than decorative. A grid and guides can help establish consistent alignment, spacing, and proportions."}, {"q": "Which workflow best matches the course workflow discussed in the lecture?", "o": ["Photoshop → Coding → Illustrator → XD", "Illustrator structural layout → XD Wireframe/Prototype → Photoshop image preparation → Illustrator visual design → XD final interactive prototype", "XD → Photoshop → Coding → Illustrator", "Photoshop → Illustrator → Final Website without XD"], "a": 1, "e": "The course workflow gradually develops the project from structure to wireframing and interaction, then prepares visual assets and finishes the final interactive prototype in XD."}, {"q": "Why is Adobe Illustrator particularly useful for creating the structural layout of a website?", "o": ["It provides precise vector-based shapes, alignment, grids, guides, and scalable artwork", "It automatically hosts websites", "It replaces HTML and CSS", "It is designed only for photo editing"], "a": 0, "e": "Illustrator is well suited for creating precise vector-based layouts and interface elements because it provides tools for grids, guides, alignment, shapes, typography, and scalable graphics."}, {"q": "What is the main goal of the Illustrator stage before moving to Adobe XD?", "o": ["To create the website's final code", "To establish a clear and organized visual structure that can later be developed into an interactive prototype", "To edit all photographs professionally", "To publish the website online"], "a": 1, "e": "The Illustrator stage establishes the visual structure and design foundation. Adobe XD is then used to organize the screens and add navigation and interactions."}], "3": [{"q": "Which layer of website design unifies the colors, fonts and elements across the pages?", "o": ["Visual structure", "Visual design", "Visual identity", "Visual hierarchy"], "a": 2, "e": "Visual identity unifies colors, fonts and elements. Visual structure sets the places of elements; visual design gives the logo, icons and buttons their shape and function."}, {"q": "Which layer determines the places of the elements on a page?", "o": ["Visual structure", "Visual identity", "Visual design", "Typography"], "a": 0, "e": "Visual structure determines where elements are placed."}, {"q": "What is the role of Buttons and Icons in a website interface?", "o": ["Organize content and decide what is read first", "Clear signals of action and function", "Support the idea with visual presence", "Point of recognition for the brand"], "a": 1, "e": "Buttons and icons are clear signals of action and function."}, {"q": "Which elements 'organize the content and decide what is read first'?", "o": ["Logo and Navigation Menu", "Buttons and Icons", "Cards, Headings and Typography", "Illustrations and Graphic Elements"], "a": 2, "e": "Cards, headings and typography organize content and set reading order."}, {"q": "What is the working rule for designing website elements?", "o": ["Each element should be as eye-catching as possible", "Elements must belong to one system, not only look good alone", "Use a different style for each page", "Avoid repeating any element"], "a": 1, "e": "It is not enough for each element to be beautiful on its own; the elements must belong to one system."}, {"q": "Which principle says 'size and color decide what is seen first'?", "o": ["Unity and coherence", "Alignment and consistency", "White space", "Contrast and visual hierarchy"], "a": 3, "e": "Contrast and visual hierarchy control what the eye sees first."}, {"q": "What does white space do, according to the lecture?", "o": ["Wastes screen area", "Clarifies the relationship between elements", "Replaces the grid", "Makes text justified"], "a": 1, "e": "Empty space clarifies the relationship between elements."}, {"q": "Which principle means 'shared edges make the interface readable'?", "o": ["Alignment and consistency", "Unity and coherence", "Contrast", "White space"], "a": 0, "e": "Shared edges come from alignment and consistency."}, {"q": "In the 12-column grid, what do the gutter and the margin control?", "o": ["The number of columns", "The color palette", "The font size", "Distances between areas of the page and its edges"], "a": 3, "e": "Columns set widths of cards, images and content areas; gutter and margin control the distances between areas and the page edges."}, {"q": "Which 12-column division suits 'three equal cards'?", "o": ["6 + 6", "4 + 4 + 4", "3 + 6 + 3", "4 + 8"], "a": 1, "e": "4 + 4 + 4 gives three equal cards. 3 + 6 + 3 is content in the middle with side margins."}, {"q": "Which division gives a supporting area beside the main content?", "o": ["4 + 4 + 4", "6 + 6", "4 + 8", "3 + 6 + 3"], "a": 2, "e": "4 + 8 puts a supporting area beside the main content."}, {"q": "What is the gutter?", "o": ["The space around the content area", "The inner space around an element's content", "The space between the columns", "The maximum width of the page"], "a": 2, "e": "Margin is around the content area, gutter is between columns, padding is inside an element."}, {"q": "What is padding?", "o": ["The inner space around the content of an element", "The space between columns", "The space around the content area", "The width of the container"], "a": 0, "e": "Padding is the inner space around an element's content."}, {"q": "Which set of values belongs to the 8px spacing system?", "o": ["5, 10, 15, 20", "8, 16, 24, 32, 48, 64", "10, 20, 30, 40", "8, 12, 18, 24"], "a": 1, "e": "The scale is multiples of eight: 8, 16, 24, 32, 48 and 64 px. A fixed scale keeps spacing consistent."}, {"q": "What are the indicative desktop values for gutter and margin?", "o": ["Gutter 16px, margin 20px", "Gutter 32px, margin 24px", "Gutter 24px, margin 32px", "Gutter 20px, margin 16px"], "a": 2, "e": "Desktop: gutter 24px, margin 32px. Mobile: gutter 16px, margin 20px."}, {"q": "Which container width is suggested for reading?", "o": ["1140px", "1280px", "1440px", "375px"], "a": 0, "e": "1140px for reading, 1280px for general layouts, 1440px for image-dependent designs."}, {"q": "Which breakpoint width is given for Tablet?", "o": ["375px", "1024px", "768px", "1280px"], "a": 2, "e": "Mobile 375, Tablet 768, Laptop 1024, Desktop 1280, Large screens 1440."}, {"q": "The container and breakpoint values in the lecture are...", "o": ["Mandatory rules for every project", "Reference values, not mandatory rules", "Only for museum websites", "Only for mobile"], "a": 1, "e": "The lecture says they are reference values and not mandatory rules for every project."}, {"q": "Which design intent fits an educational website?", "o": ["Wide spaces and an immersive experience", "The fewest distractions, highlighting the work", "Clarity, organization and classification", "Full-screen single images"], "a": 2, "e": "Educational: clarity, organization and classification."}, {"q": "Which is a model of educational website with 'a grid of courses with filters'?", "o": ["LMS Dashboard", "Marketplace", "Single Instructor", "Gamified Learning"], "a": 1, "e": "Marketplace is a grid of courses with filters."}, {"q": "Which educational model is 'an interactive path of lessons'?", "o": ["Marketplace", "LMS Dashboard", "Gamified Learning", "Single Instructor"], "a": 2, "e": "Gamified Learning is an interactive path of lessons."}, {"q": "What does a course card contain in the educational layout?", "o": ["Image, title, instructor and rating", "Only a title", "Logo and menu", "Video and price only"], "a": 0, "e": "Course card: image, title, instructor and rating."}, {"q": "Which container and header height are given for a museum website?", "o": ["1280px, 64-72px", "1320-1440px, 72px", "About 1440px or full width, about 80px", "1140px, 48px"], "a": 2, "e": "Museum: container about 1440px or full width, header about 80px, gutter 32px, section spacing 120-200px."}, {"q": "Which museum pattern is 'an organized grid for exploring the collection'?", "o": ["Editorial", "Archive Grid", "Timeline", "Minimal Grid"], "a": 1, "e": "Archive Grid organizes the collection for exploring. Timeline browses works through time."}, {"q": "What is the section spacing for a portfolio website?", "o": ["120-200px", "16-20px", "64-80px", "8px"], "a": 2, "e": "Portfolio: container 1320-1440px, header 72px, gutter 16-20px, section spacing 64-80px."}, {"q": "In the portfolio layout, how many columns does each project take when two are shown per row?", "o": ["4 columns", "6 columns", "3 columns", "12 columns"], "a": 1, "e": "Two projects per row, each taking 6 columns."}, {"q": "Which portfolio pattern uses an asymmetric 8 + 4 division?", "o": ["Minimal Grid", "Full-Screen", "List / Index", "Masonry / Brutalist"], "a": 3, "e": "Masonry / Brutalist is an asymmetric distribution with an 8 + 4 column division."}, {"q": "According to the checklist, what comes first?", "o": ["Choose the layout before the elements", "Choose icons first", "Pick colors first", "Write the content last"], "a": 0, "e": "The checklist's System group ends with: choose the layout before the elements."}, {"q": "Which item belongs to the checklist's Verification group?", "o": ["A fixed spacing system", "A clear grid", "Basic screen sizes", "A suitable container"], "a": 2, "e": "Verification: basic screen sizes, consistency between pages, review of alignment and rhythm."}, {"q": "In Illustrator's New Document dialog, which tab holds presets for web page design?", "o": ["Print", "Web", "Film & Video", "Art & Illustration"], "a": 1, "e": "The Web tab has screen presets such as Web-Large (1920 x 1080 px) and 1440 x 900 px."}, {"q": "What size is the Web-Large preset used for HD screens?", "o": ["1440 x 900 px", "1920 x 1080 px", "375 x 812 px", "768 x 1024 px"], "a": 1, "e": "Web-Large is 1920 x 1080 px (Full HD)."}, {"q": "What is the other web preset in the image, used for smaller laptop screens?", "o": ["1440 x 900 px", "1280 x 1920 px", "1080 x 1920 px", "900 x 1440 px"], "a": 0, "e": "The second preset is 1440 x 900 px, with a smaller artboard than Web-Large."}, {"q": "Which unit is used when creating a web page artboard?", "o": ["Pixels (px)", "Millimeters", "Inches", "Points only"], "a": 0, "e": "Web layouts are measured in pixels. Print uses mm, inches or points."}, {"q": "Which color mode should the new web document use?", "o": ["CMYK", "RGB", "Grayscale only", "Lab"], "a": 1, "e": "Web designs are for screens, so RGB. (The Web presets already use RGB.)"}, {"q": "Which Raster Effects resolution is set for screen design?", "o": ["72 ppi", "300 ppi", "600 ppi", "1200 ppi"], "a": 0, "e": "Screen (72 ppi) is used for web. 300 ppi (High) is for print."}, {"q": "How many artboards does a single-page web layout need to start with?", "o": ["One artboard for each screen size you design (for example desktop and smaller laptop)", "Always 10", "None", "Only one for every project"], "a": 0, "e": "You can create one artboard per screen size, or separate files, to design each version."}, {"q": "What is the shortcut to show or hide rulers?", "o": ["Ctrl/Cmd + R", "Ctrl/Cmd + G", "Ctrl/Cmd + U", "Ctrl/Cmd + Y"], "a": 0, "e": "Ctrl/Cmd + R toggles rulers (View > Rulers > Show Rulers). Guides are pulled out of them."}, {"q": "How do you create a guide from a ruler?", "o": ["Click and drag from the top or left ruler onto the artboard", "Press Delete", "Use the Eraser Tool", "Save the file as PDF"], "a": 0, "e": "Drag from the horizontal ruler for horizontal guides and from the vertical ruler for vertical guides."}, {"q": "How do you turn a drawn rectangle into a guide?", "o": ["Select it, then View > Guides > Make Guides", "Press Ctrl/Cmd + S", "Group it", "Change its color to gray"], "a": 0, "e": "View > Guides > Make Guides converts a selected object into a guide. Release Guides turns it back into an object."}, {"q": "Which tool creates evenly spaced columns with gutters in one step?", "o": ["Object > Path > Split Into Grid", "Edit > Copy", "File > Export", "Object > Expand"], "a": 0, "e": "Draw a rectangle for the content area, choose Split Into Grid, set the columns and gutter, then make guides from them."}, {"q": "In Split Into Grid, what does the Gutter value set?", "o": ["The space between columns", "The artboard width", "The page margin", "The stroke weight"], "a": 0, "e": "Gutter is the space between columns (or rows). Margin is the space between the content area and the page edge."}, {"q": "A 12-column grid has how many gutters between the columns?", "o": ["11", "12", "13", "10"], "a": 0, "e": "Gutters sit between columns, so 12 columns have 11 gutters."}, {"q": "According to the lecture, which gutter and margin are indicative for desktop?", "o": ["Gutter 24px, margin 32px", "Gutter 16px, margin 20px", "Gutter 8px, margin 8px", "Gutter 64px, margin 64px"], "a": 0, "e": "Desktop: gutter 24px, margin 32px. Mobile: gutter 16px, margin 20px."}, {"q": "Which command shows the document grid in Illustrator?", "o": ["View > Show Grid (Ctrl/Cmd + ')", "File > Show Grid", "Edit > Grid", "Window > Grid"], "a": 0, "e": "View > Show Grid displays the grid; Snap to Grid makes objects stick to it."}, {"q": "Where do you change the grid spacing (Gridline every, Subdivisions)?", "o": ["Preferences > Guides & Grid", "File > Document Setup", "Window > Layers", "Object > Transform"], "a": 0, "e": "Preferences > Guides & Grid, for example 8px with subdivisions to follow the 8px system."}, {"q": "What does Smart Guides (Ctrl/Cmd + U) help with?", "o": ["Aligning objects to others and the artboard while you move them", "Saving the file", "Changing color mode", "Exporting JPEG"], "a": 0, "e": "Smart Guides show alignment lines and measurements as you move objects."}, {"q": "Why lock guides after creating them?", "o": ["So you do not move them by accident while drawing", "So the file becomes a PDF", "So colors change", "So the artboard is deleted"], "a": 0, "e": "View > Guides > Lock Guides prevents accidental moves."}, {"q": "Why is a web layout often first drawn in shades of gray?", "o": ["To focus on structure, spacing and hierarchy before colors and images", "Because Illustrator cannot use color", "To reduce the artboard size", "Because gray is required by JPEG"], "a": 0, "e": "A grayscale wireframe separates structure from visual identity. Color is added later."}, {"q": "Which basic shape would you use for the header, hero and footer blocks?", "o": ["Rectangle Tool", "Star Tool", "Polygon Tool", "Spiral Tool"], "a": 0, "e": "Rectangles for the main blocks such as header, hero, cards and footer."}, {"q": "Which shape suits a button in a wireframe?", "o": ["Rounded Rectangle", "Star", "Spiral", "Line only"], "a": 0, "e": "A rounded rectangle with a darker gray fill reads as a button."}, {"q": "Which basic shape is usually used for a profile picture or avatar?", "o": ["Ellipse (circle with Shift)", "Rectangle", "Triangle", "Star"], "a": 0, "e": "A circle (Ellipse Tool + Shift) is the standard avatar shape."}, {"q": "How do you make a gray fill from the Color panel?", "o": ["Set the mode to Grayscale and move the K slider, or pick a gray swatch", "Choose CMYK blue", "Use the Zoom Tool", "Choose the Eraser"], "a": 0, "e": "Use gray swatches or the Grayscale slider. Light grays for backgrounds, mid-grays for image placeholders, dark grays for text and buttons."}, {"q": "In a grayscale wireframe, how is visual hierarchy shown?", "o": ["By differences in size and tone (lighter vs darker gray)", "By using many colors", "By making all blocks the same", "By deleting the borders"], "a": 0, "e": "Size and tone create contrast: darker and larger elements draw the eye first."}, {"q": "How do you mark an image placeholder in a wireframe?", "o": ["A gray rectangle, optionally with two crossing lines", "A random star", "A red circle", "Leave the page empty"], "a": 0, "e": "A gray rectangle (with a cross) is the usual placeholder for images."}, {"q": "Which panel helps keep header, hero, content and footer organized as separate sections?", "o": ["Layers panel", "Swatches panel", "Brushes panel", "Symbols panel"], "a": 0, "e": "Create named layers (Header, Hero, Content, Footer) and lock the ones you finished."}, {"q": "Which panel evenly aligns and distributes the cards?", "o": ["Align panel", "Pathfinder panel", "Appearance panel", "Image Trace panel"], "a": 0, "e": "The Align panel aligns to the artboard or a key object and distributes spacing evenly."}, {"q": "How should the spacing between blocks be chosen?", "o": ["From the 8px scale (8, 16, 24, 32, 48, 64)", "Randomly", "Always 1px", "Only by eye with no values"], "a": 0, "e": "Use the fixed 8px scale to keep spacing consistent."}, {"q": "Which is the best order when building the wireframe?", "o": ["Place guides and grid first, then draw the large blocks, then details", "Draw colors first, then grid", "Export first, then draw", "Add text before any structure"], "a": 0, "e": "Layout before elements: grid and guides, big shapes (header, hero, sections), then cards, buttons and text."}], "4": [{"q": "What is a logo?", "o": ["A photo of the building", "A long paragraph describing a company", "A symbol that expresses a product, company or service and delivers its message clearly to the target audience", "A page layout grid"], "a": 2, "e": "A logo is a symbol expressing a product, company or service, and it must deliver its message clearly."}, {"q": "Which of these is NOT one of the four points of the logo design strategy?", "o": ["Research the competitors", "Choose gradients and shadows", "Think long term", "Understand the business"], "a": 1, "e": "The four points: understand the business, research competitors, know the target audience, think long term."}, {"q": "Why does the designer research the competitors' logos?", "o": ["To copy them exactly", "To find out about their visual identity", "To skip the sketching stage", "To avoid using any colors"], "a": 1, "e": "Researching competitors shows their visual identity, so the new logo can be distinct."}, {"q": "Why should a logo be designed with the long term in mind?", "o": ["It is only used on social media", "It only appears once", "It must last for many years despite continuous change and development", "It will be replaced every month"], "a": 2, "e": "A logo should survive many years of change and development."}, {"q": "The evolution of logos has always moved toward...", "o": ["More gradients", "Simplicity and the ability to adapt", "More details and decoration", "Longer text"], "a": 1, "e": "Brands simplify logos so they stay in consumers' minds long term and adapt to different uses."}, {"q": "In which years did the Concord Museum logo change in the lecture?", "o": ["2004 and 2023 only", "1950 only", "1990, 2003 and 2023", "1980, 1999 and 2010"], "a": 2, "e": "Concord Museum: 1990 (detailed seal-like emblem), 2003 and 2023 (simple typographic marks)."}, {"q": "How many main versions did the Natural History Museum (London) logo have?", "o": ["One", "Two: 1990 and 2023", "Five", "Three: before 2004, 2004-2023 and 2023-present"], "a": 3, "e": "Before 2004, from 2004 to 2023, and from 2023 to the present."}, {"q": "What does the criterion 'Simplicity' say about a logo?", "o": ["It should have a long paragraph", "It should contain only one distinctive symbol", "It should be full of details", "It should contain many symbols"], "a": 1, "e": "The public sees a logo for a moment, so it should be simple with one distinctive symbol."}, {"q": "How many typefaces should a logo use?", "o": ["Four different fonts", "A new font per letter", "One typeface, consistent in Arabic and English text", "No text at all"], "a": 2, "e": "One type of font for the text, whether Arabic or English."}, {"q": "What does the lecture recommend about logo color?", "o": ["As many colors as possible", "Always use shadows", "Always use gradients", "One color, or two at most, without gradients or shadows"], "a": 3, "e": "Limited color: preferably one or two, without gradients or shadows."}, {"q": "On which backgrounds must a logo work?", "o": ["Only gradients", "White and black", "Only white", "Only photos"], "a": 1, "e": "A logo must be usable on both white and black backgrounds."}, {"q": "What does 'Versatility' mean in logo criteria?", "o": ["It only works on screens", "It uses many fonts", "It changes color each day", "It suits very large sizes (billboards) and very small sizes (business cards, pins)"], "a": 3, "e": "It can be enlarged or reduced without losing its features."}, {"q": "Why should a designer avoid following trends in logo design?", "o": ["Because trends need gradients", "Because trends are expensive", "So the logo can be used at any time and in any place", "Because trends are illegal"], "a": 2, "e": "Avoiding trends keeps the logo timeless."}, {"q": "Which logo type 'helps to distinguish the name of the brand'?", "o": ["Emblem", "Abstract Mark", "Word Mark", "Mascot"], "a": 2, "e": "A word mark (logotype) is the brand name styled as the logo, like Google or Coca-Cola."}, {"q": "Which logo type is ideal for brands with long names?", "o": ["Mascot", "Logo Symbol", "Emblem", "Letter Mark"], "a": 3, "e": "A letter mark (like IBM or CNN) makes long names easy to recognize."}, {"q": "Which type is a distinctive logo that needs no accompanying text?", "o": ["Logo Symbol", "Word Mark", "Letter Mark", "Combination Mark"], "a": 0, "e": "A logo symbol (like the Apple or Twitter bird) is recognized without text."}, {"q": "Which logo type stirs feelings without forming a known image?", "o": ["Abstract Mark", "Emblem Logo", "Mascot Logo", "Word Mark"], "a": 0, "e": "Abstract marks (like Pepsi or Nike) use abstract shapes; brands use them to stand out."}, {"q": "Which type combines the word and the shape?", "o": ["Logo Symbol", "Combination Mark", "Letter Mark", "Abstract Mark"], "a": 1, "e": "A combination mark strengthens visual identity and ensures the brand is recognized."}, {"q": "Which type gives a traditional, trustworthy feeling and is often used by universities and government bodies?", "o": ["Word Mark", "Emblem Logo", "Letter Mark", "Mascot Logo"], "a": 1, "e": "Emblem logos, like Harvard's, are common for schools, universities and organizations."}, {"q": "Which type suits brands that target families and children?", "o": ["Letter Mark", "Emblem Logo", "Abstract Mark", "Mascot Logo"], "a": 3, "e": "A mascot makes the brand closer and friendlier, and is used in entertainment marketing."}, {"q": "Which three groups are logos divided into?", "o": ["Word-based, shape-based and word-and-shape combined", "Big, medium and small", "Black, white and gray", "Print, web and video"], "a": 0, "e": "Word-based, shape-based (symbolic) and compound (word and shape)."}, {"q": "A logo idea related to the brand name (like the Apple logo for Apple) is called...", "o": ["Indirect idea", "Direct idea related to the name", "Abstract mark", "Direct idea related to the service"], "a": 1, "e": "The logo shows something connected to the name of the brand."}, {"q": "A coffee-bean cup in a coffee shop logo is...", "o": ["An emblem", "An indirect idea", "A word mark", "A direct idea related to the service"], "a": 3, "e": "It shows something connected to the service that is provided."}, {"q": "FedEx and Amazon are examples of...", "o": ["Mascot logos", "Indirect ideas", "Emblem logos", "Direct ideas related to the service"], "a": 1, "e": "They deliver a specific idea to the audience, but in an indirect way."}, {"q": "Which museum logo is described as a simple single-color shape inspired by the horizontal plan of the building?", "o": ["Museum of Islamic Art", "Grand Egyptian Museum (GEM)", "The Egyptian Museum in Tahrir", "National Museum of Egyptian Civilization"], "a": 1, "e": "GEM has very high simplicity: an abstract geometric shape in warm orange."}, {"q": "Which museum logo is a wordmark with no visual symbol?", "o": ["The Egyptian Museum in Tahrir", "GEM", "Museum of Islamic Art", "National Museum of Egyptian Civilization (NMEC)"], "a": 3, "e": "NMEC is text-based; its gold gradient makes one-color printing difficult."}, {"q": "Why is the Egyptian Museum (Tahrir) logo rated low in simplicity?", "o": ["Fine details and shadows are lost when it is reduced", "It has only one color and no details", "It is only text", "It has no building"], "a": 0, "e": "Its detailed facade drawing and embossed effect are closer to an illustration than a logo."}, {"q": "Which logo uses a six-pointed geometric star with interlocking rings?", "o": ["Museum of Islamic Art in Cairo", "GEM", "NMEC", "The Egyptian Museum in Tahrir"], "a": 0, "e": "The geometric interlacing and star come from Islamic ornament principles."}, {"q": "What is the first stage of logo design?", "o": ["Choose the fonts", "Choose the color palette", "Print the logo", "Make a mood board"], "a": 3, "e": "Stages: 1 mood board, 2 draw several designs, 3 choose fonts, 4 choose color palette."}, {"q": "What is a mood board?", "o": ["A final exported file", "A collage of images, logos, colors and textures that sets the visual direction", "A type of font", "A printing machine"], "a": 1, "e": "It collects visual references ('visual feeding') before the design begins."}, {"q": "In Stage 2, what does the designer do?", "o": ["Writes the summary", "Uses the first idea only", "Chooses only colors", "Draws several different designs and compares them"], "a": 3, "e": "Rather than settling on the first idea, sketch several and compare."}, {"q": "Which websites does the lecture mention for choosing fonts and colors?", "o": ["Google Fonts and Color Hunt", "Only a calculator", "Only a printer", "Only a camera"], "a": 0, "e": "Google Fonts for English fonts, a site for Arabic fonts, Color Hunt for palettes, and a tool that picks colors from an image."}, {"q": "Which Illustrator tool is used to draw precise paths by clicking anchor points?", "o": ["Hand Tool", "Eraser Tool", "Pen Tool (P)", "Zoom Tool"], "a": 2, "e": "The Pen Tool (P) creates paths with straight and curved segments."}, {"q": "How do you make a curved segment with the Pen Tool?", "o": ["Only double-click", "Hold Caps Lock", "Click and drag to pull out direction handles", "Press Delete"], "a": 2, "e": "Click and drag when placing an anchor point; handle length and angle set the curve."}, {"q": "How do you close a shape with the Pen Tool?", "o": ["Press Ctrl/Cmd + S", "Press Tab", "Click on the first anchor point", "Click the artboard name"], "a": 2, "e": "Hover over the starting anchor point and click to close the path."}, {"q": "What does holding Shift do while placing Pen Tool points?", "o": ["Deletes the point", "Zooms in", "Constrains the segment to multiples of 45 degrees", "Changes color"], "a": 2, "e": "Shift locks segments to 45-degree angles."}, {"q": "What is the Curvature Tool good for?", "o": ["Drawing smooth curves easily by clicking points", "Changing color mode", "Exporting PDF", "Making text bold"], "a": 0, "e": "The Curvature Tool (Shift + ~) makes smooth curves with simple clicks and is easier for beginners."}, {"q": "How do you turn a smooth point into a corner point with the Curvature Tool?", "o": ["Press Escape", "Press Delete", "Change the stroke weight", "Double-click the point"], "a": 3, "e": "Double-clicking toggles between smooth and corner points."}, {"q": "Which tool selects and moves individual anchor points and handles?", "o": ["Direct Selection Tool (A)", "Selection Tool (V)", "Zoom Tool", "Artboard Tool"], "a": 0, "e": "The white arrow (A) edits anchor points and handles; the black arrow (V) moves the whole object."}, {"q": "Which tool converts a smooth point into a corner point and vice versa?", "o": ["Anchor Point Tool (Shift + C)", "Rotate Tool", "Gradient Tool", "Eraser Tool"], "a": 0, "e": "The Anchor Point (Convert) Tool switches between corner and smooth points."}, {"q": "Which basic shapes are most useful to build a geometric logo quickly?", "o": ["Ellipse, Rectangle, Polygon and Star", "Only Paintbrush", "Only Spiral", "Only Blob Brush"], "a": 0, "e": "Combine circles, squares, triangles and stars, then merge them."}, {"q": "Which Pathfinder command merges overlapping shapes into one shape?", "o": ["Exclude", "Intersect", "Unite", "Minus Front"], "a": 2, "e": "Unite merges selected shapes into a single shape."}, {"q": "Which Pathfinder command cuts the front shape out of the back shape?", "o": ["Merge", "Divide", "Minus Front", "Unite"], "a": 2, "e": "Minus Front subtracts the shapes in front from the shape at the back."}, {"q": "Which Pathfinder command keeps only the overlapping area?", "o": ["Minus Front", "Outline", "Intersect", "Unite"], "a": 2, "e": "Intersect keeps the area where all selected shapes overlap."}, {"q": "Where do you open the Pathfinder panel?", "o": ["Window > Pathfinder", "Edit > Pathfinder", "View > Pathfinder", "File > Pathfinder"], "a": 0, "e": "Window > Pathfinder (Shift + Ctrl/Cmd + F9)."}, {"q": "What is the shortcut of the Shape Builder Tool?", "o": ["Shift + C", "Shift + P", "Shift + S", "Shift + M"], "a": 3, "e": "Select shapes, then drag across regions with Shape Builder (Shift + M) to merge them."}, {"q": "How do you delete a region with the Shape Builder Tool?", "o": ["Hold Alt/Option and click the region", "Press Ctrl + Z", "Double-click the artboard", "Press Tab"], "a": 0, "e": "Alt/Option + click removes the region under the cursor."}, {"q": "Why convert text to outlines (Create Outlines, Shift + Ctrl/Cmd + O) in a logo?", "o": ["So it gets a shadow", "So it becomes vector shapes and does not depend on an installed font", "So it turns gray", "So it turns into a JPEG"], "a": 1, "e": "Outlined text keeps the same look on any computer and can be edited like a shape."}, {"q": "Why use Object > Path > Outline Stroke before using Pathfinder?", "o": ["To convert strokes into filled shapes that scale and merge correctly", "To delete the artboard", "To change document units", "To make the file smaller only"], "a": 0, "e": "Strokes become filled shapes, so scaling and Pathfinder work as expected."}, {"q": "How can you test that a logo works on white and black backgrounds?", "o": ["Place the logo on a white rectangle and on a black rectangle", "Use more colors", "Add a drop shadow", "Convert it to a photo"], "a": 0, "e": "Test it on both backgrounds, as the criteria require."}, {"q": "Which file format keeps a logo scalable without losing quality?", "o": ["A blurry PNG only", "A screenshot", "Low-resolution JPEG only", "Vector (AI, SVG or PDF)"], "a": 3, "e": "Vector formats can be enlarged or reduced without losing features. Export PNG or JPEG copies when needed."}], "5": [{"q": "According to the introduction, what comes before applying colors in this lecture?", "o": ["Printing the design", "The visual structure and the layout of the page", "Exporting the final files", "Choosing the hosting company"], "a": 1, "e": "The lecture focuses on visual structure and layout before colors, then on the individual elements."}, {"q": "Which elements form 'the point of recognition and the way to move around the site'?", "o": ["Logo and Navigation Menu", "Cards, Headings and Typography", "Illustrations and Graphic Elements", "Buttons and Icons"], "a": 0, "e": "Logo and navigation menu: recognition plus movement around the site."}, {"q": "What is the role of Buttons and Icons?", "o": ["Point of recognition", "Clear signals of action and function", "Organize content and decide what is read first", "Support the idea with visual presence"], "a": 1, "e": "Buttons and icons are clear signals of action and function."}, {"q": "Which elements 'organize the content and decide what is read first'?", "o": ["Illustrations only", "Cards, Headings and Typography", "Buttons and Icons", "Logo and Navigation Menu"], "a": 1, "e": "Cards, headings and typography organize the content and the reading order."}, {"q": "What is the role of Illustrations and Graphic Elements?", "o": ["Provide links between pages", "Organize forms", "Support the idea and give the interface its visual presence", "Set the page width"], "a": 2, "e": "They support the idea and give the interface visual presence."}, {"q": "What does a good element combine, according to the lecture?", "o": ["Animation with sound", "Many colors with many fonts", "Visual clarity with ease of use", "Large size with heavy shadows"], "a": 2, "e": "A good element combines visual clarity with ease of use."}, {"q": "What is the purpose of navigation menus?", "o": ["Guide the user to one action only", "Display independent pieces of content", "Create repeating patterns", "Organize the links and make it easy to reach the sections of the website"], "a": 3, "e": "Menus organize links and make sections easy to reach."}, {"q": "What is the purpose of buttons?", "o": ["Replace all headings", "Guide the user to carry out a specific action", "Show only the logo", "Fill the background"], "a": 1, "e": "Buttons guide the user to a specific action."}, {"q": "Which is a design guideline for menus and buttons?", "o": ["Use different alignment for each item", "Make every button look exactly the same and equally strong", "Avoid spacing between elements", "Distinguish the primary element from the secondary elements"], "a": 3, "e": "Distinguish primary from secondary and take care of alignment, spacing and visual clarity."}, {"q": "Why distinguish a primary button from secondary buttons?", "o": ["To make the page slower", "To remove the menu", "So the user can tell the main action from the supporting ones", "To hide the icons"], "a": 2, "e": "Visual difference shows which action is the most important."}, {"q": "The navigation bar examples range from a simple row of links to bars with...", "o": ["Only a logo", "Only a footer", "Only a slideshow", "A search field and a call-to-action button"], "a": 3, "e": "Figure 1 shows bars from a simple link row to bars with a search field and a call-to-action button."}, {"q": "What do icons do?", "o": ["Show long paragraphs", "Hold the page's background", "Express functions through simple symbols", "Replace the whole layout"], "a": 2, "e": "Icons express functions using simple symbols."}, {"q": "Which is an icon design guideline?", "o": ["Use a different line thickness for each icon", "Make each icon a different style", "Unify the drawing style and the thickness of the lines", "Use very detailed drawings"], "a": 2, "e": "One drawing style and one line thickness keep an icon set consistent."}, {"q": "Which icon guideline concerns small sizes?", "o": ["Add shadows to every icon", "Make sure the icon stays clear when its size is reduced", "Use a long text label inside it", "Make the icon only large"], "a": 1, "e": "Icons must remain clear when reduced."}, {"q": "What does a consistent icon set share, as in the lecture figure?", "o": ["Random colors only", "The same line weight, style and proportions", "Different styles and weights", "Different sizes only"], "a": 1, "e": "The figure shows the same line weight, style and proportions across icons."}, {"q": "What are cards used to display?", "o": ["The main navigation bar", "Only the footer text", "The page background", "Independent pieces of content such as a course, an artifact or an art exhibition"], "a": 3, "e": "Cards display independent pieces of content, such as a course, artifact or exhibition."}, {"q": "Which of these does a card contain?", "o": ["Only the site logo", "Only a long article", "An image or visual element", "Only a menu"], "a": 2, "e": "A card contains an image or visual element, title and short description, a button or link, and unified dimensions and padding."}, {"q": "What text does a card normally include?", "o": ["A full chapter", "Only a copyright line", "A title and a short description", "A random paragraph"], "a": 2, "e": "A title and a short description."}, {"q": "What should a card offer so the user can continue?", "o": ["Nothing", "A hidden menu", "A long form", "A button or link to learn more"], "a": 3, "e": "A button or link to learn more."}, {"q": "Why do cards have unified dimensions and internal spacing (padding)?", "o": ["So a group of cards looks consistent and organized", "To make them different sizes", "To remove the images", "To hide the title"], "a": 0, "e": "Unified dimensions and padding keep cards consistent."}, {"q": "What should text design distinguish between?", "o": ["The main heading, the subheading and the body text", "Only colors", "Only icons", "Only photos"], "a": 0, "e": "Text design distinguishes main heading, subheading and body text."}, {"q": "Which is part of the typography guidelines?", "o": ["Remove all spacing", "Use only one size for all text", "Use the smallest font for headings", "Adjust the spacing between the letters and between the lines"], "a": 3, "e": "Control letter spacing and line spacing, choose sizes and weights, and aim for readability and hierarchy."}, {"q": "In the example type scale, what is the size of H1 (the main heading)?", "o": ["28px", "12px", "36px", "16px"], "a": 2, "e": "H1 36px, H2 28px, Body 16px, Caption 12px."}, {"q": "In the example type scale, what is the size of H2 (the subheading)?", "o": ["36px", "12px", "16px", "28px"], "a": 3, "e": "H2 is 28px."}, {"q": "In the example type scale, what is the size of body text?", "o": ["12px", "36px", "28px", "16px"], "a": 3, "e": "Body text is 16px."}, {"q": "In the example type scale, what is Caption (12px) used for?", "o": ["The main heading", "Small supporting text", "The subheading", "The main text"], "a": 1, "e": "Caption is small supporting text."}, {"q": "What does the type scale figure say about font size?", "o": ["Font size is not important", "Font size creates visual priority and reading order", "Font size only matters for icons", "Font size must be identical"], "a": 1, "e": "Larger text is read first, so size sets priority and order."}, {"q": "Which is a guideline for illustrations and graphic elements?", "o": ["Use only random photos", "Use no patterns ever", "Use geometric shapes and ornaments", "Avoid shapes completely"], "a": 2, "e": "Use geometric shapes and ornaments, repeating patterns and explanatory illustrations."}, {"q": "How should colors be used in graphic elements?", "o": ["To support the identity of the website", "Randomly on every page", "Only in the footer", "Never"], "a": 0, "e": "Colors support the identity of the website."}, {"q": "What balance should be kept in illustrations and graphics?", "o": ["No graphics at all", "A balance between the graphics and the content", "Graphics should cover all the text", "Only text with no space"], "a": 1, "e": "Graphics should add personality without overwhelming the content."}, {"q": "Which principle means 'elements share edges and the weight on the page is distributed evenly'?", "o": ["Contrast and hierarchy", "Alignment and balance", "Unity and consistency", "White space"], "a": 1, "e": "Alignment and balance."}, {"q": "Which principle uses differences in size, color and weight to show what is most important?", "o": ["Contrast and hierarchy", "White space", "Unified colors, shapes and spacing", "Alignment and balance"], "a": 0, "e": "Contrast and hierarchy."}, {"q": "Which principle means every element looks like it belongs to the same website?", "o": ["Unity and consistency", "White space", "Contrast and hierarchy", "Alignment and balance"], "a": 0, "e": "Unity and consistency."}, {"q": "What does white space do?", "o": ["Makes text unreadable", "Separates elements and gives the page room to breathe", "Fills the page with decoration", "Removes the images"], "a": 1, "e": "Empty space separates elements and gives the page room to breathe."}, {"q": "Which principle uses the same palette, shape language and spacing rules throughout?", "o": ["Alignment and balance", "Unified colors, shapes and spacing", "Contrast and hierarchy", "White space"], "a": 1, "e": "The same palette, shape language and spacing rules are used throughout."}, {"q": "What does a design system gather in one reference?", "o": ["Only the page content", "Only photos", "The grid, colors, buttons, typography, icons and spacing", "Only the logo"], "a": 2, "e": "Figure 6: a design system gathers grid, colors, buttons, typography, icons and spacing in one reference."}, {"q": "What is the lecture's conclusion about a good element?", "o": ["It should only be decorative", "It combines visual clarity with ease of use and looks like part of the website's identity", "It should have no function", "It should look different from the rest of the site"], "a": 1, "e": "A good element is clear, easy to use and part of the site's identity."}]};
+const Q=(q,o,a,e)=>({q,o,a,e});
+const OWN={
+"1":[
+Q("What is the aim of the Web Design course, according to Lecture 1?",["Only to make a nice-looking page","To understand what a website is made of, how a designer thinks, and how an idea becomes an interactive interface","To learn database programming","To learn video editing"],1,"المادة مش هدفها صفحة حلوة وبس؛ هدفها تفهم الموقع مكون من إيه والديزاينر بيفكر إزاي."),
+Q("Web design basics rest on which three ideas?",["Code, server, database","The idea, the interface and the user experience","Color, font, image","Header, body, footer"],1,"<b>Idea</b> (الموقع ليه)، <b>Interface</b> (شكله والتفاعل)، <b>User experience</b> (إحساس الاستخدام)."),
+Q("When a person opens a website, what is the correct order of what happens?",["Interacts → sees → navigates → understands","Sees → understands → navigates → interacts","Navigates → sees → interacts → understands","Understands → sees → interacts → navigates"],1,"الترتيب: <b>sees → understands → navigates → interacts</b>."),
+Q("How does a designer see a website, compared with a normal user?",["As one complete whole","As a set of elements that are deliberately arranged and planned","As a random collection of images","As code only"],1,"اليوزر بيشوفه one whole، الديزاينر بيشوفه عناصر متخططة بقصد، وحتى الـ empty spaces ليها هدف."),
+Q("Web design is defined as the planning and design of visual interfaces to present content in a way that is:",["Clear, attractive and easy to use","Long, detailed and complex","Fast, cheap and secure","Colorful, animated and loud"],0,"التعريف: <b>clear, attractive and easy to use</b>."),
+Q("Which statement about web design is correct?",["It is just Photoshop","It is just drawing a page on a computer","A web designer designs a complete experience for the user","It only means writing code"],2,"الـ web designer بيصمم <b>تجربة كاملة</b>."),
+Q("Which topics belong to website development rather than web design?",["Appearance, layout, interaction","Programming, functions, databases, running the website","User experience and typography","Color and composition"],1,"الـ Development: programming, functions, databases, operation."),
+Q("How are web design and website development related?",["They are identical","They are different but complementary","Development comes from graphic design","Design replaces development"],1,"<b>Different but complementary</b>: الديزاينر يقرر الشكل والسلوك، والـ developer يبني التكنولوجيا."),
+Q("What is the main difference between web design and graphic design?",["Web design never uses color","Web design is not only static: the user interacts with it","Graphic design uses no typography","There is no difference"],1,"الـ web design مش static؛ لازم يتصمم للاستخدام والحركة."),
+Q("Which rules from graphic design are reused in web design?",["Color, typography, composition, images and identity","SQL, HTML, PHP","Only drawing by hand","Printing and binding"],0,"قواعد الـ graphic design: <b>color, typography, composition, images, identity</b>."),
+Q("UI (User Interface) is best described as:",["How the user feels while using the website","Everything the user sees and interacts with: colors, fonts, buttons, images and spaces","The server that hosts the site","The database structure"],1,"الـ UI = كل اللي اليوزر بيشوفه ويتفاعل معاه."),
+Q("Which three questions examine the UI?",["Who? Why? What?","Visual, Interaction, Clarity","Browse, Compare, Checkout","Discover, Learn, Practice"],1,"<b>Visual</b> (الشكل والهوية)، <b>Interaction</b> (إيه يتداس)، <b>Clarity</b> (الرسالة واضحة؟)."),
+Q("Which is a main quality of good UX?",["Many animations","Speed of reaching the goal","Bright colors","Large logo"],1,"صفات الـ UX: ease of understanding, ease of navigation, <b>speed of reaching the goal</b>, comfort & trust."),
+Q("The key question of UX is:",["How does the website look?","How does the experience work?","What is the color palette?","Which font is used?"],1,"UI = how does it look؟ UX = <b>how does the experience work</b>؟"),
+Q("Which activity belongs to the UX side, according to Figure 1?",["Typography","Colors","Information architecture","Graphic design"],2,"UX: user research, scenarios, <b>information architecture</b>, wireframes & prototypes, interaction design."),
+Q("Why does a successful website need both UI and UX?",["Because UI is only for mobile","A beautiful interface without a clear experience confuses users, and a good experience needs an interface that expresses it","Because UX is about colors","It does not; one is enough"],1,"الاتنين مكملين لبعض."),
+Q("Which website component is 'the first large area the visitor sees and communicates the main message'?",["Footer","Hero Section","Navigation","Header"],1,"<b>Hero Section</b> = the first message."),
+Q("What is the role of the Call to Action (CTA)?",["Closing information","The next step: a button or link inviting the user to act","Moving between pages","Showing the site name"],1,"CTA = <b>the next step</b>."),
+Q("Which component holds closing information and secondary links?",["Hero","Header","Footer","CTA"],2,"<b>Footer</b>."),
+Q("A website that serves a cause or community rather than making a profit is:",["E-commerce","Non-profit","Media","Business"],1,"<b>Non-profit</b>."),
+Q("A website that serves entrepreneurs, typically by selling information or expertise, is:",["Portfolio","Infopreneur (entrepreneur) website","Media","Educational"],1,"<b>Entrepreneur / Infopreneur</b>."),
+Q("What is the correct purchase journey on an e-commerce website?",["Browse → Compare → Add to cart → Checkout","Checkout → Browse → Compare → Add to cart","Discover → Learn → Practice","Design → Link → Test"],0,"<b>Browse → Compare → Add to cart → Checkout</b>."),
+Q("What are the three steps of the student journey on an educational website?",["Browse, Compare, Checkout","Discover, Learn, Practice","Research, Structure, Wireframe","Sees, Understands, Interacts"],1,"<b>Discover → Learn → Practice</b>."),
+Q("What is the correct order of the five stages of website design?",["Wireframe → Research → Prototype → Structure → Visual Design","Research → Structure → Wireframe → Visual Design → Prototype","Visual Design → Research → Structure → Prototype → Wireframe","Structure → Research → Visual Design → Wireframe → Prototype"],1,"<b>Research → Structure → Wireframe → Visual Design → Prototype</b>."),
+Q("Which questions guide the Research stage?",["Where? When? How much?","Who? Why? What?","Layout, Hierarchy, Flow","Design, Link, Test"],1,"<b>Who?</b> اليوزر، <b>Why?</b> الهدف، <b>What?</b> المحتوى والـ functions."),
+Q("According to the lecture, good design starts with:",["Opening the design software","Good questions","Choosing colors","Writing code"],1,"Good design starts with <b>good questions</b>, not with opening the software."),
+Q("In the Structure stage, information is turned into:",["A logo","A clear site map","A color palette","A video"],1,"Structure = <b>site map</b>."),
+Q("A wireframe concentrates on:",["Colors and images","Structure and content before colors and images","Final photos","Animation only"],1,"Wireframe = simplified sketch قبل الألوان والصور."),
+Q("Which three things does a wireframe deal with?",["Layout, Hierarchy, Flow","Color, Font, Image","Who, Why, What","Browse, Compare, Checkout"],0,"<b>Layout</b> (فين)، <b>Hierarchy</b> (إيه الأول)، <b>Flow</b> (التنقل)."),
+Q("Which program is used for image and visual processing (mood and color)?",["Adobe Illustrator","Adobe Photoshop","Adobe XD","Notepad"],1,"<b>Photoshop</b> للصور والـ mood."),
+Q("Which program is used for logos, icons and vector graphics?",["Adobe Illustrator","Adobe Photoshop","Adobe XD","Excel"],0,"<b>Illustrator</b> للـ vector."),
+Q("Which program is used to design screens, link them and test the path?",["Photoshop","Illustrator","Adobe XD","Premiere"],2,"<b>Adobe XD</b> للـ interfaces والـ prototypes."),
+Q("What are the three steps of working in Adobe XD?",["Design the screen, Link the screens, Test the path","Browse, Compare, Checkout","Idea, Script, Voice","Research, Structure, Wireframe"],0,"<b>Design → Link → Test</b>."),
+Q("What does a static design test?",["Whether the path is usable","Appearance","The database","Server speed"],1,"Static design = still image بيختبر <b>appearance</b>."),
+Q("What does a prototype test?",["Only beauty","Whether the user's path is understandable and usable","Printing quality","File size"],1,"الـ prototype بيختبر إن المسار <b>understandable and usable</b>."),
+Q("In the museum website case study, what is the CTA?",["Exhibitions · Visit · Collections","Book your visit","The story of each piece","The museum building"],1,"CTA = <b>Book your visit</b>."),
+Q("In the museum website, which items form the Navigation?",["Exhibitions · Visit · Collections","Home · Cart · Checkout","Login · Register","News · Sports"],0,"Navigation = <b>Exhibitions · Visit · Collections</b>."),
+Q("The goal of the museum website's digital visit is to help the visitor:",["Buy products only","Discover the exhibition, understand the piece, and plan the visit","Read news","Play games"],1,"<b>Discover, understand, plan the visit</b>."),
+Q("The semester is organized around which programs?",["Photoshop, Illustrator and Adobe XD, then a final project","Word, Excel and PowerPoint","Premiere and After Effects","Blender and Maya"],0,"<b>Photoshop → Illustrator → XD → Final project</b>.")
+],
+"2":[
+Q("Which of these is NOT one of the five pillars of a web layout?",["Position","Size","Spacing","Animation"],3,"الـ 5 pillars: position, size, spacing, alignment, hierarchy."),
+Q("Instead of asking 'What will we put on the page?', the designer asks:",["Which color is nicest?","Where will it be placed? How large will it be? What is its relationship to other elements?","How much will it cost?","Which server to use?"],1,"دي أسئلة الـ layout التلاتة."),
+Q("Which 12-column division gives a narrower side area with a wide main area?",["6+6","3+9","4+4+4","3+6+3"],1,"<b>3+9</b>."),
+Q("Which layout type shows main content with a sidebar?",["Single Column","Two Column","Card-based","Three Column"],1,"<b>Two Column</b>."),
+Q("Which layout type presents independent pieces of content inside cards?",["Card-based Layout","Single Column","Two Column","Magazine"],0,"<b>Card-based</b>."),
+Q("In visual hierarchy, what does Spacing do?",["Attracts the eye first","Organizes groups","Directs reading","Creates a point of attraction"],1,"Spacing <b>organizes groups</b>. Size يشد العين، Typography يوجه القراءة، Image نقطة جذب."),
+Q("What is the priority of a university website?",["Emotional visual experience","Information architecture and comprehensiveness","Quick persuasion with one CTA","Full-screen images"],1,"University = <b>information architecture</b>، mega menus و search."),
+Q("Which navigation technique suits a university website with many departments?",["Hidden navigation only","Mega menus","No navigation","A single button"],1,"<b>Mega menus</b> لتنظيم الأقسام والبرامج."),
+Q("For a personal portfolio, the story should be ordered as:",["Evidence → identity → next step","Identity → evidence → next step","Next step → identity → evidence","Footer → hero → header"],1,"<b>Identity → evidence → next step</b> مع CTA واحد واضح."),
+Q("In the student assignment, the homepage structural layout must be made:",["With final colors and images","Without colors and without final images","Only with photos","Only with code"],1,"Artboard, Grid, Guides, Shapes, Alignment, Spacing، <b>من غير ألوان وصور نهائية</b>."),
+Q("Which statement about the 12-column grid is correct?",["It requires 12 elements on the page","It is a flexible system for dividing space while keeping alignment","It only works on mobile","It forbids margins"],1,"Flexible system، مش 12 عنصر."),
+Q("Margins, gutters and padding are described in the lecture as:",["Wasted emptiness","Functional visual design tools","Errors to avoid","Only for print"],1,"<b>Functional visual design tools</b>, not lost areas.")
+],
+"3":[
+Q("Which breakpoint width is given for Laptop?",["768px","1024px","1280px","375px"],1,"Mobile 375، Tablet 768، <b>Laptop 1024</b>، Desktop 1280، Large 1440."),
+Q("Which container width is suggested for general layouts?",["1140px","1280px","1440px","720px"],1,"1140 reading، <b>1280 general</b>، 1440 image-dependent."),
+Q("Which educational model is 'a fixed curriculum list'?",["Marketplace","LMS Dashboard","Gamified Learning","Single Instructor"],1,"<b>LMS Dashboard</b>."),
+Q("Which museum layout pattern presents image and text in a gradual visual narrative?",["Archive Grid","Timeline","Editorial","Masonry"],2,"<b>Editorial</b>."),
+Q("Which museum pattern browses works and events through time?",["Timeline","Editorial","Minimal Grid","List / Index"],0,"<b>Timeline</b>."),
+Q("What is the section spacing of a museum website?",["64–80px","120–200px","8–16px","24px"],1,"Museum: <b>120–200px</b>. Portfolio: 64–80px."),
+Q("Which portfolio pattern lets one work fill the screen?",["Full-Screen","List / Index","Minimal Grid","Masonry"],0,"<b>Full-Screen</b>."),
+Q("What is the sidebar width in the educational website reference layout?",["120px","280px","720px","1280px"],1,"Sidebar حوالي <b>280px</b>."),
+Q("Which layer of a website design gives the logo, icons and buttons their shape and function?",["Visual structure","Visual design","Visual identity","Information architecture"],1,"<b>Visual design</b>."),
+Q("What is the content structure of a portfolio website?",["Work / About / Contact","Home / Cart / Checkout","Courses / Filters / Ratings","Exhibitions / Visit / Collections"],0,"<b>Work / About / Contact</b>.")
+],
+"4":[
+Q("Which logo criterion says 'text can be read easily and at first glance'?",["Distinctiveness","Legibility","Versatility","Meaning"],1,"<b>Legibility</b>."),
+Q("Which criterion says the logo must clearly express the product or activity of the company?",["Meaning (relevance)","Avoiding trends","Limited color","One typeface"],0,"<b>Meaning (relevance)</b>."),
+Q("Why should a logo be simple, according to the lecture?",["Because printing is expensive","The public sees it for a moment, for example while walking or riding public transport","Because simple logos need gradients","Because complex logos are illegal"],1,"الناس مش بتقعد تحلل اللوجو؛ بتشوفه لحظة."),
+Q("Where is the Concord Museum located?",["London, United Kingdom","Concord, Massachusetts, United States","Cairo, Egypt","Paris, France"],1,"<b>Concord, Massachusetts</b>."),
+Q("What does the GEM logo's orange color reflect?",["The Nile water","The sun over the Giza plateau at sunset","Gold of the pharaohs","The desert at night"],1,"<b>The sun over the Giza plateau at sunset</b>."),
+Q("Which museum logo is closer to an illustrative drawing than to a logo?",["GEM","NMEC","The Egyptian Museum in Tahrir","Museum of Islamic Art"],2,"<b>Tahrir</b>: رسم تفصيلي للواجهة بـ embossed effect."),
+Q("The logo of the Grand Egyptian Museum is inspired by:",["The pyramids' side view","The horizontal plan (top view) of the building","A pharaoh's face","An Islamic star"],1,"مستوحى من <b>المسقط الأفقي للمبنى</b>."),
+Q("Which logo type is used in entertainment marketing?",["Mascot Logo","Emblem Logo","Letter Mark","Word Mark"],0,"<b>Mascot</b>.")
+],
+"5":[
+Q("According to the lecture, how are museum website colors chosen?",["Randomly","Based on color psychology and the museum's content classification","Only by the director's taste","Always blue"],1,"مبني على <b>Color Psychology</b> وتصنيف المتحف."),
+Q("Which colors suit art museums?",["Black, White, Gray","Green, Blue, Brown","Cyan, Neon, Black","Brown, Terracotta, Gold"],0,"Art = <b>Black, White, Gray</b>: modernity و neutrality."),
+Q("Which colors suit history and antiquities museums?",["Brown, Terracotta, Gold, Cream","Cyan Blue, Neon, Black","Green, Blue, Brown","Pink and purple"],0,"History = <b>Brown, Terracotta, Gold, Cream</b>: heritage و dignity."),
+Q("Which colors suit natural history museums?",["Green, Blue, Brown","Black, White, Gray","Cyan, Neon, Black","Gold and red"],0,"Natural History = <b>Green, Blue, Brown</b>: life و sustainability."),
+Q("Which colors suit science and technology museums?",["Cyan Blue, Neon, Black","Brown, Cream, Gold","Green, Brown","White only"],0,"Science = <b>Cyan, Neon, Black</b>: future و innovation."),
+Q("Which psychological impression do art museum colors create?",["Heritage and luxury","Modernity, highlighting exhibits, absolute neutrality","Life and sustainability","The future and innovation"],1,"Art museums: <b>modernity, neutrality</b>."),
+Q("What impression do science and technology museum colors aim for?",["Heritage","The future, innovation, intelligence and scientific curiosity","Absolute neutrality","Connection to Planet Earth"],1,"Science: <b>future & innovation</b>."),
+Q("What do graphic elements add to the interface?",["Personality","Loading time only","Database access","Nothing"],0,"Graphic elements <b>add personality</b>.")
+]};
+
+/* ============ registry ============ */
+const ORDER=["1","2","3","4","5"];
+const QS={};ORDER.forEach(k=>{QS[k]=[...(DOCQ[k]||[]),...(OWN[k]||[])].map((x,i)=>({...x,lec:k,id:k+"-"+i}))});
+const QUIZZES={};
+ORDER.forEach(k=>QUIZZES["quiz-"+k]={title:`Quiz: ${LECS[k].title}`,ar:`كويز محاضرة ${k}`,qs:QS[k],back:"lec-"+k,shuffle:true});
+const norm=s=>s.toLowerCase().replace(/[^a-z0-9]/g,"");
+const BANK=(()=>{const seen=new Set(),out=[];ORDER.forEach(k=>QS[k].forEach(q=>{const n=norm(q.q);if(!seen.has(n)){seen.add(n);out.push(q)}}));return out})();
+const EXAM_N=30, PER_LEC=EXAM_N/ORDER.length;
+
+/* ============ random helpers ============ */
+function hashStr(s){let h=1779033703^s.length;for(let i=0;i<s.length;i++){h=Math.imul(h^s.charCodeAt(i),3432918353);h=h<<13|h>>>19}return h>>>0}
+function rngFrom(seed){let a=seed>>>0;return()=>{a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
+function shuffled(arr,r){const a=arr.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(r()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+const NOSHUF=/all of the above|none of the above|both/i;
+function prep(q,r){if(!r||q.o.some(o=>NOSHUF.test(o)))return {...q};const p=shuffled(q.o.map((_,i)=>i),r);return {...q,o:p.map(i=>q.o[i]),a:p.indexOf(q.a)}}
+const ALPH="ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
+function newCode(){let s="";const c=window.crypto&&crypto.getRandomValues?crypto.getRandomValues(new Uint32Array(6)):Array.from({length:6},()=>Math.random()*4294967296);for(let i=0;i<6;i++)s+=ALPH[c[i]%ALPH.length];return s}
+function buildExam(code){const r=rngFrom(hashStr("wd-exam:"+code));let picked=[];
+  ORDER.forEach(k=>{picked.push(...shuffled(BANK.filter(q=>q.lec===k),r).slice(0,PER_LEC))});
+  picked=shuffled(picked,r).map(q=>prep(q,r));
+  return {title:"Final Exam",ar:"الاختبار الشامل",qs:picked,back:"exam",exam:true,code,modes:true}}
+
+/* ============ nav ============ */
+const NAV=[["home","Map"],...ORDER.map(k=>["lec-"+k,"L"+k]),["exam","Final Exam"]];
+const navEl=document.getElementById("nav");
+navEl.innerHTML=NAV.map(([h,l])=>`<a href="${U(h)}" data-h="${h}">${l}</a>`).join("");
+const app=document.getElementById("app");
+function bestOf(id){const b=store.get("best:"+id,null);return b?`BEST ${b.s}/${b.t}`:"NOT PLAYED"}
+
+/* ============ views ============ */
+function viewHome(){
+  const total=BANK.length;
+  app.innerHTML=`
+  <section class="hero">
+    <div class="eyebrow" dir="ltr">WEB DESIGN · MULTIMEDIA SOFTWARE · BY <a class="me" href="https://dev.uniskills.pro/" target="_blank" rel="noopener">AHMED SALMAN</a></div>
+    <h1 dir="ltr">DESIGN THE <span>WEB</span><br>LEVEL BY LEVEL</h1>
+    <p>شرح المحاضرات الخمسة بالعربي والمصطلحات إنجليزي، كويز تدريبي على كل محاضرة، واختبار شامل بيتولد مختلف كل مرة من بنك ${total} سؤال.</p>
+    <div class="stage" id="stg" dir="ltr"><div class="block" style="left:30%">?</div><div class="block" style="left:62%">?</div><canvas id="walker" width="48" height="72" style="width:64px;height:96px;left:0"></canvas></div>
+  </section>
+  <div class="map">
+  ${ORDER.map(k=>{const L=LECS[k];return `<article class="lvl px">
+    <span class="no" dir="ltr">LEVEL ${k}</span>
+    <h3 dir="ltr">${L.title}</h3><p>${L.ar}.<span dir="ltr">${L.sub}</span></p>
+    <div class="row"><a class="btn" href="${U("lec-"+k)}">LEARN</a><a class="btn g" href="${U("quiz-"+k)}">QUIZ · ${QS[k].length}</a><span class="best" dir="ltr">${bestOf("quiz-"+k)}</span></div>
+  </article>`}).join("")}
+  <article class="lvl px boss"><span class="no" dir="ltr">FINAL BOSS</span><h3 dir="ltr">Final Exam · ${EXAM_N} Random Questions</h3>
+    <p>كل مرة تدخل بيتولدلك امتحان جديد: ${EXAM_N} سؤال، ${PER_LEC} من كل محاضرة، والاختيارات مترتبة عشوائي. يعني كل واحد بياخد امتحان مختلف.</p>
+    <div class="stats" dir="ltr"><span class="stat">BANK <b>${total}</b></span>${ORDER.map(k=>`<span class="stat">L${k} <b>${BANK.filter(q=>q.lec===k).length}</b></span>`).join("")}</div>
+    <div class="row"><a class="btn" href="${U("exam")}">START EXAM</a><span class="best" dir="ltr">${bestOf("exam")}</span></div></article>
+  </div>`;
+  walker();
+  say("أهلاً! أنا أحمد. المادة دي Web Design: ابدأ بـ Level 1، وفي الآخر جرب الاختبار الشامل.","wave");
+}
+let walkRAF=0;
+function walker(){cancelAnimationFrame(walkRAF);const cv=document.getElementById("walker"),stg=document.getElementById("stg");if(!cv)return;
+  let x=0,dir=1,t=0;const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const step=()=>{if(!document.body.contains(cv))return;t++;const W=stg.clientWidth-64;x+=dir*1.4;if(x>W||x<0){dir*=-1}
+    cv.style.left=x+"px";cv.style.transform=dir<0?"scaleX(-1)":"none";
+    const jumpZone=[.30,.62].some(p=>Math.abs(x+32-(stg.clientWidth*p+16))<22);
+    cv.style.bottom=jumpZone?"22px":"8px";
+    if(t%4===0)drawPose(cv,jumpZone?"cheer":(Math.floor(t/12)%2?"walk1":"walk2"));
+    walkRAF=requestAnimationFrame(step)};
+  if(reduce){drawPose(cv,"idle");cv.style.left="20px"}else step();
+}
+function viewLesson(k){
+  const L=LECS[k];
+  app.innerHTML=`<section class="page-head"><span class="eyebrow" dir="ltr">LEVEL ${k} · ${L.sub}</span>
+  <h1 dir="ltr">${L.title}</h1><p style="color:var(--muted)">${L.ar}</p></section>
+  <div class="lesson fade">${L.html}
+  <section class="sec px"><h2>Ready?</h2><p>خلصت الشرح؟ حل الكويز دلوقتي (${QS[k].length} سؤال)، والإجابة والشرح بيظهروا بعد كل سؤال.</p>
+  <div class="cta"><a class="btn g" href="${U("quiz-"+k)}">START QUIZ</a>${next(k)}</div></section></div>`;
+  window.scrollTo(0,0); say(L.hello,"think"); initDemos();
+}
+function next(k){const i=ORDER.indexOf(k);const n=ORDER[i+1];return n?`<a class="btn o" href="${U("lec-"+n)}">NEXT LEVEL</a>`:`<a class="btn o" href="${U("exam")}">FINAL EXAM</a>`}
+
+/* demos */
+function initDemos(){
+  const gc=document.getElementById("gchips");
+  if(gc){const DIV={"6+6":[6,6],"4+8":[4,8],"3+9":[3,9],"4+4+4":[4,4,4],"3+6+3":[3,6,3]};
+    const NOTE={"6+6":"تقسيم متماثل لجزئين متساويين.","4+8":"sidebar (4) و main content (8).","3+9":"side area ضيقة و main area واسعة.","4+4+4":"3 أعمدة متساوية، زي 3 cards.","3+6+3":"عمود أساسي في النص وجنبه من الناحيتين."};
+    const g=document.getElementById("g12"),note=document.getElementById("gnote");
+    const draw=key=>{let col=1;g.innerHTML=Array.from({length:12},(_,i)=>`<div class="col" style="grid-column:${i+1}"></div>`).join("")+DIV[key].map(n=>{const s=`<div class="blk" style="grid-column:${col} / span ${n}">${n}</div>`;col+=n;return s}).join("");
+      note.innerHTML=`<b>${key}</b> = ${NOTE[key]}`;gc.querySelectorAll(".chip").forEach(c=>c.setAttribute("aria-pressed",c.dataset.k===key))};
+    gc.innerHTML=Object.keys(DIV).map(k=>`<button class="chip" type="button" data-k="${k}">${k}</button>`).join("");
+    gc.querySelectorAll(".chip").forEach(c=>c.onclick=()=>draw(c.dataset.k));draw("4+8")}
+  const spg=document.getElementById("spg");
+  if(spg){const SC8=[8,16,24,32,48,64],spp=document.getElementById("spp"),d=document.getElementById("spd");
+    const upd=()=>{const g=SC8[+spg.value],p=SC8[+spp.value];document.getElementById("spgv").textContent=g+"px";document.getElementById("sppv").textContent=p+"px";
+      d.style.gap=g+"px";d.style.padding=g+"px";d.innerHTML=[1,2,3].map(i=>`<div class="cardx" style="padding:${p}px"><div class="ph"></div><div class="tx">Card ${i} · padding ${p}</div></div>`).join("")};
+    spg.oninput=upd;spp.oninput=upd;upd()}
+}
+
+/* quiz engine */
+let S=null, timerI=0;
+function stopTimer(){clearInterval(timerI);timerI=0}
+function viewQuiz(id){
+  const Z0=QUIZZES[id];const r=rngFrom(hashStr(id+":"+Date.now()));
+  const Z={...Z0,qs:Z0.qs.map(q=>prep(q,Z0.shuffle?r:null))};
+  S={id,Z,i:0,ans:Array(Z.qs.length).fill(null),mode:"practice",done:false};
+  renderQuiz(); window.scrollTo(0,0);
+  say("يلا بينا! جاوب والإجابة الصح هتظهر على طول. الاختيارات بتتلخبط كل مرة.","think");
+}
+function viewExam(){
+  stopTimer();
+  const last=store.get("lastCode","");
+  app.innerHTML=`<section class="page-head"><span class="eyebrow" dir="ltr">FINAL BOSS · ${EXAM_N} QUESTIONS · ${BANK.length} IN THE BANK</span><h1 dir="ltr">Final Exam</h1><p style="color:var(--muted)">الاختبار الشامل على المحاضرات الخمسة</p></section>
+  <div class="qwrap fade">
+   <section class="sec px"><h2>إزاي بيشتغل؟</h2>
+    <ul class="l"><li>كل مرة تدوس START بيتولد امتحان جديد بكود خاص بيه.</li><li><b>${EXAM_N} سؤال</b>: ${PER_LEC} من كل محاضرة، بترتيب عشوائي، والاختيارات كمان بتتلخبط.</li><li>وضع <b>Exam</b>: الإجابات والدرجة في الآخر، مع تحليل لكل محاضرة. ووضع <b>Practice</b>: الإجابة بعد كل سؤال.</li><li>عايز تحل نفس امتحان صاحبك؟ ابعتله الكود ويدخله تحت.</li></ul>
+    <div class="cta" dir="ltr"><button class="btn" id="go">START NEW EXAM</button></div>
+   </section>
+   <section class="sec px"><h2>عندك كود امتحان؟</h2>
+    <div class="codebox"><label for="codeIn" class="lab" style="font-family:var(--f-pixel);font-size:9px;color:var(--acc)">CODE</label><input id="codeIn" maxlength="6" placeholder="${last||"ABC123"}" value="" autocomplete="off" spellcheck="false"><button class="btn g" id="load">LOAD</button></div>
+    <p id="codeErr" style="color:var(--rose);margin:6px 0 0" hidden></p>
+   </section>
+  </div>`;
+  document.getElementById("go").onclick=()=>startExam(newCode());
+  const inp=document.getElementById("codeIn");
+  document.getElementById("load").onclick=()=>{const c=inp.value.trim().toUpperCase();const ok=c.length===6&&[...c].every(ch=>ALPH.includes(ch));
+    const er=document.getElementById("codeErr");if(!ok){er.hidden=false;er.textContent="الكود 6 حروف وأرقام، زي K7QM2X.";return}startExam(c)};
+  inp.onkeydown=e=>{if(e.key==="Enter")document.getElementById("load").click()};
+  window.scrollTo(0,0);
+  say("الاختبار الشامل: كل مرة امتحان مختلف. ركز وبالتوفيق!","think");
+}
+function startExam(code){
+  store.set("lastCode",code);
+  const Z=buildExam(code);
+  S={id:"exam",Z,i:0,ans:Array(Z.qs.length).fill(null),mode:"exam",done:false,t0:Date.now()};
+  renderQuiz();window.scrollTo(0,0);
+  stopTimer();timerI=setInterval(()=>{const el=document.getElementById("tmr");if(!el||S.done)return;el.textContent=fmt(Date.now()-S.t0)},1000);
+  say(`امتحانك اتولد بالكود <b>${code}</b>. بالتوفيق!`,"type");
+}
+const fmt=ms=>{const s=Math.floor(ms/1000);return String(Math.floor(s/60)).padStart(2,"0")+":"+String(s%60).padStart(2,"0")};
+function renderQuiz(){
+  const {Z,i,ans,mode}=S;const n=Z.qs.length;
+  if(S.done)return renderResult();
+  const q=Z.qs[i];const a=ans[i];const answered=a!==null;const reveal=answered&&mode==="practice";
+  const done=ans.filter(x=>x!==null).length;
+  app.innerHTML=`<section class="page-head"><span class="eyebrow" dir="ltr">${Z.title}${Z.exam?` · LECTURE ${q.lec}`:""}</span><h1 dir="ltr" style="font-size:clamp(16px,3vw,22px)">${Z.ar}</h1>
+  ${Z.exam?`<div class="cta" dir="ltr"><span class="excode">CODE ${Z.code}</span><span class="timer" id="tmr">${fmt(Date.now()-S.t0)}</span></div>`:""}</section>
+  <div class="qwrap">
+   <div class="qtop" dir="ltr">
+     ${Z.modes?`<div class="modes"><button class="btn o" id="mE" aria-pressed="${mode==="exam"}">EXAM</button><button class="btn o" id="mP" aria-pressed="${mode==="practice"}">PRACTICE</button></div>`:""}
+     <div class="hpbar" aria-hidden="true"><i style="width:${done/n*100}%"></i></div>
+     <span class="qcount">Q ${i+1}/${n}</span>
+     ${Z.exam?"":`<button class="btn b" id="keyB">ANSWER KEY</button>`}
+   </div>
+   <article class="qcard px fade">
+     <div class="qtext"><span class="n">${i+1}.</span>${esc(q.q)}</div>
+     <div class="opts">${q.o.map((o,j)=>{let c="";if(reveal){if(j===q.a)c="ok";else if(j===a)c="bad"}else if(answered&&j===a)c="pick";
+       return `<button class="opt ${c}" data-j="${j}" ${reveal?"disabled":""}><span class="L">${"ABCD"[j]}</span><span>${esc(o)}</span></button>`}).join("")}</div>
+     ${reveal?`<div class="exp ${a===q.a?"":"wr"}"><span class="h">${a===q.a?"CORRECT +10 XP":"WRONG · ANSWER: "+"ABCD"[q.a]}</span><div class="body">${q.e}</div></div>`:""}
+   </article>
+   <div class="qnav" dir="ltr">
+     <button class="btn o" id="prev" ${i===0?"disabled":""}>PREV</button>
+     ${i<n-1?`<button class="btn" id="nxt">NEXT</button>`:`<button class="btn g" id="fin">FINISH</button>`}
+   </div>
+   ${n<=60?`<div class="dots" aria-label="Jump to question">${ans.map((x,j)=>`<button class="${x!==null?"done":""} ${j===i?"cur":""}" data-go="${j}" aria-label="Question ${j+1}">${j+1}</button>`).join("")}</div>`:""}
+   <div><a class="btn o" href="${U(Z.back)}">BACK</a></div>
+   ${Z.exam?"":`<details class="allq"><summary>كل الأسئلة بالإجابات والشرح (${n})</summary><div class="key">${keyList(Z,Array(n).fill(null),false)}</div></details>`}
+  </div>`;
+  app.querySelectorAll(".opt").forEach(b=>b.onclick=()=>pick(+b.dataset.j));
+  app.querySelectorAll("[data-go]").forEach(b=>b.onclick=()=>{S.i=+b.dataset.go;renderQuiz()});
+  const g=id=>document.getElementById(id);
+  g("prev").onclick=()=>{S.i--;renderQuiz()};
+  if(g("nxt"))g("nxt").onclick=()=>{S.i++;renderQuiz()};
+  if(g("fin"))g("fin").onclick=finish;
+  if(g("keyB"))g("keyB").onclick=()=>renderKey(false);
+  if(Z.modes){g("mP").onclick=()=>{if(S.mode==="practice")return;S.mode="practice";S.ans.fill(null);S.i=0;renderQuiz();say("وضع التدريب: الإجابة هتظهر بعد كل سؤال.","think")};
+    g("mE").onclick=()=>{if(S.mode==="exam")return;S.mode="exam";S.ans.fill(null);S.i=0;renderQuiz();say("وضع الامتحان: الإجابات في الآخر.","think")}}
+}
+function finish(){const left=S.ans.filter(x=>x===null).length;
+  if(left&&S.mode==="exam"&&!S.confirm){S.confirm=true;say(`لسه فاضل <b>${left}</b> سؤال من غير إجابة. دوس FINISH تاني لو عايز تسلم.`,"sad");return}
+  S.done=true;stopTimer();S.t1=Date.now();renderQuiz();window.scrollTo(0,0)}
+function esc(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;")}
+function pick(j){
+  const q=S.Z.qs[S.i];
+  if(S.mode==="practice"){if(S.ans[S.i]!==null)return;S.ans[S.i]=j;
+    if(j===q.a){addXP(10);const m=["صح! كمّل كده.","برافو، +10 XP.","إجابة بطل!","تمام كده، اللي بعده."];say(m[Math.floor(Math.random()*m.length)],"happy")}
+    else say(`لأ، الإجابة الصح <b>${"ABCD"[q.a]}</b>. اقرا الشرح تحت.`,"sad");
+    renderQuiz();const exp=app.querySelector(".exp");if(exp)exp.scrollIntoView({block:"nearest",behavior:"smooth"});
+  }else{S.ans[S.i]=j;S.confirm=false;if(S.i<S.Z.qs.length-1){S.i++}renderQuiz()}
+}
+function renderResult(){
+  const {Z,ans}=S;const n=Z.qs.length;const s=Z.qs.reduce((c,q,i)=>c+(ans[i]===q.a),0);const p=s/n;
+  if(S.mode==="exam")addXP(s*10);
+  const rank=p>=.9?"S":p>=.75?"A":p>=.6?"B":p>=.5?"C":"D";
+  const prev=store.get("best:"+S.id,null);if(!prev||s>prev.s)store.set("best:"+S.id,{s,t:n});
+  const brk=Z.exam?ORDER.map(k=>{const idx=Z.qs.map((q,i)=>i).filter(i=>Z.qs[i].lec===k);const c=idx.filter(i=>ans[i]===Z.qs[i].a).length;return {k,c,t:idx.length}}):[];
+  const weak=brk.filter(b=>b.t&&b.c/b.t<.6).map(b=>"L"+b.k);
+  app.innerHTML=`<section class="page-head"><span class="eyebrow" dir="ltr">${Z.title} · RESULT</span>${Z.exam?`<div class="cta" dir="ltr"><span class="excode">CODE ${Z.code}</span><span class="timer">TIME ${fmt((S.t1||Date.now())-S.t0)}</span></div>`:""}</section>
+  <div class="result px fade"><div style="font-family:var(--f-pixel);font-size:10px;color:var(--muted)">RANK</div><div class="rank">${rank}</div>
+  <div class="score" dir="ltr">${s} / ${n}</div>
+  <p>${p>=.75?"ممتاز! انت جاهز.":p>=.5?"كويس، راجع الأسئلة اللي غلطت فيها تحت.":"محتاج تراجع الشرح تاني وتعيد."}</p>
+  ${Z.exam?`<div class="brk">${brk.map(b=>`<div><span>LECTURE ${b.k}</span><i><b style="width:${b.t?b.c/b.t*100:0}%"></b></i><span>${b.c}/${b.t}</span></div>`).join("")}</div>
+  ${weak.length?`<p>ركز في مراجعة: <b dir="ltr">${weak.join(" · ")}</b></p>`:""}`:""}
+  <div class="cta" dir="ltr">${Z.exam?`<button class="btn" id="again">NEW EXAM</button>`:`<button class="btn" id="again">PLAY AGAIN</button>`}<button class="btn b" id="rev">REVIEW ANSWERS</button><a class="btn o" href="${U(Z.exam?"home":Z.back)}">BACK</a></div></div>`;
+  say(p>=.75?`جبت ${s} من ${n}. Rank ${rank}!`:`جبت ${s} من ${n}. راجع الشرح وجرب تاني.`,p>=.6?"happy":"sad");
+  document.getElementById("again").onclick=()=>Z.exam?startExam(newCode()):viewQuiz(S.id);
+  document.getElementById("rev").onclick=()=>renderKey(true);
+}
+function keyList(Z,ans,withMine){return Z.qs.map((q,i)=>{const mine=ans[i];const wrong=withMine&&mine!==null&&mine!==q.a;const skipped=withMine&&mine===null;
+  return `<div class="krow"><div class="q"><span class="n">${i+1}.</span>${esc(q.q)}${Z.exam?` <span class="qsec" style="display:inline">L${q.lec}</span>`:""}</div>
+  ${wrong?`<div class="a x">${"ABCD"[mine]}) ${esc(q.o[mine])}</div>`:""}${skipped?`<div class="a x">NO ANSWER</div>`:""}
+  <div class="a">${"ABCD"[q.a]}) ${esc(q.o[q.a])}</div><div class="ex">${q.e}</div></div>`}).join("")}
+function renderKey(withMine){
+  const {Z,ans}=S;
+  app.innerHTML=`<section class="page-head"><span class="eyebrow" dir="ltr">${Z.title} · ANSWER KEY</span><h1 dir="ltr" style="font-size:clamp(16px,3vw,22px)">${Z.ar}</h1>
+  <div class="cta" dir="ltr"><button class="btn" id="bk">${withMine?"RESULT":"BACK TO QUIZ"}</button></div></section>
+  <div class="key fade">${keyList(Z,ans,withMine)}</div>`;
+  window.scrollTo(0,0);
+  document.getElementById("bk").onclick=()=>{renderQuiz();window.scrollTo(0,0)};
+  say("دي كل الإجابات مع الشرح. ذاكرها كويس.","think");
+}
+
+/* ============ router ============ */
+const PAGE_TITLE="Web Design Pixel Quest | شرح وحل Web Design";
+function route(){
+  cancelAnimationFrame(walkRAF);stopTimer();
+  const h=STATIC?ROUTE_META.content:(location.hash||"#home").slice(1);
+  navEl.querySelectorAll("a").forEach(a=>{const on=a.dataset.h===h||(h.startsWith("quiz-")&&a.dataset.h==="lec-"+h.slice(5));a.classList.toggle("on",on)});
+  const lk=h.startsWith("lec-")?h.slice(4):null;
+  document.title=lk&&LECS[lk]?`${LECS[lk].title} | ${LECS[lk].ar} | Web Design`:QUIZZES[h]?`${QUIZZES[h].title} | ${QUIZZES[h].ar} | Web Design`:h==="exam"?"Final Exam | الاختبار الشامل | Web Design":PAGE_TITLE;
+  if(lk&&LECS[lk])viewLesson(lk);
+  else if(QUIZZES[h])viewQuiz(h);
+  else if(h==="exam")viewExam();
+  else viewHome();
+  const on=navEl.querySelector("a.on");if(on)on.scrollIntoView({inline:"nearest",block:"nearest"});
+}
+if(!STATIC)addEventListener("hashchange",route);
+if(STATIC)document.querySelector(".bar .logo").href="/";
+route();
+</script>
+<footer class="wrap" dir="ltr">MADE BY <a href="https://dev.uniskills.pro/" target="_blank" rel="noopener">AHMED SALMAN</a></footer>
+
+</body>
+</html>
