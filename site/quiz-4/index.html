@@ -33,12 +33,16 @@
 <style>:root{padding:env(safe-area-inset-top,0px) 0 env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 </head>
 <body>
-<script>try{var __t=localStorage.getItem("wd:theme");if(__t==="light"||__t==="dark")document.documentElement.setAttribute("data-theme",__t);var __p=localStorage.getItem("wd:pal");if(__p&&/^[a-z]+$/.test(__p)&&__p!=="arcade")document.documentElement.setAttribute("data-pal",__p)}catch(e){}</script>
+<script>try{var __t=localStorage.getItem("wd:theme");if(__t==="light"||__t==="dark")document.documentElement.setAttribute("data-theme",__t);var __f=localStorage.getItem("wd:font");var __F={"cairo":"Cairo:wght@400;600;700","tajawal":"Tajawal:wght@400;500;700","readex":"Readex+Pro:wght@400;600;700","kufi":"Noto+Kufi+Arabic:wght@400;600;700","plex":"IBM+Plex+Sans+Arabic:wght@400;600;700"};if(__f&&__F[__f]&&__f!=="cairo"){document.documentElement.setAttribute("data-font",__f);var __l=document.createElement("link");__l.rel="stylesheet";__l.id="fontL";__l.href="https://fonts.googleapis.com/css2?family="+__F[__f]+"&display=swap";document.head.appendChild(__l)}var __p=localStorage.getItem("wd:pal");if(__p&&/^[a-z]+$/.test(__p)&&__p!=="arcade")document.documentElement.setAttribute("data-pal",__p)}catch(e){}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=JetBrains+Mono:wght@400;600&family=IBM+Plex+Sans+Arabic:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=JetBrains+Mono:wght@400;600&family=Cairo:wght@400;600;700&display=swap">
 <style>
 /* Layout: arcade "world map" home → level pages (lesson + quiz) → generated final exam. Light + dark, portfolio palette. */
-:root{--f-pixel:"Press Start 2P","IBM Plex Sans Arabic",monospace;--f-term:"JetBrains Mono",ui-monospace,monospace;--f-body:"IBM Plex Sans Arabic","Segoe UI",Tahoma,sans-serif}
+:root{--f-ar:"Cairo";--f-pixel:"Press Start 2P",var(--f-ar),monospace;--f-term:"JetBrains Mono",ui-monospace,monospace;--f-body:var(--f-ar),"Segoe UI",Tahoma,sans-serif}
+:root[data-font="tajawal"]{--f-ar:"Tajawal"}
+:root[data-font="readex"]{--f-ar:"Readex Pro"}
+:root[data-font="kufi"]{--f-ar:"Noto Kufi Arabic"}
+:root[data-font="plex"]{--f-ar:"IBM Plex Sans Arabic"}
 /*PALETTES-CSS*/
 :root{--bg:#f5f4f0;--panel:#ffffff;--panel2:#f1efe9;--line:#d8d5ca;--pxsh:#0b0d12;--ink:#0b0d12;--muted:#5d6474;--hl:#a35f00;--acc:#4b55e8;--acc2:#d97a08;--b1:#ffd23f;--b1d:#c99a00;--b1l:#fff3b0;--b1t:#0b0d12;--b2:#7c88ff;--b2d:#4b55e8;--b2l:#b9c0ff;--b2t:#05070d;--b3:#ffb547;--b3d:#d97a08;--b3l:#ffe0b0;--b3t:#0b0d12;--hero:#1b2160;--herosh:#b9c0ff;--herospan:#e08a00;--herospansh:#0b0d12;--star1:#c9c5b8;--star2:#e6e3da;--grid:#4b55e833;--canvas:#ece9e1;--defbg:#eef0ff;--deftx:#1d2350;--tipbg:#fff8de;--pickbg:#fff3c4;--glow:rgba(75,85,232,.35);--rose:#d6304f;--ok:#12804a;--okbg:#e3f5ea;--badbg:#fde8ec;--ground:#0b0d12;color-scheme:light}
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#05070d;--panel:#0d111c;--panel2:#151b2c;--line:#262d45;--pxsh:#262d45;--ink:#eef1f8;--muted:#8a93a8;--hl:#ffd23f;--acc:#7c88ff;--acc2:#ffb547;--b1:#ffd23f;--b1d:#c99a00;--b1l:#fff3b0;--b1t:#0b0d12;--b2:#7c88ff;--b2d:#4b55e8;--b2l:#b9c0ff;--b2t:#05070d;--b3:#ffb547;--b3d:#d97a08;--b3l:#ffe0b0;--b3t:#0b0d12;--hero:#dfe3ff;--herosh:#4b55e8;--herospan:#ffd23f;--herospansh:#a86f00;--star1:#8a93a8;--star2:#262d45;--grid:#7c88ff55;--canvas:#0a0d16;--defbg:#0a0d16;--deftx:#d6dbff;--tipbg:#1a1708;--pickbg:#2e2810;--glow:rgba(124,136,255,.45);--rose:#ff4d6d;--ok:#3ddc97;--okbg:#0f3a2c;--badbg:#3a1220;--ground:#ffffff;color-scheme:dark}}
@@ -104,6 +108,12 @@ p{margin:.4em 0}
 .pgrid .sws{display:flex;border:2px solid #000;width:100%}
 .pgrid .sws i{flex:1;height:20px}
 .ptitle{font-family:var(--f-pixel);font-size:8px;color:var(--muted);grid-column:1/-1}
+.pfonts{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.pfonts button{background:var(--panel2);color:var(--ink);border:2px solid var(--line);padding:6px 8px;cursor:pointer;display:grid;gap:2px;text-align:right;direction:rtl}
+.pfonts button[aria-pressed=true]{border-color:var(--ink);box-shadow:3px 3px 0 var(--pxsh)}
+.pfonts button span{font-size:16px;line-height:1.5}
+.pfonts button small{font-family:var(--f-term);font-size:10px;color:var(--muted);direction:ltr;text-align:left}
+.palp.px{max-height:calc(100vh - 80px);overflow-y:auto}
 
 /* pixel panel + buttons (portfolio pixel-btn) */
 .px{background:var(--panel);border:2px solid var(--line);box-shadow:4px 4px 0 0 var(--pxsh);border-radius:6px;position:relative}
@@ -311,7 +321,7 @@ footer a{color:var(--hl);text-decoration:none;border-bottom:2px solid var(--hl)}
   <nav id="nav"></nav>
   <div class="tools"><button id="themeB" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="palP"><span class="swm" id="swm"></span>COLORS</button><div class="xp" title="XP from correct answers"><span class="coin"></span><span id="xp">0</span> XP</div></div>
 </header>
-<div id="palP" class="palp px" hidden role="dialog" aria-label="Colors"><div class="pmodes" id="pmodes"></div><div class="pgrid" id="pgrid"></div></div>
+<div id="palP" class="palp px" hidden role="dialog" aria-label="Colors"><div class="pmodes" id="pmodes"></div><div class="pgrid" id="pgrid"></div><div class="pfonts" id="pfonts"></div></div>
 <main class="wrap" id="app" dir="rtl"><section class="page-head"><span class="eyebrow" dir="ltr">Quiz: Logo Design</span><h1 dir="ltr" style="font-size:clamp(16px,3vw,22px)">كويز محاضرة 4</h1>
   </section>
   <div class="qwrap">
@@ -323,7 +333,7 @@ footer a{color:var(--hl);text-decoration:none;border-bottom:2px solid var(--hl)}
    </div>
    <article class="qcard px fade">
      <div class="qtext"><span class="n">1.</span>What is a logo?</div>
-     <div class="opts"><button class="opt " data-j="0"><span class="L">A</span><span>A long paragraph describing a company</span></button><button class="opt " data-j="1"><span class="L">B</span><span>A page layout grid</span></button><button class="opt " data-j="2"><span class="L">C</span><span>A photo of the building</span></button><button class="opt " data-j="3"><span class="L">D</span><span>A symbol that expresses a product, company or service and delivers its message clearly to the target audience</span></button></div>
+     <div class="opts"><button class="opt " data-j="0"><span class="L">A</span><span>A page layout grid</span></button><button class="opt " data-j="1"><span class="L">B</span><span>A symbol that expresses a product, company or service and delivers its message clearly to the target audience</span></button><button class="opt " data-j="2"><span class="L">C</span><span>A long paragraph describing a company</span></button><button class="opt " data-j="3"><span class="L">D</span><span>A photo of the building</span></button></div>
      
    </article>
    <div class="qnav" dir="ltr">
@@ -334,59 +344,59 @@ footer a{color:var(--hl);text-decoration:none;border-bottom:2px solid var(--hl)}
    <div><a class="btn o" href="/lec-4/">BACK</a></div>
    <details class="allq"><summary>كل الأسئلة بالإجابات والشرح (59)</summary><div class="key"><div class="krow"><div class="q"><span class="n">1.</span>What is a logo?</div>
   
-  <div class="a">D) A symbol that expresses a product, company or service and delivers its message clearly to the target audience</div><div class="ex">A logo is a symbol expressing a product, company or service, and it must deliver its message clearly.</div></div><div class="krow"><div class="q"><span class="n">2.</span>Which of these is NOT one of the four points of the logo design strategy?</div>
+  <div class="a">B) A symbol that expresses a product, company or service and delivers its message clearly to the target audience</div><div class="ex">A logo is a symbol expressing a product, company or service, and it must deliver its message clearly.</div></div><div class="krow"><div class="q"><span class="n">2.</span>Which of these is NOT one of the four points of the logo design strategy?</div>
   
-  <div class="a">D) Choose gradients and shadows</div><div class="ex">The four points: understand the business, research competitors, know the target audience, think long term.</div></div><div class="krow"><div class="q"><span class="n">3.</span>Why does the designer research the competitors' logos?</div>
+  <div class="a">C) Choose gradients and shadows</div><div class="ex">The four points: understand the business, research competitors, know the target audience, think long term.</div></div><div class="krow"><div class="q"><span class="n">3.</span>Why does the designer research the competitors' logos?</div>
   
-  <div class="a">A) To find out about their visual identity</div><div class="ex">Researching competitors shows their visual identity, so the new logo can be distinct.</div></div><div class="krow"><div class="q"><span class="n">4.</span>Why should a logo be designed with the long term in mind?</div>
+  <div class="a">B) To find out about their visual identity</div><div class="ex">Researching competitors shows their visual identity, so the new logo can be distinct.</div></div><div class="krow"><div class="q"><span class="n">4.</span>Why should a logo be designed with the long term in mind?</div>
   
-  <div class="a">B) It must last for many years despite continuous change and development</div><div class="ex">A logo should survive many years of change and development.</div></div><div class="krow"><div class="q"><span class="n">5.</span>The evolution of logos has always moved toward...</div>
+  <div class="a">A) It must last for many years despite continuous change and development</div><div class="ex">A logo should survive many years of change and development.</div></div><div class="krow"><div class="q"><span class="n">5.</span>The evolution of logos has always moved toward...</div>
   
-  <div class="a">C) Simplicity and the ability to adapt</div><div class="ex">Brands simplify logos so they stay in consumers' minds long term and adapt to different uses.</div></div><div class="krow"><div class="q"><span class="n">6.</span>In which years did the Concord Museum logo change in the lecture?</div>
+  <div class="a">A) Simplicity and the ability to adapt</div><div class="ex">Brands simplify logos so they stay in consumers' minds long term and adapt to different uses.</div></div><div class="krow"><div class="q"><span class="n">6.</span>In which years did the Concord Museum logo change in the lecture?</div>
   
-  <div class="a">D) 1990, 2003 and 2023</div><div class="ex">Concord Museum: 1990 (detailed seal-like emblem), 2003 and 2023 (simple typographic marks).</div></div><div class="krow"><div class="q"><span class="n">7.</span>How many main versions did the Natural History Museum (London) logo have?</div>
+  <div class="a">A) 1990, 2003 and 2023</div><div class="ex">Concord Museum: 1990 (detailed seal-like emblem), 2003 and 2023 (simple typographic marks).</div></div><div class="krow"><div class="q"><span class="n">7.</span>How many main versions did the Natural History Museum (London) logo have?</div>
   
-  <div class="a">D) Three: before 2004, 2004-2023 and 2023-present</div><div class="ex">Before 2004, from 2004 to 2023, and from 2023 to the present.</div></div><div class="krow"><div class="q"><span class="n">8.</span>What does the criterion 'Simplicity' say about a logo?</div>
+  <div class="a">C) Three: before 2004, 2004-2023 and 2023-present</div><div class="ex">Before 2004, from 2004 to 2023, and from 2023 to the present.</div></div><div class="krow"><div class="q"><span class="n">8.</span>What does the criterion 'Simplicity' say about a logo?</div>
   
   <div class="a">A) It should contain only one distinctive symbol</div><div class="ex">The public sees a logo for a moment, so it should be simple with one distinctive symbol.</div></div><div class="krow"><div class="q"><span class="n">9.</span>How many typefaces should a logo use?</div>
   
-  <div class="a">C) One typeface, consistent in Arabic and English text</div><div class="ex">One type of font for the text, whether Arabic or English.</div></div><div class="krow"><div class="q"><span class="n">10.</span>What does the lecture recommend about logo color?</div>
+  <div class="a">A) One typeface, consistent in Arabic and English text</div><div class="ex">One type of font for the text, whether Arabic or English.</div></div><div class="krow"><div class="q"><span class="n">10.</span>What does the lecture recommend about logo color?</div>
   
-  <div class="a">C) One color, or two at most, without gradients or shadows</div><div class="ex">Limited color: preferably one or two, without gradients or shadows.</div></div><div class="krow"><div class="q"><span class="n">11.</span>On which backgrounds must a logo work?</div>
+  <div class="a">B) One color, or two at most, without gradients or shadows</div><div class="ex">Limited color: preferably one or two, without gradients or shadows.</div></div><div class="krow"><div class="q"><span class="n">11.</span>On which backgrounds must a logo work?</div>
   
-  <div class="a">C) White and black</div><div class="ex">A logo must be usable on both white and black backgrounds.</div></div><div class="krow"><div class="q"><span class="n">12.</span>What does 'Versatility' mean in logo criteria?</div>
+  <div class="a">A) White and black</div><div class="ex">A logo must be usable on both white and black backgrounds.</div></div><div class="krow"><div class="q"><span class="n">12.</span>What does 'Versatility' mean in logo criteria?</div>
   
-  <div class="a">C) It suits very large sizes (billboards) and very small sizes (business cards, pins)</div><div class="ex">It can be enlarged or reduced without losing its features.</div></div><div class="krow"><div class="q"><span class="n">13.</span>Why should a designer avoid following trends in logo design?</div>
+  <div class="a">B) It suits very large sizes (billboards) and very small sizes (business cards, pins)</div><div class="ex">It can be enlarged or reduced without losing its features.</div></div><div class="krow"><div class="q"><span class="n">13.</span>Why should a designer avoid following trends in logo design?</div>
   
-  <div class="a">A) So the logo can be used at any time and in any place</div><div class="ex">Avoiding trends keeps the logo timeless.</div></div><div class="krow"><div class="q"><span class="n">14.</span>Which logo type 'helps to distinguish the name of the brand'?</div>
+  <div class="a">D) So the logo can be used at any time and in any place</div><div class="ex">Avoiding trends keeps the logo timeless.</div></div><div class="krow"><div class="q"><span class="n">14.</span>Which logo type 'helps to distinguish the name of the brand'?</div>
   
-  <div class="a">A) Word Mark</div><div class="ex">A word mark (logotype) is the brand name styled as the logo, like Google or Coca-Cola.</div></div><div class="krow"><div class="q"><span class="n">15.</span>Which logo type is ideal for brands with long names?</div>
+  <div class="a">D) Word Mark</div><div class="ex">A word mark (logotype) is the brand name styled as the logo, like Google or Coca-Cola.</div></div><div class="krow"><div class="q"><span class="n">15.</span>Which logo type is ideal for brands with long names?</div>
   
-  <div class="a">B) Letter Mark</div><div class="ex">A letter mark (like IBM or CNN) makes long names easy to recognize.</div></div><div class="krow"><div class="q"><span class="n">16.</span>Which type is a distinctive logo that needs no accompanying text?</div>
+  <div class="a">D) Letter Mark</div><div class="ex">A letter mark (like IBM or CNN) makes long names easy to recognize.</div></div><div class="krow"><div class="q"><span class="n">16.</span>Which type is a distinctive logo that needs no accompanying text?</div>
   
-  <div class="a">A) Logo Symbol</div><div class="ex">A logo symbol (like the Apple or Twitter bird) is recognized without text.</div></div><div class="krow"><div class="q"><span class="n">17.</span>Which logo type stirs feelings without forming a known image?</div>
+  <div class="a">C) Logo Symbol</div><div class="ex">A logo symbol (like the Apple or Twitter bird) is recognized without text.</div></div><div class="krow"><div class="q"><span class="n">17.</span>Which logo type stirs feelings without forming a known image?</div>
   
-  <div class="a">C) Abstract Mark</div><div class="ex">Abstract marks (like Pepsi or Nike) use abstract shapes; brands use them to stand out.</div></div><div class="krow"><div class="q"><span class="n">18.</span>Which type combines the word and the shape?</div>
+  <div class="a">D) Abstract Mark</div><div class="ex">Abstract marks (like Pepsi or Nike) use abstract shapes; brands use them to stand out.</div></div><div class="krow"><div class="q"><span class="n">18.</span>Which type combines the word and the shape?</div>
   
-  <div class="a">C) Combination Mark</div><div class="ex">A combination mark strengthens visual identity and ensures the brand is recognized.</div></div><div class="krow"><div class="q"><span class="n">19.</span>Which type gives a traditional, trustworthy feeling and is often used by universities and government bodies?</div>
+  <div class="a">A) Combination Mark</div><div class="ex">A combination mark strengthens visual identity and ensures the brand is recognized.</div></div><div class="krow"><div class="q"><span class="n">19.</span>Which type gives a traditional, trustworthy feeling and is often used by universities and government bodies?</div>
   
   <div class="a">B) Emblem Logo</div><div class="ex">Emblem logos, like Harvard's, are common for schools, universities and organizations.</div></div><div class="krow"><div class="q"><span class="n">20.</span>Which type suits brands that target families and children?</div>
   
   <div class="a">D) Mascot Logo</div><div class="ex">A mascot makes the brand closer and friendlier, and is used in entertainment marketing.</div></div><div class="krow"><div class="q"><span class="n">21.</span>Which three groups are logos divided into?</div>
   
-  <div class="a">B) Word-based, shape-based and word-and-shape combined</div><div class="ex">Word-based, shape-based (symbolic) and compound (word and shape).</div></div><div class="krow"><div class="q"><span class="n">22.</span>A logo idea related to the brand name (like the Apple logo for Apple) is called...</div>
+  <div class="a">D) Word-based, shape-based and word-and-shape combined</div><div class="ex">Word-based, shape-based (symbolic) and compound (word and shape).</div></div><div class="krow"><div class="q"><span class="n">22.</span>A logo idea related to the brand name (like the Apple logo for Apple) is called...</div>
   
-  <div class="a">C) Direct idea related to the name</div><div class="ex">The logo shows something connected to the name of the brand.</div></div><div class="krow"><div class="q"><span class="n">23.</span>A coffee-bean cup in a coffee shop logo is...</div>
+  <div class="a">B) Direct idea related to the name</div><div class="ex">The logo shows something connected to the name of the brand.</div></div><div class="krow"><div class="q"><span class="n">23.</span>A coffee-bean cup in a coffee shop logo is...</div>
   
-  <div class="a">A) A direct idea related to the service</div><div class="ex">It shows something connected to the service that is provided.</div></div><div class="krow"><div class="q"><span class="n">24.</span>FedEx and Amazon are examples of...</div>
+  <div class="a">C) A direct idea related to the service</div><div class="ex">It shows something connected to the service that is provided.</div></div><div class="krow"><div class="q"><span class="n">24.</span>FedEx and Amazon are examples of...</div>
   
-  <div class="a">A) Indirect ideas</div><div class="ex">They deliver a specific idea to the audience, but in an indirect way.</div></div><div class="krow"><div class="q"><span class="n">25.</span>Which museum logo is described as a simple single-color shape inspired by the horizontal plan of the building?</div>
+  <div class="a">D) Indirect ideas</div><div class="ex">They deliver a specific idea to the audience, but in an indirect way.</div></div><div class="krow"><div class="q"><span class="n">25.</span>Which museum logo is described as a simple single-color shape inspired by the horizontal plan of the building?</div>
   
-  <div class="a">C) Grand Egyptian Museum (GEM)</div><div class="ex">GEM has very high simplicity: an abstract geometric shape in warm orange.</div></div><div class="krow"><div class="q"><span class="n">26.</span>Which museum logo is a wordmark with no visual symbol?</div>
+  <div class="a">D) Grand Egyptian Museum (GEM)</div><div class="ex">GEM has very high simplicity: an abstract geometric shape in warm orange.</div></div><div class="krow"><div class="q"><span class="n">26.</span>Which museum logo is a wordmark with no visual symbol?</div>
   
-  <div class="a">D) National Museum of Egyptian Civilization (NMEC)</div><div class="ex">NMEC is text-based; its gold gradient makes one-color printing difficult.</div></div><div class="krow"><div class="q"><span class="n">27.</span>Why is the Egyptian Museum (Tahrir) logo rated low in simplicity?</div>
+  <div class="a">B) National Museum of Egyptian Civilization (NMEC)</div><div class="ex">NMEC is text-based; its gold gradient makes one-color printing difficult.</div></div><div class="krow"><div class="q"><span class="n">27.</span>Why is the Egyptian Museum (Tahrir) logo rated low in simplicity?</div>
   
-  <div class="a">D) Fine details and shadows are lost when it is reduced</div><div class="ex">Its detailed facade drawing and embossed effect are closer to an illustration than a logo.</div></div><div class="krow"><div class="q"><span class="n">28.</span>Which logo uses a six-pointed geometric star with interlocking rings?</div>
+  <div class="a">B) Fine details and shadows are lost when it is reduced</div><div class="ex">Its detailed facade drawing and embossed effect are closer to an illustration than a logo.</div></div><div class="krow"><div class="q"><span class="n">28.</span>Which logo uses a six-pointed geometric star with interlocking rings?</div>
   
   <div class="a">D) Museum of Islamic Art in Cairo</div><div class="ex">The geometric interlacing and star come from Islamic ornament principles.</div></div><div class="krow"><div class="q"><span class="n">29.</span>What is the first stage of logo design?</div>
   
@@ -394,63 +404,63 @@ footer a{color:var(--hl);text-decoration:none;border-bottom:2px solid var(--hl)}
   
   <div class="a">A) A collage of images, logos, colors and textures that sets the visual direction</div><div class="ex">It collects visual references ('visual feeding') before the design begins.</div></div><div class="krow"><div class="q"><span class="n">31.</span>In Stage 2, what does the designer do?</div>
   
-  <div class="a">B) Draws several different designs and compares them</div><div class="ex">Rather than settling on the first idea, sketch several and compare.</div></div><div class="krow"><div class="q"><span class="n">32.</span>Which websites does the lecture mention for choosing fonts and colors?</div>
+  <div class="a">C) Draws several different designs and compares them</div><div class="ex">Rather than settling on the first idea, sketch several and compare.</div></div><div class="krow"><div class="q"><span class="n">32.</span>Which websites does the lecture mention for choosing fonts and colors?</div>
   
-  <div class="a">D) Google Fonts and Color Hunt</div><div class="ex">Google Fonts for English fonts, a site for Arabic fonts, Color Hunt for palettes, and a tool that picks colors from an image.</div></div><div class="krow"><div class="q"><span class="n">33.</span>Which Illustrator tool is used to draw precise paths by clicking anchor points?</div>
+  <div class="a">C) Google Fonts and Color Hunt</div><div class="ex">Google Fonts for English fonts, a site for Arabic fonts, Color Hunt for palettes, and a tool that picks colors from an image.</div></div><div class="krow"><div class="q"><span class="n">33.</span>Which Illustrator tool is used to draw precise paths by clicking anchor points?</div>
   
-  <div class="a">B) Pen Tool (P)</div><div class="ex">The Pen Tool (P) creates paths with straight and curved segments.</div></div><div class="krow"><div class="q"><span class="n">34.</span>How do you make a curved segment with the Pen Tool?</div>
+  <div class="a">A) Pen Tool (P)</div><div class="ex">The Pen Tool (P) creates paths with straight and curved segments.</div></div><div class="krow"><div class="q"><span class="n">34.</span>How do you make a curved segment with the Pen Tool?</div>
   
-  <div class="a">C) Click and drag to pull out direction handles</div><div class="ex">Click and drag when placing an anchor point; handle length and angle set the curve.</div></div><div class="krow"><div class="q"><span class="n">35.</span>How do you close a shape with the Pen Tool?</div>
+  <div class="a">A) Click and drag to pull out direction handles</div><div class="ex">Click and drag when placing an anchor point; handle length and angle set the curve.</div></div><div class="krow"><div class="q"><span class="n">35.</span>How do you close a shape with the Pen Tool?</div>
   
-  <div class="a">D) Click on the first anchor point</div><div class="ex">Hover over the starting anchor point and click to close the path.</div></div><div class="krow"><div class="q"><span class="n">36.</span>What does holding Shift do while placing Pen Tool points?</div>
+  <div class="a">B) Click on the first anchor point</div><div class="ex">Hover over the starting anchor point and click to close the path.</div></div><div class="krow"><div class="q"><span class="n">36.</span>What does holding Shift do while placing Pen Tool points?</div>
   
-  <div class="a">B) Constrains the segment to multiples of 45 degrees</div><div class="ex">Shift locks segments to 45-degree angles.</div></div><div class="krow"><div class="q"><span class="n">37.</span>What is the Curvature Tool good for?</div>
+  <div class="a">A) Constrains the segment to multiples of 45 degrees</div><div class="ex">Shift locks segments to 45-degree angles.</div></div><div class="krow"><div class="q"><span class="n">37.</span>What is the Curvature Tool good for?</div>
   
-  <div class="a">B) Drawing smooth curves easily by clicking points</div><div class="ex">The Curvature Tool (Shift + ~) makes smooth curves with simple clicks and is easier for beginners.</div></div><div class="krow"><div class="q"><span class="n">38.</span>How do you turn a smooth point into a corner point with the Curvature Tool?</div>
+  <div class="a">A) Drawing smooth curves easily by clicking points</div><div class="ex">The Curvature Tool (Shift + ~) makes smooth curves with simple clicks and is easier for beginners.</div></div><div class="krow"><div class="q"><span class="n">38.</span>How do you turn a smooth point into a corner point with the Curvature Tool?</div>
   
-  <div class="a">A) Double-click the point</div><div class="ex">Double-clicking toggles between smooth and corner points.</div></div><div class="krow"><div class="q"><span class="n">39.</span>Which tool selects and moves individual anchor points and handles?</div>
+  <div class="a">B) Double-click the point</div><div class="ex">Double-clicking toggles between smooth and corner points.</div></div><div class="krow"><div class="q"><span class="n">39.</span>Which tool selects and moves individual anchor points and handles?</div>
   
-  <div class="a">B) Direct Selection Tool (A)</div><div class="ex">The white arrow (A) edits anchor points and handles; the black arrow (V) moves the whole object.</div></div><div class="krow"><div class="q"><span class="n">40.</span>Which tool converts a smooth point into a corner point and vice versa?</div>
+  <div class="a">D) Direct Selection Tool (A)</div><div class="ex">The white arrow (A) edits anchor points and handles; the black arrow (V) moves the whole object.</div></div><div class="krow"><div class="q"><span class="n">40.</span>Which tool converts a smooth point into a corner point and vice versa?</div>
   
-  <div class="a">A) Anchor Point Tool (Shift + C)</div><div class="ex">The Anchor Point (Convert) Tool switches between corner and smooth points.</div></div><div class="krow"><div class="q"><span class="n">41.</span>Which basic shapes are most useful to build a geometric logo quickly?</div>
+  <div class="a">C) Anchor Point Tool (Shift + C)</div><div class="ex">The Anchor Point (Convert) Tool switches between corner and smooth points.</div></div><div class="krow"><div class="q"><span class="n">41.</span>Which basic shapes are most useful to build a geometric logo quickly?</div>
   
-  <div class="a">B) Ellipse, Rectangle, Polygon and Star</div><div class="ex">Combine circles, squares, triangles and stars, then merge them.</div></div><div class="krow"><div class="q"><span class="n">42.</span>Which Pathfinder command merges overlapping shapes into one shape?</div>
+  <div class="a">C) Ellipse, Rectangle, Polygon and Star</div><div class="ex">Combine circles, squares, triangles and stars, then merge them.</div></div><div class="krow"><div class="q"><span class="n">42.</span>Which Pathfinder command merges overlapping shapes into one shape?</div>
   
   <div class="a">A) Unite</div><div class="ex">Unite merges selected shapes into a single shape.</div></div><div class="krow"><div class="q"><span class="n">43.</span>Which Pathfinder command cuts the front shape out of the back shape?</div>
   
   <div class="a">D) Minus Front</div><div class="ex">Minus Front subtracts the shapes in front from the shape at the back.</div></div><div class="krow"><div class="q"><span class="n">44.</span>Which Pathfinder command keeps only the overlapping area?</div>
   
-  <div class="a">C) Intersect</div><div class="ex">Intersect keeps the area where all selected shapes overlap.</div></div><div class="krow"><div class="q"><span class="n">45.</span>Where do you open the Pathfinder panel?</div>
+  <div class="a">D) Intersect</div><div class="ex">Intersect keeps the area where all selected shapes overlap.</div></div><div class="krow"><div class="q"><span class="n">45.</span>Where do you open the Pathfinder panel?</div>
   
-  <div class="a">C) Window &gt; Pathfinder</div><div class="ex">Window &gt; Pathfinder (Shift + Ctrl/Cmd + F9).</div></div><div class="krow"><div class="q"><span class="n">46.</span>What is the shortcut of the Shape Builder Tool?</div>
+  <div class="a">B) Window &gt; Pathfinder</div><div class="ex">Window &gt; Pathfinder (Shift + Ctrl/Cmd + F9).</div></div><div class="krow"><div class="q"><span class="n">46.</span>What is the shortcut of the Shape Builder Tool?</div>
   
-  <div class="a">B) Shift + M</div><div class="ex">Select shapes, then drag across regions with Shape Builder (Shift + M) to merge them.</div></div><div class="krow"><div class="q"><span class="n">47.</span>How do you delete a region with the Shape Builder Tool?</div>
+  <div class="a">A) Shift + M</div><div class="ex">Select shapes, then drag across regions with Shape Builder (Shift + M) to merge them.</div></div><div class="krow"><div class="q"><span class="n">47.</span>How do you delete a region with the Shape Builder Tool?</div>
   
-  <div class="a">B) Hold Alt/Option and click the region</div><div class="ex">Alt/Option + click removes the region under the cursor.</div></div><div class="krow"><div class="q"><span class="n">48.</span>Why convert text to outlines (Create Outlines, Shift + Ctrl/Cmd + O) in a logo?</div>
+  <div class="a">A) Hold Alt/Option and click the region</div><div class="ex">Alt/Option + click removes the region under the cursor.</div></div><div class="krow"><div class="q"><span class="n">48.</span>Why convert text to outlines (Create Outlines, Shift + Ctrl/Cmd + O) in a logo?</div>
   
-  <div class="a">B) So it becomes vector shapes and does not depend on an installed font</div><div class="ex">Outlined text keeps the same look on any computer and can be edited like a shape.</div></div><div class="krow"><div class="q"><span class="n">49.</span>Why use Object &gt; Path &gt; Outline Stroke before using Pathfinder?</div>
+  <div class="a">C) So it becomes vector shapes and does not depend on an installed font</div><div class="ex">Outlined text keeps the same look on any computer and can be edited like a shape.</div></div><div class="krow"><div class="q"><span class="n">49.</span>Why use Object &gt; Path &gt; Outline Stroke before using Pathfinder?</div>
   
   <div class="a">A) To convert strokes into filled shapes that scale and merge correctly</div><div class="ex">Strokes become filled shapes, so scaling and Pathfinder work as expected.</div></div><div class="krow"><div class="q"><span class="n">50.</span>How can you test that a logo works on white and black backgrounds?</div>
   
   <div class="a">C) Place the logo on a white rectangle and on a black rectangle</div><div class="ex">Test it on both backgrounds, as the criteria require.</div></div><div class="krow"><div class="q"><span class="n">51.</span>Which file format keeps a logo scalable without losing quality?</div>
   
-  <div class="a">C) Vector (AI, SVG or PDF)</div><div class="ex">Vector formats can be enlarged or reduced without losing features. Export PNG or JPEG copies when needed.</div></div><div class="krow"><div class="q"><span class="n">52.</span>Which logo criterion says 'text can be read easily and at first glance'?</div>
+  <div class="a">D) Vector (AI, SVG or PDF)</div><div class="ex">Vector formats can be enlarged or reduced without losing features. Export PNG or JPEG copies when needed.</div></div><div class="krow"><div class="q"><span class="n">52.</span>Which logo criterion says 'text can be read easily and at first glance'?</div>
   
-  <div class="a">B) Legibility</div><div class="ex"><b>Legibility</b>.</div></div><div class="krow"><div class="q"><span class="n">53.</span>Which criterion says the logo must clearly express the product or activity of the company?</div>
+  <div class="a">C) Legibility</div><div class="ex"><b>Legibility</b>.</div></div><div class="krow"><div class="q"><span class="n">53.</span>Which criterion says the logo must clearly express the product or activity of the company?</div>
   
-  <div class="a">B) Meaning (relevance)</div><div class="ex"><b>Meaning (relevance)</b>.</div></div><div class="krow"><div class="q"><span class="n">54.</span>Why should a logo be simple, according to the lecture?</div>
+  <div class="a">D) Meaning (relevance)</div><div class="ex"><b>Meaning (relevance)</b>.</div></div><div class="krow"><div class="q"><span class="n">54.</span>Why should a logo be simple, according to the lecture?</div>
   
   <div class="a">B) The public sees it for a moment, for example while walking or riding public transport</div><div class="ex">الناس مش بتقعد تحلل اللوجو؛ بتشوفه لحظة.</div></div><div class="krow"><div class="q"><span class="n">55.</span>Where is the Concord Museum located?</div>
   
-  <div class="a">A) Concord, Massachusetts, United States</div><div class="ex"><b>Concord, Massachusetts</b>.</div></div><div class="krow"><div class="q"><span class="n">56.</span>What does the GEM logo's orange color reflect?</div>
+  <div class="a">B) Concord, Massachusetts, United States</div><div class="ex"><b>Concord, Massachusetts</b>.</div></div><div class="krow"><div class="q"><span class="n">56.</span>What does the GEM logo's orange color reflect?</div>
   
-  <div class="a">D) The sun over the Giza plateau at sunset</div><div class="ex"><b>The sun over the Giza plateau at sunset</b>.</div></div><div class="krow"><div class="q"><span class="n">57.</span>Which museum logo is closer to an illustrative drawing than to a logo?</div>
+  <div class="a">C) The sun over the Giza plateau at sunset</div><div class="ex"><b>The sun over the Giza plateau at sunset</b>.</div></div><div class="krow"><div class="q"><span class="n">57.</span>Which museum logo is closer to an illustrative drawing than to a logo?</div>
   
-  <div class="a">C) The Egyptian Museum in Tahrir</div><div class="ex"><b>Tahrir</b>: رسم تفصيلي للواجهة بـ embossed effect.</div></div><div class="krow"><div class="q"><span class="n">58.</span>The logo of the Grand Egyptian Museum is inspired by:</div>
+  <div class="a">D) The Egyptian Museum in Tahrir</div><div class="ex"><b>Tahrir</b>: رسم تفصيلي للواجهة بـ embossed effect.</div></div><div class="krow"><div class="q"><span class="n">58.</span>The logo of the Grand Egyptian Museum is inspired by:</div>
   
-  <div class="a">C) The horizontal plan (top view) of the building</div><div class="ex">مستوحى من <b>المسقط الأفقي للمبنى</b>.</div></div><div class="krow"><div class="q"><span class="n">59.</span>Which logo type is used in entertainment marketing?</div>
+  <div class="a">D) The horizontal plan (top view) of the building</div><div class="ex">مستوحى من <b>المسقط الأفقي للمبنى</b>.</div></div><div class="krow"><div class="q"><span class="n">59.</span>Which logo type is used in entertainment marketing?</div>
   
-  <div class="a">B) Mascot Logo</div><div class="ex"><b>Mascot</b>.</div></div></div></details>
+  <div class="a">C) Mascot Logo</div><div class="ex"><b>Mascot</b>.</div></div></div></details>
   </div></main>
 <div id="guide"><canvas id="hero" width="48" height="72" aria-label="Ahmed, the pixel guide"></canvas><div id="bubble" role="status"><button class="x" aria-label="Hide message">X</button><span id="say"></span></div></div>
 
@@ -482,7 +492,15 @@ function renderPal(){const th=curTheme(),m=curMode(),p=curPal();
   palP.querySelectorAll("[data-m]").forEach(b=>b.onclick=()=>setMode(b.dataset.m));
   palP.querySelectorAll("[data-p]").forEach(b=>b.onclick=()=>{setPal(b.dataset.p);say(`اخترت <b dir="ltr">${PALS.find(x=>x.k===b.dataset.p).n}</b>. شكلها حلو!`,"happy")});
   starCols()}
-function openPal(o){palP.hidden=!o;themeB.setAttribute("aria-expanded",o);if(o)renderPal()}
+const FONTS=[{k:"cairo",n:"Cairo",u:"Cairo:wght@400;600;700"},{k:"tajawal",n:"Tajawal",u:"Tajawal:wght@400;500;700"},{k:"readex",n:"Readex Pro",u:"Readex+Pro:wght@400;600;700"},{k:"kufi",n:"Noto Kufi Arabic",u:"Noto+Kufi+Arabic:wght@400;600;700"},{k:"plex",n:"IBM Plex Sans Arabic",u:"IBM+Plex+Sans+Arabic:wght@400;600;700"}];
+function curFont(){return root.getAttribute("data-font")||"cairo"}
+const loadedF=new Set(["cairo"]);
+function loadFont(f){if(loadedF.has(f.k))return;loadedF.add(f.k);const l=document.createElement("link");l.rel="stylesheet";l.href="https://fonts.googleapis.com/css2?family="+f.u+"&display=swap";document.head.appendChild(l)}
+function setFont(k){if(k==="cairo")root.removeAttribute("data-font");else root.setAttribute("data-font",k);try{localStorage.setItem("wd:font",k)}catch(e){}renderFonts()}
+function renderFonts(){const c=curFont();const el=document.getElementById("pfonts");
+  el.innerHTML=`<span class="ptitle" style="direction:ltr;text-align:left">ARABIC FONT</span>`+FONTS.map(f=>`<button type="button" data-f="${f.k}" aria-pressed="${c===f.k}"><span style="font-family:'${f.n}'">شرح الويب ديزاين</span><small>${f.n}</small></button>`).join("");
+  el.querySelectorAll("[data-f]").forEach(b=>b.onclick=()=>{setFont(b.dataset.f);say("الخط اتغير. لو مش مريح جرب واحد تاني.","happy")})}
+function openPal(o){if(o){FONTS.forEach(loadFont);renderFonts()}palP.hidden=!o;themeB.setAttribute("aria-expanded",o);if(o)renderPal()}
 themeB.onclick=e=>{e.stopPropagation();openPal(palP.hidden)};
 palP.onclick=e=>e.stopPropagation();
 document.addEventListener("click",()=>{if(!palP.hidden)openPal(false)});
@@ -507,7 +525,7 @@ function say(t,mood){sayEl.innerHTML=t;bubble.hidden=false;clearTimeout(hideT);h
   if(mood==="happy"){setG("happy",1800);G.classList.add("jump")}else if(mood==="sad"){setG("sad",1800);G.classList.add("shake")}
   else if(mood==="think"){setG("think",1800)}else if(mood==="wave"){setG("wave",2000)}else if(mood==="type"){setG("type",2400)}else{setG("talk",1500)}}
 bubble.querySelector(".x").onclick=()=>bubble.hidden=true;
-const TIPS=["المصطلحات الملونة دي اللي بتيجي في الامتحان بالنص.","حل كويز المحاضرة بعد ما تخلص شرحها على طول.","الاختبار الشامل كل مرة بيطلعلك 30 سؤال مختلفين، جربه أكتر من مرة.","احفظ أرقام الـ 12-column grid والـ 8px system كويس.","مش عاجبك اللون؟ دوس COLORS فوق واختار palette تانية في الفاتح أو الغامق.","اضغط عليا تاني لو عايز نصيحة جديدة."];
+const TIPS=["المصطلحات الملونة دي اللي بتيجي في الامتحان بالنص.","حل كويز المحاضرة بعد ما تخلص شرحها على طول.","الاختبار الشامل كل مرة بيطلعلك 30 سؤال مختلفين، جربه أكتر من مرة.","احفظ أرقام الـ 12-column grid والـ 8px system كويس.","مش عاجبك اللون أو الخط؟ دوس COLORS فوق واختار اللي يريحك.","اضغط عليا تاني لو عايز نصيحة جديدة."];
 let tipI=0; G.onclick=()=>say(TIPS[tipI++%TIPS.length],"think");
 
 /* ============ starfield ============ */

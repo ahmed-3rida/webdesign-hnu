@@ -2,12 +2,16 @@
 <meta name="description" content="شرح وحل مادة Web Design بالعربي والمصطلحات إنجليزي: 5 محاضرات، كويز تدريبي على كل محاضرة، واختبار شامل بيتولد مختلف كل مرة من بنك أسئلة كبير.">
 <meta name="author" content="Ahmed Salman">
 <meta name="claude:viewport-fit-sides" content="cover">
-<script>try{var __t=localStorage.getItem("wd:theme");if(__t==="light"||__t==="dark")document.documentElement.setAttribute("data-theme",__t);var __p=localStorage.getItem("wd:pal");if(__p&&/^[a-z]+$/.test(__p)&&__p!=="arcade")document.documentElement.setAttribute("data-pal",__p)}catch(e){}</script>
+<script>try{var __t=localStorage.getItem("wd:theme");if(__t==="light"||__t==="dark")document.documentElement.setAttribute("data-theme",__t);var __f=localStorage.getItem("wd:font");var __F={"cairo":"Cairo:wght@400;600;700","tajawal":"Tajawal:wght@400;500;700","readex":"Readex+Pro:wght@400;600;700","kufi":"Noto+Kufi+Arabic:wght@400;600;700","plex":"IBM+Plex+Sans+Arabic:wght@400;600;700"};if(__f&&__F[__f]&&__f!=="cairo"){document.documentElement.setAttribute("data-font",__f);var __l=document.createElement("link");__l.rel="stylesheet";__l.id="fontL";__l.href="https://fonts.googleapis.com/css2?family="+__F[__f]+"&display=swap";document.head.appendChild(__l)}var __p=localStorage.getItem("wd:pal");if(__p&&/^[a-z]+$/.test(__p)&&__p!=="arcade")document.documentElement.setAttribute("data-pal",__p)}catch(e){}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=JetBrains+Mono:wght@400;600&family=IBM+Plex+Sans+Arabic:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=JetBrains+Mono:wght@400;600&family=Cairo:wght@400;600;700&display=swap">
 <style>
 /* Layout: arcade "world map" home → level pages (lesson + quiz) → generated final exam. Light + dark, portfolio palette. */
-:root{--f-pixel:"Press Start 2P","IBM Plex Sans Arabic",monospace;--f-term:"JetBrains Mono",ui-monospace,monospace;--f-body:"IBM Plex Sans Arabic","Segoe UI",Tahoma,sans-serif}
+:root{--f-ar:"Cairo";--f-pixel:"Press Start 2P",var(--f-ar),monospace;--f-term:"JetBrains Mono",ui-monospace,monospace;--f-body:var(--f-ar),"Segoe UI",Tahoma,sans-serif}
+:root[data-font="tajawal"]{--f-ar:"Tajawal"}
+:root[data-font="readex"]{--f-ar:"Readex Pro"}
+:root[data-font="kufi"]{--f-ar:"Noto Kufi Arabic"}
+:root[data-font="plex"]{--f-ar:"IBM Plex Sans Arabic"}
 /*PALETTES-CSS*/
 :root{--bg:#f5f4f0;--panel:#ffffff;--panel2:#f1efe9;--line:#d8d5ca;--pxsh:#0b0d12;--ink:#0b0d12;--muted:#5d6474;--hl:#a35f00;--acc:#4b55e8;--acc2:#d97a08;--b1:#ffd23f;--b1d:#c99a00;--b1l:#fff3b0;--b1t:#0b0d12;--b2:#7c88ff;--b2d:#4b55e8;--b2l:#b9c0ff;--b2t:#05070d;--b3:#ffb547;--b3d:#d97a08;--b3l:#ffe0b0;--b3t:#0b0d12;--hero:#1b2160;--herosh:#b9c0ff;--herospan:#e08a00;--herospansh:#0b0d12;--star1:#c9c5b8;--star2:#e6e3da;--grid:#4b55e833;--canvas:#ece9e1;--defbg:#eef0ff;--deftx:#1d2350;--tipbg:#fff8de;--pickbg:#fff3c4;--glow:rgba(75,85,232,.35);--rose:#d6304f;--ok:#12804a;--okbg:#e3f5ea;--badbg:#fde8ec;--ground:#0b0d12;color-scheme:light}
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#05070d;--panel:#0d111c;--panel2:#151b2c;--line:#262d45;--pxsh:#262d45;--ink:#eef1f8;--muted:#8a93a8;--hl:#ffd23f;--acc:#7c88ff;--acc2:#ffb547;--b1:#ffd23f;--b1d:#c99a00;--b1l:#fff3b0;--b1t:#0b0d12;--b2:#7c88ff;--b2d:#4b55e8;--b2l:#b9c0ff;--b2t:#05070d;--b3:#ffb547;--b3d:#d97a08;--b3l:#ffe0b0;--b3t:#0b0d12;--hero:#dfe3ff;--herosh:#4b55e8;--herospan:#ffd23f;--herospansh:#a86f00;--star1:#8a93a8;--star2:#262d45;--grid:#7c88ff55;--canvas:#0a0d16;--defbg:#0a0d16;--deftx:#d6dbff;--tipbg:#1a1708;--pickbg:#2e2810;--glow:rgba(124,136,255,.45);--rose:#ff4d6d;--ok:#3ddc97;--okbg:#0f3a2c;--badbg:#3a1220;--ground:#ffffff;color-scheme:dark}}
@@ -73,6 +77,12 @@ p{margin:.4em 0}
 .pgrid .sws{display:flex;border:2px solid #000;width:100%}
 .pgrid .sws i{flex:1;height:20px}
 .ptitle{font-family:var(--f-pixel);font-size:8px;color:var(--muted);grid-column:1/-1}
+.pfonts{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.pfonts button{background:var(--panel2);color:var(--ink);border:2px solid var(--line);padding:6px 8px;cursor:pointer;display:grid;gap:2px;text-align:right;direction:rtl}
+.pfonts button[aria-pressed=true]{border-color:var(--ink);box-shadow:3px 3px 0 var(--pxsh)}
+.pfonts button span{font-size:16px;line-height:1.5}
+.pfonts button small{font-family:var(--f-term);font-size:10px;color:var(--muted);direction:ltr;text-align:left}
+.palp.px{max-height:calc(100vh - 80px);overflow-y:auto}
 
 /* pixel panel + buttons (portfolio pixel-btn) */
 .px{background:var(--panel);border:2px solid var(--line);box-shadow:4px 4px 0 0 var(--pxsh);border-radius:6px;position:relative}
@@ -280,7 +290,7 @@ footer a{color:var(--hl);text-decoration:none;border-bottom:2px solid var(--hl)}
   <nav id="nav"></nav>
   <div class="tools"><button id="themeB" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="palP"><span class="swm" id="swm"></span>COLORS</button><div class="xp" title="XP from correct answers"><span class="coin"></span><span id="xp">0</span> XP</div></div>
 </header>
-<div id="palP" class="palp px" hidden role="dialog" aria-label="Colors"><div class="pmodes" id="pmodes"></div><div class="pgrid" id="pgrid"></div></div>
+<div id="palP" class="palp px" hidden role="dialog" aria-label="Colors"><div class="pmodes" id="pmodes"></div><div class="pgrid" id="pgrid"></div><div class="pfonts" id="pfonts"></div></div>
 <main class="wrap" id="app" dir="rtl"><!--PRERENDER--></main>
 <div id="guide"><canvas id="hero" width="48" height="72" aria-label="Ahmed, the pixel guide"></canvas><div id="bubble" role="status"><button class="x" aria-label="Hide message">X</button><span id="say"></span></div></div>
 
@@ -312,7 +322,15 @@ function renderPal(){const th=curTheme(),m=curMode(),p=curPal();
   palP.querySelectorAll("[data-m]").forEach(b=>b.onclick=()=>setMode(b.dataset.m));
   palP.querySelectorAll("[data-p]").forEach(b=>b.onclick=()=>{setPal(b.dataset.p);say(`اخترت <b dir="ltr">${PALS.find(x=>x.k===b.dataset.p).n}</b>. شكلها حلو!`,"happy")});
   starCols()}
-function openPal(o){palP.hidden=!o;themeB.setAttribute("aria-expanded",o);if(o)renderPal()}
+const FONTS=[{k:"cairo",n:"Cairo",u:"Cairo:wght@400;600;700"},{k:"tajawal",n:"Tajawal",u:"Tajawal:wght@400;500;700"},{k:"readex",n:"Readex Pro",u:"Readex+Pro:wght@400;600;700"},{k:"kufi",n:"Noto Kufi Arabic",u:"Noto+Kufi+Arabic:wght@400;600;700"},{k:"plex",n:"IBM Plex Sans Arabic",u:"IBM+Plex+Sans+Arabic:wght@400;600;700"}];
+function curFont(){return root.getAttribute("data-font")||"cairo"}
+const loadedF=new Set(["cairo"]);
+function loadFont(f){if(loadedF.has(f.k))return;loadedF.add(f.k);const l=document.createElement("link");l.rel="stylesheet";l.href="https://fonts.googleapis.com/css2?family="+f.u+"&display=swap";document.head.appendChild(l)}
+function setFont(k){if(k==="cairo")root.removeAttribute("data-font");else root.setAttribute("data-font",k);try{localStorage.setItem("wd:font",k)}catch(e){}renderFonts()}
+function renderFonts(){const c=curFont();const el=document.getElementById("pfonts");
+  el.innerHTML=`<span class="ptitle" style="direction:ltr;text-align:left">ARABIC FONT</span>`+FONTS.map(f=>`<button type="button" data-f="${f.k}" aria-pressed="${c===f.k}"><span style="font-family:'${f.n}'">شرح الويب ديزاين</span><small>${f.n}</small></button>`).join("");
+  el.querySelectorAll("[data-f]").forEach(b=>b.onclick=()=>{setFont(b.dataset.f);say("الخط اتغير. لو مش مريح جرب واحد تاني.","happy")})}
+function openPal(o){if(o){FONTS.forEach(loadFont);renderFonts()}palP.hidden=!o;themeB.setAttribute("aria-expanded",o);if(o)renderPal()}
 themeB.onclick=e=>{e.stopPropagation();openPal(palP.hidden)};
 palP.onclick=e=>e.stopPropagation();
 document.addEventListener("click",()=>{if(!palP.hidden)openPal(false)});
@@ -337,7 +355,7 @@ function say(t,mood){sayEl.innerHTML=t;bubble.hidden=false;clearTimeout(hideT);h
   if(mood==="happy"){setG("happy",1800);G.classList.add("jump")}else if(mood==="sad"){setG("sad",1800);G.classList.add("shake")}
   else if(mood==="think"){setG("think",1800)}else if(mood==="wave"){setG("wave",2000)}else if(mood==="type"){setG("type",2400)}else{setG("talk",1500)}}
 bubble.querySelector(".x").onclick=()=>bubble.hidden=true;
-const TIPS=["المصطلحات الملونة دي اللي بتيجي في الامتحان بالنص.","حل كويز المحاضرة بعد ما تخلص شرحها على طول.","الاختبار الشامل كل مرة بيطلعلك 30 سؤال مختلفين، جربه أكتر من مرة.","احفظ أرقام الـ 12-column grid والـ 8px system كويس.","مش عاجبك اللون؟ دوس COLORS فوق واختار palette تانية في الفاتح أو الغامق.","اضغط عليا تاني لو عايز نصيحة جديدة."];
+const TIPS=["المصطلحات الملونة دي اللي بتيجي في الامتحان بالنص.","حل كويز المحاضرة بعد ما تخلص شرحها على طول.","الاختبار الشامل كل مرة بيطلعلك 30 سؤال مختلفين، جربه أكتر من مرة.","احفظ أرقام الـ 12-column grid والـ 8px system كويس.","مش عاجبك اللون أو الخط؟ دوس COLORS فوق واختار اللي يريحك.","اضغط عليا تاني لو عايز نصيحة جديدة."];
 let tipI=0; G.onclick=()=>say(TIPS[tipI++%TIPS.length],"think");
 
 /* ============ starfield ============ */

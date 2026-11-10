@@ -33,12 +33,16 @@
 <style>:root{padding:env(safe-area-inset-top,0px) 0 env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 </head>
 <body>
-<script>try{var __t=localStorage.getItem("wd:theme");if(__t==="light"||__t==="dark")document.documentElement.setAttribute("data-theme",__t);var __p=localStorage.getItem("wd:pal");if(__p&&/^[a-z]+$/.test(__p)&&__p!=="arcade")document.documentElement.setAttribute("data-pal",__p)}catch(e){}</script>
+<script>try{var __t=localStorage.getItem("wd:theme");if(__t==="light"||__t==="dark")document.documentElement.setAttribute("data-theme",__t);var __f=localStorage.getItem("wd:font");var __F={"cairo":"Cairo:wght@400;600;700","tajawal":"Tajawal:wght@400;500;700","readex":"Readex+Pro:wght@400;600;700","kufi":"Noto+Kufi+Arabic:wght@400;600;700","plex":"IBM+Plex+Sans+Arabic:wght@400;600;700"};if(__f&&__F[__f]&&__f!=="cairo"){document.documentElement.setAttribute("data-font",__f);var __l=document.createElement("link");__l.rel="stylesheet";__l.id="fontL";__l.href="https://fonts.googleapis.com/css2?family="+__F[__f]+"&display=swap";document.head.appendChild(__l)}var __p=localStorage.getItem("wd:pal");if(__p&&/^[a-z]+$/.test(__p)&&__p!=="arcade")document.documentElement.setAttribute("data-pal",__p)}catch(e){}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=JetBrains+Mono:wght@400;600&family=IBM+Plex+Sans+Arabic:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=JetBrains+Mono:wght@400;600&family=Cairo:wght@400;600;700&display=swap">
 <style>
 /* Layout: arcade "world map" home → level pages (lesson + quiz) → generated final exam. Light + dark, portfolio palette. */
-:root{--f-pixel:"Press Start 2P","IBM Plex Sans Arabic",monospace;--f-term:"JetBrains Mono",ui-monospace,monospace;--f-body:"IBM Plex Sans Arabic","Segoe UI",Tahoma,sans-serif}
+:root{--f-ar:"Cairo";--f-pixel:"Press Start 2P",var(--f-ar),monospace;--f-term:"JetBrains Mono",ui-monospace,monospace;--f-body:var(--f-ar),"Segoe UI",Tahoma,sans-serif}
+:root[data-font="tajawal"]{--f-ar:"Tajawal"}
+:root[data-font="readex"]{--f-ar:"Readex Pro"}
+:root[data-font="kufi"]{--f-ar:"Noto Kufi Arabic"}
+:root[data-font="plex"]{--f-ar:"IBM Plex Sans Arabic"}
 /*PALETTES-CSS*/
 :root{--bg:#f5f4f0;--panel:#ffffff;--panel2:#f1efe9;--line:#d8d5ca;--pxsh:#0b0d12;--ink:#0b0d12;--muted:#5d6474;--hl:#a35f00;--acc:#4b55e8;--acc2:#d97a08;--b1:#ffd23f;--b1d:#c99a00;--b1l:#fff3b0;--b1t:#0b0d12;--b2:#7c88ff;--b2d:#4b55e8;--b2l:#b9c0ff;--b2t:#05070d;--b3:#ffb547;--b3d:#d97a08;--b3l:#ffe0b0;--b3t:#0b0d12;--hero:#1b2160;--herosh:#b9c0ff;--herospan:#e08a00;--herospansh:#0b0d12;--star1:#c9c5b8;--star2:#e6e3da;--grid:#4b55e833;--canvas:#ece9e1;--defbg:#eef0ff;--deftx:#1d2350;--tipbg:#fff8de;--pickbg:#fff3c4;--glow:rgba(75,85,232,.35);--rose:#d6304f;--ok:#12804a;--okbg:#e3f5ea;--badbg:#fde8ec;--ground:#0b0d12;color-scheme:light}
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#05070d;--panel:#0d111c;--panel2:#151b2c;--line:#262d45;--pxsh:#262d45;--ink:#eef1f8;--muted:#8a93a8;--hl:#ffd23f;--acc:#7c88ff;--acc2:#ffb547;--b1:#ffd23f;--b1d:#c99a00;--b1l:#fff3b0;--b1t:#0b0d12;--b2:#7c88ff;--b2d:#4b55e8;--b2l:#b9c0ff;--b2t:#05070d;--b3:#ffb547;--b3d:#d97a08;--b3l:#ffe0b0;--b3t:#0b0d12;--hero:#dfe3ff;--herosh:#4b55e8;--herospan:#ffd23f;--herospansh:#a86f00;--star1:#8a93a8;--star2:#262d45;--grid:#7c88ff55;--canvas:#0a0d16;--defbg:#0a0d16;--deftx:#d6dbff;--tipbg:#1a1708;--pickbg:#2e2810;--glow:rgba(124,136,255,.45);--rose:#ff4d6d;--ok:#3ddc97;--okbg:#0f3a2c;--badbg:#3a1220;--ground:#ffffff;color-scheme:dark}}
@@ -104,6 +108,12 @@ p{margin:.4em 0}
 .pgrid .sws{display:flex;border:2px solid #000;width:100%}
 .pgrid .sws i{flex:1;height:20px}
 .ptitle{font-family:var(--f-pixel);font-size:8px;color:var(--muted);grid-column:1/-1}
+.pfonts{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.pfonts button{background:var(--panel2);color:var(--ink);border:2px solid var(--line);padding:6px 8px;cursor:pointer;display:grid;gap:2px;text-align:right;direction:rtl}
+.pfonts button[aria-pressed=true]{border-color:var(--ink);box-shadow:3px 3px 0 var(--pxsh)}
+.pfonts button span{font-size:16px;line-height:1.5}
+.pfonts button small{font-family:var(--f-term);font-size:10px;color:var(--muted);direction:ltr;text-align:left}
+.palp.px{max-height:calc(100vh - 80px);overflow-y:auto}
 
 /* pixel panel + buttons (portfolio pixel-btn) */
 .px{background:var(--panel);border:2px solid var(--line);box-shadow:4px 4px 0 0 var(--pxsh);border-radius:6px;position:relative}
@@ -311,7 +321,7 @@ footer a{color:var(--hl);text-decoration:none;border-bottom:2px solid var(--hl)}
   <nav id="nav"></nav>
   <div class="tools"><button id="themeB" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="palP"><span class="swm" id="swm"></span>COLORS</button><div class="xp" title="XP from correct answers"><span class="coin"></span><span id="xp">0</span> XP</div></div>
 </header>
-<div id="palP" class="palp px" hidden role="dialog" aria-label="Colors"><div class="pmodes" id="pmodes"></div><div class="pgrid" id="pgrid"></div></div>
+<div id="palP" class="palp px" hidden role="dialog" aria-label="Colors"><div class="pmodes" id="pmodes"></div><div class="pgrid" id="pgrid"></div><div class="pfonts" id="pfonts"></div></div>
 <main class="wrap" id="app" dir="rtl"><section class="page-head"><span class="eyebrow" dir="ltr">Quiz: Introduction to Web Design</span><h1 dir="ltr" style="font-size:clamp(16px,3vw,22px)">كويز محاضرة 1</h1>
   </section>
   <div class="qwrap">
@@ -323,7 +333,7 @@ footer a{color:var(--hl);text-decoration:none;border-bottom:2px solid var(--hl)}
    </div>
    <article class="qcard px fade">
      <div class="qtext"><span class="n">1.</span>What is the aim of the Web Design course, according to Lecture 1?</div>
-     <div class="opts"><button class="opt " data-j="0"><span class="L">A</span><span>To understand what a website is made of, how a designer thinks, and how an idea becomes an interactive interface</span></button><button class="opt " data-j="1"><span class="L">B</span><span>Only to make a nice-looking page</span></button><button class="opt " data-j="2"><span class="L">C</span><span>To learn video editing</span></button><button class="opt " data-j="3"><span class="L">D</span><span>To learn database programming</span></button></div>
+     <div class="opts"><button class="opt " data-j="0"><span class="L">A</span><span>To learn database programming</span></button><button class="opt " data-j="1"><span class="L">B</span><span>To learn video editing</span></button><button class="opt " data-j="2"><span class="L">C</span><span>To understand what a website is made of, how a designer thinks, and how an idea becomes an interactive interface</span></button><button class="opt " data-j="3"><span class="L">D</span><span>Only to make a nice-looking page</span></button></div>
      
    </article>
    <div class="qnav" dir="ltr">
@@ -334,57 +344,57 @@ footer a{color:var(--hl);text-decoration:none;border-bottom:2px solid var(--hl)}
    <div><a class="btn o" href="/lec-1/">BACK</a></div>
    <details class="allq"><summary>كل الأسئلة بالإجابات والشرح (39)</summary><div class="key"><div class="krow"><div class="q"><span class="n">1.</span>What is the aim of the Web Design course, according to Lecture 1?</div>
   
-  <div class="a">A) To understand what a website is made of, how a designer thinks, and how an idea becomes an interactive interface</div><div class="ex">المادة مش هدفها صفحة حلوة وبس؛ هدفها تفهم الموقع مكون من إيه والديزاينر بيفكر إزاي.</div></div><div class="krow"><div class="q"><span class="n">2.</span>Web design basics rest on which three ideas?</div>
+  <div class="a">C) To understand what a website is made of, how a designer thinks, and how an idea becomes an interactive interface</div><div class="ex">المادة مش هدفها صفحة حلوة وبس؛ هدفها تفهم الموقع مكون من إيه والديزاينر بيفكر إزاي.</div></div><div class="krow"><div class="q"><span class="n">2.</span>Web design basics rest on which three ideas?</div>
   
-  <div class="a">B) The idea, the interface and the user experience</div><div class="ex"><b>Idea</b> (الموقع ليه)، <b>Interface</b> (شكله والتفاعل)، <b>User experience</b> (إحساس الاستخدام).</div></div><div class="krow"><div class="q"><span class="n">3.</span>When a person opens a website, what is the correct order of what happens?</div>
+  <div class="a">C) The idea, the interface and the user experience</div><div class="ex"><b>Idea</b> (الموقع ليه)، <b>Interface</b> (شكله والتفاعل)، <b>User experience</b> (إحساس الاستخدام).</div></div><div class="krow"><div class="q"><span class="n">3.</span>When a person opens a website, what is the correct order of what happens?</div>
   
-  <div class="a">B) Sees → understands → navigates → interacts</div><div class="ex">الترتيب: <b>sees → understands → navigates → interacts</b>.</div></div><div class="krow"><div class="q"><span class="n">4.</span>How does a designer see a website, compared with a normal user?</div>
+  <div class="a">D) Sees → understands → navigates → interacts</div><div class="ex">الترتيب: <b>sees → understands → navigates → interacts</b>.</div></div><div class="krow"><div class="q"><span class="n">4.</span>How does a designer see a website, compared with a normal user?</div>
   
   <div class="a">D) As a set of elements that are deliberately arranged and planned</div><div class="ex">اليوزر بيشوفه one whole، الديزاينر بيشوفه عناصر متخططة بقصد، وحتى الـ empty spaces ليها هدف.</div></div><div class="krow"><div class="q"><span class="n">5.</span>Web design is defined as the planning and design of visual interfaces to present content in a way that is:</div>
   
-  <div class="a">D) Clear, attractive and easy to use</div><div class="ex">التعريف: <b>clear, attractive and easy to use</b>.</div></div><div class="krow"><div class="q"><span class="n">6.</span>Which statement about web design is correct?</div>
+  <div class="a">A) Clear, attractive and easy to use</div><div class="ex">التعريف: <b>clear, attractive and easy to use</b>.</div></div><div class="krow"><div class="q"><span class="n">6.</span>Which statement about web design is correct?</div>
   
-  <div class="a">A) A web designer designs a complete experience for the user</div><div class="ex">الـ web designer بيصمم <b>تجربة كاملة</b>.</div></div><div class="krow"><div class="q"><span class="n">7.</span>Which topics belong to website development rather than web design?</div>
+  <div class="a">C) A web designer designs a complete experience for the user</div><div class="ex">الـ web designer بيصمم <b>تجربة كاملة</b>.</div></div><div class="krow"><div class="q"><span class="n">7.</span>Which topics belong to website development rather than web design?</div>
   
-  <div class="a">D) Programming, functions, databases, running the website</div><div class="ex">الـ Development: programming, functions, databases, operation.</div></div><div class="krow"><div class="q"><span class="n">8.</span>How are web design and website development related?</div>
+  <div class="a">C) Programming, functions, databases, running the website</div><div class="ex">الـ Development: programming, functions, databases, operation.</div></div><div class="krow"><div class="q"><span class="n">8.</span>How are web design and website development related?</div>
   
-  <div class="a">D) They are different but complementary</div><div class="ex"><b>Different but complementary</b>: الديزاينر يقرر الشكل والسلوك، والـ developer يبني التكنولوجيا.</div></div><div class="krow"><div class="q"><span class="n">9.</span>What is the main difference between web design and graphic design?</div>
+  <div class="a">A) They are different but complementary</div><div class="ex"><b>Different but complementary</b>: الديزاينر يقرر الشكل والسلوك، والـ developer يبني التكنولوجيا.</div></div><div class="krow"><div class="q"><span class="n">9.</span>What is the main difference between web design and graphic design?</div>
   
-  <div class="a">B) Web design is not only static: the user interacts with it</div><div class="ex">الـ web design مش static؛ لازم يتصمم للاستخدام والحركة.</div></div><div class="krow"><div class="q"><span class="n">10.</span>Which rules from graphic design are reused in web design?</div>
+  <div class="a">C) Web design is not only static: the user interacts with it</div><div class="ex">الـ web design مش static؛ لازم يتصمم للاستخدام والحركة.</div></div><div class="krow"><div class="q"><span class="n">10.</span>Which rules from graphic design are reused in web design?</div>
   
-  <div class="a">B) Color, typography, composition, images and identity</div><div class="ex">قواعد الـ graphic design: <b>color, typography, composition, images, identity</b>.</div></div><div class="krow"><div class="q"><span class="n">11.</span>UI (User Interface) is best described as:</div>
+  <div class="a">D) Color, typography, composition, images and identity</div><div class="ex">قواعد الـ graphic design: <b>color, typography, composition, images, identity</b>.</div></div><div class="krow"><div class="q"><span class="n">11.</span>UI (User Interface) is best described as:</div>
   
-  <div class="a">C) Everything the user sees and interacts with: colors, fonts, buttons, images and spaces</div><div class="ex">الـ UI = كل اللي اليوزر بيشوفه ويتفاعل معاه.</div></div><div class="krow"><div class="q"><span class="n">12.</span>Which three questions examine the UI?</div>
+  <div class="a">D) Everything the user sees and interacts with: colors, fonts, buttons, images and spaces</div><div class="ex">الـ UI = كل اللي اليوزر بيشوفه ويتفاعل معاه.</div></div><div class="krow"><div class="q"><span class="n">12.</span>Which three questions examine the UI?</div>
   
-  <div class="a">C) Visual, Interaction, Clarity</div><div class="ex"><b>Visual</b> (الشكل والهوية)، <b>Interaction</b> (إيه يتداس)، <b>Clarity</b> (الرسالة واضحة؟).</div></div><div class="krow"><div class="q"><span class="n">13.</span>Which is a main quality of good UX?</div>
+  <div class="a">B) Visual, Interaction, Clarity</div><div class="ex"><b>Visual</b> (الشكل والهوية)، <b>Interaction</b> (إيه يتداس)، <b>Clarity</b> (الرسالة واضحة؟).</div></div><div class="krow"><div class="q"><span class="n">13.</span>Which is a main quality of good UX?</div>
   
   <div class="a">B) Speed of reaching the goal</div><div class="ex">صفات الـ UX: ease of understanding, ease of navigation, <b>speed of reaching the goal</b>, comfort &amp; trust.</div></div><div class="krow"><div class="q"><span class="n">14.</span>The key question of UX is:</div>
   
-  <div class="a">A) How does the experience work?</div><div class="ex">UI = how does it look؟ UX = <b>how does the experience work</b>؟</div></div><div class="krow"><div class="q"><span class="n">15.</span>Which activity belongs to the UX side, according to Figure 1?</div>
+  <div class="a">B) How does the experience work?</div><div class="ex">UI = how does it look؟ UX = <b>how does the experience work</b>؟</div></div><div class="krow"><div class="q"><span class="n">15.</span>Which activity belongs to the UX side, according to Figure 1?</div>
   
-  <div class="a">A) Information architecture</div><div class="ex">UX: user research, scenarios, <b>information architecture</b>, wireframes &amp; prototypes, interaction design.</div></div><div class="krow"><div class="q"><span class="n">16.</span>Why does a successful website need both UI and UX?</div>
+  <div class="a">D) Information architecture</div><div class="ex">UX: user research, scenarios, <b>information architecture</b>, wireframes &amp; prototypes, interaction design.</div></div><div class="krow"><div class="q"><span class="n">16.</span>Why does a successful website need both UI and UX?</div>
   
-  <div class="a">A) A beautiful interface without a clear experience confuses users, and a good experience needs an interface that expresses it</div><div class="ex">الاتنين مكملين لبعض.</div></div><div class="krow"><div class="q"><span class="n">17.</span>Which website component is 'the first large area the visitor sees and communicates the main message'?</div>
+  <div class="a">D) A beautiful interface without a clear experience confuses users, and a good experience needs an interface that expresses it</div><div class="ex">الاتنين مكملين لبعض.</div></div><div class="krow"><div class="q"><span class="n">17.</span>Which website component is 'the first large area the visitor sees and communicates the main message'?</div>
   
-  <div class="a">C) Hero Section</div><div class="ex"><b>Hero Section</b> = the first message.</div></div><div class="krow"><div class="q"><span class="n">18.</span>What is the role of the Call to Action (CTA)?</div>
+  <div class="a">A) Hero Section</div><div class="ex"><b>Hero Section</b> = the first message.</div></div><div class="krow"><div class="q"><span class="n">18.</span>What is the role of the Call to Action (CTA)?</div>
   
-  <div class="a">A) The next step: a button or link inviting the user to act</div><div class="ex">CTA = <b>the next step</b>.</div></div><div class="krow"><div class="q"><span class="n">19.</span>Which component holds closing information and secondary links?</div>
+  <div class="a">B) The next step: a button or link inviting the user to act</div><div class="ex">CTA = <b>the next step</b>.</div></div><div class="krow"><div class="q"><span class="n">19.</span>Which component holds closing information and secondary links?</div>
   
   <div class="a">A) Footer</div><div class="ex"><b>Footer</b>.</div></div><div class="krow"><div class="q"><span class="n">20.</span>A website that serves a cause or community rather than making a profit is:</div>
   
-  <div class="a">D) Non-profit</div><div class="ex"><b>Non-profit</b>.</div></div><div class="krow"><div class="q"><span class="n">21.</span>A website that serves entrepreneurs, typically by selling information or expertise, is:</div>
+  <div class="a">B) Non-profit</div><div class="ex"><b>Non-profit</b>.</div></div><div class="krow"><div class="q"><span class="n">21.</span>A website that serves entrepreneurs, typically by selling information or expertise, is:</div>
   
-  <div class="a">D) Infopreneur (entrepreneur) website</div><div class="ex"><b>Entrepreneur / Infopreneur</b>.</div></div><div class="krow"><div class="q"><span class="n">22.</span>What is the correct purchase journey on an e-commerce website?</div>
+  <div class="a">C) Infopreneur (entrepreneur) website</div><div class="ex"><b>Entrepreneur / Infopreneur</b>.</div></div><div class="krow"><div class="q"><span class="n">22.</span>What is the correct purchase journey on an e-commerce website?</div>
   
-  <div class="a">A) Browse → Compare → Add to cart → Checkout</div><div class="ex"><b>Browse → Compare → Add to cart → Checkout</b>.</div></div><div class="krow"><div class="q"><span class="n">23.</span>What are the three steps of the student journey on an educational website?</div>
+  <div class="a">B) Browse → Compare → Add to cart → Checkout</div><div class="ex"><b>Browse → Compare → Add to cart → Checkout</b>.</div></div><div class="krow"><div class="q"><span class="n">23.</span>What are the three steps of the student journey on an educational website?</div>
   
   <div class="a">D) Discover, Learn, Practice</div><div class="ex"><b>Discover → Learn → Practice</b>.</div></div><div class="krow"><div class="q"><span class="n">24.</span>What is the correct order of the five stages of website design?</div>
   
-  <div class="a">A) Research → Structure → Wireframe → Visual Design → Prototype</div><div class="ex"><b>Research → Structure → Wireframe → Visual Design → Prototype</b>.</div></div><div class="krow"><div class="q"><span class="n">25.</span>Which questions guide the Research stage?</div>
+  <div class="a">C) Research → Structure → Wireframe → Visual Design → Prototype</div><div class="ex"><b>Research → Structure → Wireframe → Visual Design → Prototype</b>.</div></div><div class="krow"><div class="q"><span class="n">25.</span>Which questions guide the Research stage?</div>
   
-  <div class="a">C) Who? Why? What?</div><div class="ex"><b>Who?</b> اليوزر، <b>Why?</b> الهدف، <b>What?</b> المحتوى والـ functions.</div></div><div class="krow"><div class="q"><span class="n">26.</span>According to the lecture, good design starts with:</div>
+  <div class="a">A) Who? Why? What?</div><div class="ex"><b>Who?</b> اليوزر، <b>Why?</b> الهدف، <b>What?</b> المحتوى والـ functions.</div></div><div class="krow"><div class="q"><span class="n">26.</span>According to the lecture, good design starts with:</div>
   
-  <div class="a">B) Good questions</div><div class="ex">Good design starts with <b>good questions</b>, not with opening the software.</div></div><div class="krow"><div class="q"><span class="n">27.</span>In the Structure stage, information is turned into:</div>
+  <div class="a">D) Good questions</div><div class="ex">Good design starts with <b>good questions</b>, not with opening the software.</div></div><div class="krow"><div class="q"><span class="n">27.</span>In the Structure stage, information is turned into:</div>
   
   <div class="a">C) A clear site map</div><div class="ex">Structure = <b>site map</b>.</div></div><div class="krow"><div class="q"><span class="n">28.</span>A wireframe concentrates on:</div>
   
@@ -392,25 +402,25 @@ footer a{color:var(--hl);text-decoration:none;border-bottom:2px solid var(--hl)}
   
   <div class="a">B) Layout, Hierarchy, Flow</div><div class="ex"><b>Layout</b> (فين)، <b>Hierarchy</b> (إيه الأول)، <b>Flow</b> (التنقل).</div></div><div class="krow"><div class="q"><span class="n">30.</span>Which program is used for image and visual processing (mood and color)?</div>
   
-  <div class="a">D) Adobe Photoshop</div><div class="ex"><b>Photoshop</b> للصور والـ mood.</div></div><div class="krow"><div class="q"><span class="n">31.</span>Which program is used for logos, icons and vector graphics?</div>
+  <div class="a">A) Adobe Photoshop</div><div class="ex"><b>Photoshop</b> للصور والـ mood.</div></div><div class="krow"><div class="q"><span class="n">31.</span>Which program is used for logos, icons and vector graphics?</div>
   
-  <div class="a">B) Adobe Illustrator</div><div class="ex"><b>Illustrator</b> للـ vector.</div></div><div class="krow"><div class="q"><span class="n">32.</span>Which program is used to design screens, link them and test the path?</div>
+  <div class="a">A) Adobe Illustrator</div><div class="ex"><b>Illustrator</b> للـ vector.</div></div><div class="krow"><div class="q"><span class="n">32.</span>Which program is used to design screens, link them and test the path?</div>
   
-  <div class="a">B) Adobe XD</div><div class="ex"><b>Adobe XD</b> للـ interfaces والـ prototypes.</div></div><div class="krow"><div class="q"><span class="n">33.</span>What are the three steps of working in Adobe XD?</div>
+  <div class="a">C) Adobe XD</div><div class="ex"><b>Adobe XD</b> للـ interfaces والـ prototypes.</div></div><div class="krow"><div class="q"><span class="n">33.</span>What are the three steps of working in Adobe XD?</div>
   
   <div class="a">B) Design the screen, Link the screens, Test the path</div><div class="ex"><b>Design → Link → Test</b>.</div></div><div class="krow"><div class="q"><span class="n">34.</span>What does a static design test?</div>
   
-  <div class="a">B) Appearance</div><div class="ex">Static design = still image بيختبر <b>appearance</b>.</div></div><div class="krow"><div class="q"><span class="n">35.</span>What does a prototype test?</div>
+  <div class="a">D) Appearance</div><div class="ex">Static design = still image بيختبر <b>appearance</b>.</div></div><div class="krow"><div class="q"><span class="n">35.</span>What does a prototype test?</div>
   
-  <div class="a">D) Whether the user's path is understandable and usable</div><div class="ex">الـ prototype بيختبر إن المسار <b>understandable and usable</b>.</div></div><div class="krow"><div class="q"><span class="n">36.</span>In the museum website case study, what is the CTA?</div>
+  <div class="a">C) Whether the user's path is understandable and usable</div><div class="ex">الـ prototype بيختبر إن المسار <b>understandable and usable</b>.</div></div><div class="krow"><div class="q"><span class="n">36.</span>In the museum website case study, what is the CTA?</div>
   
-  <div class="a">D) Book your visit</div><div class="ex">CTA = <b>Book your visit</b>.</div></div><div class="krow"><div class="q"><span class="n">37.</span>In the museum website, which items form the Navigation?</div>
+  <div class="a">B) Book your visit</div><div class="ex">CTA = <b>Book your visit</b>.</div></div><div class="krow"><div class="q"><span class="n">37.</span>In the museum website, which items form the Navigation?</div>
   
-  <div class="a">A) Exhibitions · Visit · Collections</div><div class="ex">Navigation = <b>Exhibitions · Visit · Collections</b>.</div></div><div class="krow"><div class="q"><span class="n">38.</span>The goal of the museum website's digital visit is to help the visitor:</div>
+  <div class="a">B) Exhibitions · Visit · Collections</div><div class="ex">Navigation = <b>Exhibitions · Visit · Collections</b>.</div></div><div class="krow"><div class="q"><span class="n">38.</span>The goal of the museum website's digital visit is to help the visitor:</div>
   
-  <div class="a">C) Discover the exhibition, understand the piece, and plan the visit</div><div class="ex"><b>Discover, understand, plan the visit</b>.</div></div><div class="krow"><div class="q"><span class="n">39.</span>The semester is organized around which programs?</div>
+  <div class="a">A) Discover the exhibition, understand the piece, and plan the visit</div><div class="ex"><b>Discover, understand, plan the visit</b>.</div></div><div class="krow"><div class="q"><span class="n">39.</span>The semester is organized around which programs?</div>
   
-  <div class="a">C) Photoshop, Illustrator and Adobe XD, then a final project</div><div class="ex"><b>Photoshop → Illustrator → XD → Final project</b>.</div></div></div></details>
+  <div class="a">B) Photoshop, Illustrator and Adobe XD, then a final project</div><div class="ex"><b>Photoshop → Illustrator → XD → Final project</b>.</div></div></div></details>
   </div></main>
 <div id="guide"><canvas id="hero" width="48" height="72" aria-label="Ahmed, the pixel guide"></canvas><div id="bubble" role="status"><button class="x" aria-label="Hide message">X</button><span id="say"></span></div></div>
 
@@ -442,7 +452,15 @@ function renderPal(){const th=curTheme(),m=curMode(),p=curPal();
   palP.querySelectorAll("[data-m]").forEach(b=>b.onclick=()=>setMode(b.dataset.m));
   palP.querySelectorAll("[data-p]").forEach(b=>b.onclick=()=>{setPal(b.dataset.p);say(`اخترت <b dir="ltr">${PALS.find(x=>x.k===b.dataset.p).n}</b>. شكلها حلو!`,"happy")});
   starCols()}
-function openPal(o){palP.hidden=!o;themeB.setAttribute("aria-expanded",o);if(o)renderPal()}
+const FONTS=[{k:"cairo",n:"Cairo",u:"Cairo:wght@400;600;700"},{k:"tajawal",n:"Tajawal",u:"Tajawal:wght@400;500;700"},{k:"readex",n:"Readex Pro",u:"Readex+Pro:wght@400;600;700"},{k:"kufi",n:"Noto Kufi Arabic",u:"Noto+Kufi+Arabic:wght@400;600;700"},{k:"plex",n:"IBM Plex Sans Arabic",u:"IBM+Plex+Sans+Arabic:wght@400;600;700"}];
+function curFont(){return root.getAttribute("data-font")||"cairo"}
+const loadedF=new Set(["cairo"]);
+function loadFont(f){if(loadedF.has(f.k))return;loadedF.add(f.k);const l=document.createElement("link");l.rel="stylesheet";l.href="https://fonts.googleapis.com/css2?family="+f.u+"&display=swap";document.head.appendChild(l)}
+function setFont(k){if(k==="cairo")root.removeAttribute("data-font");else root.setAttribute("data-font",k);try{localStorage.setItem("wd:font",k)}catch(e){}renderFonts()}
+function renderFonts(){const c=curFont();const el=document.getElementById("pfonts");
+  el.innerHTML=`<span class="ptitle" style="direction:ltr;text-align:left">ARABIC FONT</span>`+FONTS.map(f=>`<button type="button" data-f="${f.k}" aria-pressed="${c===f.k}"><span style="font-family:'${f.n}'">شرح الويب ديزاين</span><small>${f.n}</small></button>`).join("");
+  el.querySelectorAll("[data-f]").forEach(b=>b.onclick=()=>{setFont(b.dataset.f);say("الخط اتغير. لو مش مريح جرب واحد تاني.","happy")})}
+function openPal(o){if(o){FONTS.forEach(loadFont);renderFonts()}palP.hidden=!o;themeB.setAttribute("aria-expanded",o);if(o)renderPal()}
 themeB.onclick=e=>{e.stopPropagation();openPal(palP.hidden)};
 palP.onclick=e=>e.stopPropagation();
 document.addEventListener("click",()=>{if(!palP.hidden)openPal(false)});
@@ -467,7 +485,7 @@ function say(t,mood){sayEl.innerHTML=t;bubble.hidden=false;clearTimeout(hideT);h
   if(mood==="happy"){setG("happy",1800);G.classList.add("jump")}else if(mood==="sad"){setG("sad",1800);G.classList.add("shake")}
   else if(mood==="think"){setG("think",1800)}else if(mood==="wave"){setG("wave",2000)}else if(mood==="type"){setG("type",2400)}else{setG("talk",1500)}}
 bubble.querySelector(".x").onclick=()=>bubble.hidden=true;
-const TIPS=["المصطلحات الملونة دي اللي بتيجي في الامتحان بالنص.","حل كويز المحاضرة بعد ما تخلص شرحها على طول.","الاختبار الشامل كل مرة بيطلعلك 30 سؤال مختلفين، جربه أكتر من مرة.","احفظ أرقام الـ 12-column grid والـ 8px system كويس.","مش عاجبك اللون؟ دوس COLORS فوق واختار palette تانية في الفاتح أو الغامق.","اضغط عليا تاني لو عايز نصيحة جديدة."];
+const TIPS=["المصطلحات الملونة دي اللي بتيجي في الامتحان بالنص.","حل كويز المحاضرة بعد ما تخلص شرحها على طول.","الاختبار الشامل كل مرة بيطلعلك 30 سؤال مختلفين، جربه أكتر من مرة.","احفظ أرقام الـ 12-column grid والـ 8px system كويس.","مش عاجبك اللون أو الخط؟ دوس COLORS فوق واختار اللي يريحك.","اضغط عليا تاني لو عايز نصيحة جديدة."];
 let tipI=0; G.onclick=()=>say(TIPS[tipI++%TIPS.length],"think");
 
 /* ============ starfield ============ */

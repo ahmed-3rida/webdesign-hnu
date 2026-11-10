@@ -12,7 +12,8 @@ Made by [Ahmed Salman](https://dev.uniskills.pro/).
 - A final exam generated from a bank of about 250 questions: 30 questions, 6 per lecture, random order and shuffled options.
   Every exam has a 6-character code, so two people can take the same exam.
 - Light and dark modes (Auto follows the device) with 6 color palettes per mode: Arcade, Matcha, Ocean, Sunset, Sakura, Mono.
-  The choice is saved on the device. Palettes live in `tools/palettes.py`; edit there and run `python3 tools/palettes.py`.
+  An Arabic font picker offers Cairo (default), Tajawal, Readex Pro, Noto Kufi Arabic and IBM Plex Sans Arabic.
+  Choices are saved on the device. Palettes live in `tools/palettes.py`; edit there and run `python3 tools/palettes.py`.
 
 ## Structure
 

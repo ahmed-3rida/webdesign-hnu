@@ -81,12 +81,12 @@ ${ld(r,p).map(o=>`<script type="application/ld+json">${JSON.stringify(o)}</scrip
   }
   // images: OG card + icons, drawn with the same character code
   const ahmed=SRC.match(/const AHMED=\(function\(\)[\s\S]*?return X\}\)\(\);/)[0];
-  const card=`<html><head><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=IBM+Plex+Sans+Arabic:wght@600&display=swap"></head>
+  const card=`<html><head><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Cairo:wght@700&display=swap"></head>
 <body style="margin:0;width:1200px;height:630px;background:#05070d;overflow:hidden;font-family:'Press Start 2P';position:relative">
 <div style="position:absolute;left:0;right:0;bottom:0;height:120px;background-image:linear-gradient(#7c88ff55 2px,transparent 2px),linear-gradient(90deg,#7c88ff55 2px,transparent 2px);background-size:40px 40px;-webkit-mask-image:linear-gradient(transparent,#000);border-top:4px solid #ffd23f"></div>
 <div style="position:absolute;left:80px;top:90px;color:#7c88ff;font-size:20px;letter-spacing:3px">WEB DESIGN · MULTIMEDIA SOFTWARE</div>
 <div style="position:absolute;left:80px;top:150px;color:#dfe3ff;font-size:54px;line-height:1.5;text-shadow:5px 5px 0 #4b55e8">WEB DESIGN<br><span style="color:#ffd23f;text-shadow:5px 5px 0 #a86f00">QUEST</span></div>
-<div dir="rtl" style="position:absolute;left:80px;top:360px;color:#eef1f8;font:600 34px 'IBM Plex Sans Arabic'">شرح · كويزات · اختبار شامل</div>
+<div dir="rtl" style="position:absolute;left:80px;top:360px;color:#eef1f8;font:700 34px 'Cairo'">شرح · كويزات · اختبار شامل</div>
 <div style="position:absolute;left:80px;top:440px;color:#8a93a8;font-size:16px">BY AHMED SALMAN</div>
 <canvas id="c" width="48" height="72" style="position:absolute;right:120px;top:90px;width:280px;height:420px;image-rendering:pixelated;filter:drop-shadow(0 0 30px rgba(124,136,255,.55))"></canvas>
 <script>${ahmed};AHMED.O(document.getElementById('c').getContext('2d'),AHMED.o.cheer)</script></body></html>`;
