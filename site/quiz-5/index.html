@@ -95,7 +95,7 @@ p{margin:.4em 0}
 .coin{width:12px;height:12px;background:var(--b1);border:1px solid #000;box-shadow:inset -3px -3px 0 var(--b1d);display:inline-block}
 #themeB{font-family:var(--f-pixel);font-size:8px;background:var(--panel);color:var(--ink);border:2px solid var(--line);padding:6px 8px;cursor:pointer;white-space:nowrap;box-shadow:2px 2px 0 var(--pxsh);display:flex;align-items:center;gap:6px}
 .swm{width:12px;height:12px;border:1px solid #000;background:linear-gradient(135deg,var(--b1) 50%,var(--b2) 50%)}
-.palp{position:fixed;z-index:30;top:calc(env(safe-area-inset-top,0px) + 58px);right:max(12px,env(safe-area-inset-right,0px));width:min(340px,calc(100vw - 24px));padding:12px;display:grid;gap:12px;direction:ltr}
+.palp.px{position:fixed;z-index:30;top:calc(env(safe-area-inset-top,0px) + 58px);right:max(12px,env(safe-area-inset-right,0px));width:min(340px,calc(100vw - 24px));padding:12px;display:grid;gap:12px;direction:ltr}
 .pmodes{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
 .pmodes button,.pgrid button{font-family:var(--f-pixel);font-size:8px;background:var(--panel2);color:var(--ink);border:2px solid var(--line);padding:8px 6px;cursor:pointer}
 .pmodes button[aria-pressed=true],.pgrid button[aria-pressed=true]{border-color:var(--ink);box-shadow:3px 3px 0 var(--pxsh)}
@@ -249,7 +249,7 @@ kbd{border:1px solid var(--line);border-bottom-width:3px;padding:0 5px;border-ra
 .excode{font-family:var(--f-pixel);font-size:11px;color:var(--acc);border:2px dashed var(--acc);padding:4px 8px;direction:ltr;display:inline-block}
 
 /* guide character */
-#guide{position:fixed;left:max(12px,env(safe-area-inset-left,0px));bottom:max(10px,env(safe-area-inset-bottom,0px));z-index:20;display:flex;align-items:flex-end;gap:8px;pointer-events:none}
+#guide{direction:ltr;position:fixed;left:max(12px,env(safe-area-inset-left,0px));bottom:max(10px,env(safe-area-inset-bottom,0px));z-index:20;display:flex;align-items:flex-end;gap:8px;pointer-events:none}
 #guide canvas{image-rendering:pixelated;pointer-events:auto;cursor:pointer;width:72px;height:108px;filter:drop-shadow(0 0 14px var(--glow))}
 #bubble{pointer-events:auto;max-width:min(300px,64vw);background:var(--b1);color:var(--b1t);font-size:14px;line-height:1.6;padding:10px 12px;
   border:3px solid #000;box-shadow:4px 4px 0 #000;margin-bottom:70px;position:relative;direction:rtl;font-weight:600}
@@ -323,7 +323,7 @@ footer a{color:var(--hl);text-decoration:none;border-bottom:2px solid var(--hl)}
    </div>
    <article class="qcard px fade">
      <div class="qtext"><span class="n">1.</span>According to the introduction, what comes before applying colors in this lecture?</div>
-     <div class="opts"><button class="opt " data-j="0"><span class="L">A</span><span>The visual structure and the layout of the page</span></button><button class="opt " data-j="1"><span class="L">B</span><span>Exporting the final files</span></button><button class="opt " data-j="2"><span class="L">C</span><span>Choosing the hosting company</span></button><button class="opt " data-j="3"><span class="L">D</span><span>Printing the design</span></button></div>
+     <div class="opts"><button class="opt " data-j="0"><span class="L">A</span><span>The visual structure and the layout of the page</span></button><button class="opt " data-j="1"><span class="L">B</span><span>Exporting the final files</span></button><button class="opt " data-j="2"><span class="L">C</span><span>Printing the design</span></button><button class="opt " data-j="3"><span class="L">D</span><span>Choosing the hosting company</span></button></div>
      
    </article>
    <div class="qnav" dir="ltr">
@@ -336,23 +336,23 @@ footer a{color:var(--hl);text-decoration:none;border-bottom:2px solid var(--hl)}
   
   <div class="a">A) The visual structure and the layout of the page</div><div class="ex">The lecture focuses on visual structure and layout before colors, then on the individual elements.</div></div><div class="krow"><div class="q"><span class="n">2.</span>Which elements form 'the point of recognition and the way to move around the site'?</div>
   
-  <div class="a">C) Logo and Navigation Menu</div><div class="ex">Logo and navigation menu: recognition plus movement around the site.</div></div><div class="krow"><div class="q"><span class="n">3.</span>What is the role of Buttons and Icons?</div>
+  <div class="a">D) Logo and Navigation Menu</div><div class="ex">Logo and navigation menu: recognition plus movement around the site.</div></div><div class="krow"><div class="q"><span class="n">3.</span>What is the role of Buttons and Icons?</div>
   
-  <div class="a">A) Clear signals of action and function</div><div class="ex">Buttons and icons are clear signals of action and function.</div></div><div class="krow"><div class="q"><span class="n">4.</span>Which elements 'organize the content and decide what is read first'?</div>
+  <div class="a">B) Clear signals of action and function</div><div class="ex">Buttons and icons are clear signals of action and function.</div></div><div class="krow"><div class="q"><span class="n">4.</span>Which elements 'organize the content and decide what is read first'?</div>
   
-  <div class="a">B) Cards, Headings and Typography</div><div class="ex">Cards, headings and typography organize the content and the reading order.</div></div><div class="krow"><div class="q"><span class="n">5.</span>What is the role of Illustrations and Graphic Elements?</div>
+  <div class="a">A) Cards, Headings and Typography</div><div class="ex">Cards, headings and typography organize the content and the reading order.</div></div><div class="krow"><div class="q"><span class="n">5.</span>What is the role of Illustrations and Graphic Elements?</div>
   
-  <div class="a">C) Support the idea and give the interface its visual presence</div><div class="ex">They support the idea and give the interface visual presence.</div></div><div class="krow"><div class="q"><span class="n">6.</span>What does a good element combine, according to the lecture?</div>
+  <div class="a">B) Support the idea and give the interface its visual presence</div><div class="ex">They support the idea and give the interface visual presence.</div></div><div class="krow"><div class="q"><span class="n">6.</span>What does a good element combine, according to the lecture?</div>
   
   <div class="a">B) Visual clarity with ease of use</div><div class="ex">A good element combines visual clarity with ease of use.</div></div><div class="krow"><div class="q"><span class="n">7.</span>What is the purpose of navigation menus?</div>
   
-  <div class="a">C) Organize the links and make it easy to reach the sections of the website</div><div class="ex">Menus organize links and make sections easy to reach.</div></div><div class="krow"><div class="q"><span class="n">8.</span>What is the purpose of buttons?</div>
+  <div class="a">B) Organize the links and make it easy to reach the sections of the website</div><div class="ex">Menus organize links and make sections easy to reach.</div></div><div class="krow"><div class="q"><span class="n">8.</span>What is the purpose of buttons?</div>
   
-  <div class="a">C) Guide the user to carry out a specific action</div><div class="ex">Buttons guide the user to a specific action.</div></div><div class="krow"><div class="q"><span class="n">9.</span>Which is a design guideline for menus and buttons?</div>
+  <div class="a">A) Guide the user to carry out a specific action</div><div class="ex">Buttons guide the user to a specific action.</div></div><div class="krow"><div class="q"><span class="n">9.</span>Which is a design guideline for menus and buttons?</div>
   
   <div class="a">C) Distinguish the primary element from the secondary elements</div><div class="ex">Distinguish primary from secondary and take care of alignment, spacing and visual clarity.</div></div><div class="krow"><div class="q"><span class="n">10.</span>Why distinguish a primary button from secondary buttons?</div>
   
-  <div class="a">C) So the user can tell the main action from the supporting ones</div><div class="ex">Visual difference shows which action is the most important.</div></div><div class="krow"><div class="q"><span class="n">11.</span>The navigation bar examples range from a simple row of links to bars with...</div>
+  <div class="a">D) So the user can tell the main action from the supporting ones</div><div class="ex">Visual difference shows which action is the most important.</div></div><div class="krow"><div class="q"><span class="n">11.</span>The navigation bar examples range from a simple row of links to bars with...</div>
   
   <div class="a">B) A search field and a call-to-action button</div><div class="ex">Figure 1 shows bars from a simple link row to bars with a search field and a call-to-action button.</div></div><div class="krow"><div class="q"><span class="n">12.</span>What do icons do?</div>
   
@@ -364,65 +364,65 @@ footer a{color:var(--hl);text-decoration:none;border-bottom:2px solid var(--hl)}
   
   <div class="a">D) The same line weight, style and proportions</div><div class="ex">The figure shows the same line weight, style and proportions across icons.</div></div><div class="krow"><div class="q"><span class="n">16.</span>What are cards used to display?</div>
   
-  <div class="a">D) Independent pieces of content such as a course, an artifact or an art exhibition</div><div class="ex">Cards display independent pieces of content, such as a course, artifact or exhibition.</div></div><div class="krow"><div class="q"><span class="n">17.</span>Which of these does a card contain?</div>
+  <div class="a">B) Independent pieces of content such as a course, an artifact or an art exhibition</div><div class="ex">Cards display independent pieces of content, such as a course, artifact or exhibition.</div></div><div class="krow"><div class="q"><span class="n">17.</span>Which of these does a card contain?</div>
   
-  <div class="a">C) An image or visual element</div><div class="ex">A card contains an image or visual element, title and short description, a button or link, and unified dimensions and padding.</div></div><div class="krow"><div class="q"><span class="n">18.</span>What text does a card normally include?</div>
+  <div class="a">B) An image or visual element</div><div class="ex">A card contains an image or visual element, title and short description, a button or link, and unified dimensions and padding.</div></div><div class="krow"><div class="q"><span class="n">18.</span>What text does a card normally include?</div>
   
-  <div class="a">D) A title and a short description</div><div class="ex">A title and a short description.</div></div><div class="krow"><div class="q"><span class="n">19.</span>What should a card offer so the user can continue?</div>
+  <div class="a">C) A title and a short description</div><div class="ex">A title and a short description.</div></div><div class="krow"><div class="q"><span class="n">19.</span>What should a card offer so the user can continue?</div>
   
-  <div class="a">C) A button or link to learn more</div><div class="ex">A button or link to learn more.</div></div><div class="krow"><div class="q"><span class="n">20.</span>Why do cards have unified dimensions and internal spacing (padding)?</div>
+  <div class="a">B) A button or link to learn more</div><div class="ex">A button or link to learn more.</div></div><div class="krow"><div class="q"><span class="n">20.</span>Why do cards have unified dimensions and internal spacing (padding)?</div>
   
-  <div class="a">B) So a group of cards looks consistent and organized</div><div class="ex">Unified dimensions and padding keep cards consistent.</div></div><div class="krow"><div class="q"><span class="n">21.</span>What should text design distinguish between?</div>
+  <div class="a">A) So a group of cards looks consistent and organized</div><div class="ex">Unified dimensions and padding keep cards consistent.</div></div><div class="krow"><div class="q"><span class="n">21.</span>What should text design distinguish between?</div>
   
   <div class="a">D) The main heading, the subheading and the body text</div><div class="ex">Text design distinguishes main heading, subheading and body text.</div></div><div class="krow"><div class="q"><span class="n">22.</span>Which is part of the typography guidelines?</div>
   
   <div class="a">A) Adjust the spacing between the letters and between the lines</div><div class="ex">Control letter spacing and line spacing, choose sizes and weights, and aim for readability and hierarchy.</div></div><div class="krow"><div class="q"><span class="n">23.</span>In the example type scale, what is the size of H1 (the main heading)?</div>
   
-  <div class="a">D) 36px</div><div class="ex">H1 36px, H2 28px, Body 16px, Caption 12px.</div></div><div class="krow"><div class="q"><span class="n">24.</span>In the example type scale, what is the size of H2 (the subheading)?</div>
+  <div class="a">C) 36px</div><div class="ex">H1 36px, H2 28px, Body 16px, Caption 12px.</div></div><div class="krow"><div class="q"><span class="n">24.</span>In the example type scale, what is the size of H2 (the subheading)?</div>
   
-  <div class="a">A) 28px</div><div class="ex">H2 is 28px.</div></div><div class="krow"><div class="q"><span class="n">25.</span>In the example type scale, what is the size of body text?</div>
+  <div class="a">B) 28px</div><div class="ex">H2 is 28px.</div></div><div class="krow"><div class="q"><span class="n">25.</span>In the example type scale, what is the size of body text?</div>
   
-  <div class="a">D) 16px</div><div class="ex">Body text is 16px.</div></div><div class="krow"><div class="q"><span class="n">26.</span>In the example type scale, what is Caption (12px) used for?</div>
+  <div class="a">B) 16px</div><div class="ex">Body text is 16px.</div></div><div class="krow"><div class="q"><span class="n">26.</span>In the example type scale, what is Caption (12px) used for?</div>
   
-  <div class="a">A) Small supporting text</div><div class="ex">Caption is small supporting text.</div></div><div class="krow"><div class="q"><span class="n">27.</span>What does the type scale figure say about font size?</div>
+  <div class="a">C) Small supporting text</div><div class="ex">Caption is small supporting text.</div></div><div class="krow"><div class="q"><span class="n">27.</span>What does the type scale figure say about font size?</div>
   
-  <div class="a">D) Font size creates visual priority and reading order</div><div class="ex">Larger text is read first, so size sets priority and order.</div></div><div class="krow"><div class="q"><span class="n">28.</span>Which is a guideline for illustrations and graphic elements?</div>
+  <div class="a">C) Font size creates visual priority and reading order</div><div class="ex">Larger text is read first, so size sets priority and order.</div></div><div class="krow"><div class="q"><span class="n">28.</span>Which is a guideline for illustrations and graphic elements?</div>
   
-  <div class="a">B) Use geometric shapes and ornaments</div><div class="ex">Use geometric shapes and ornaments, repeating patterns and explanatory illustrations.</div></div><div class="krow"><div class="q"><span class="n">29.</span>How should colors be used in graphic elements?</div>
+  <div class="a">C) Use geometric shapes and ornaments</div><div class="ex">Use geometric shapes and ornaments, repeating patterns and explanatory illustrations.</div></div><div class="krow"><div class="q"><span class="n">29.</span>How should colors be used in graphic elements?</div>
   
-  <div class="a">C) To support the identity of the website</div><div class="ex">Colors support the identity of the website.</div></div><div class="krow"><div class="q"><span class="n">30.</span>What balance should be kept in illustrations and graphics?</div>
+  <div class="a">D) To support the identity of the website</div><div class="ex">Colors support the identity of the website.</div></div><div class="krow"><div class="q"><span class="n">30.</span>What balance should be kept in illustrations and graphics?</div>
   
   <div class="a">A) A balance between the graphics and the content</div><div class="ex">Graphics should add personality without overwhelming the content.</div></div><div class="krow"><div class="q"><span class="n">31.</span>Which principle means 'elements share edges and the weight on the page is distributed evenly'?</div>
   
-  <div class="a">A) Alignment and balance</div><div class="ex">Alignment and balance.</div></div><div class="krow"><div class="q"><span class="n">32.</span>Which principle uses differences in size, color and weight to show what is most important?</div>
+  <div class="a">D) Alignment and balance</div><div class="ex">Alignment and balance.</div></div><div class="krow"><div class="q"><span class="n">32.</span>Which principle uses differences in size, color and weight to show what is most important?</div>
   
-  <div class="a">A) Contrast and hierarchy</div><div class="ex">Contrast and hierarchy.</div></div><div class="krow"><div class="q"><span class="n">33.</span>Which principle means every element looks like it belongs to the same website?</div>
+  <div class="a">D) Contrast and hierarchy</div><div class="ex">Contrast and hierarchy.</div></div><div class="krow"><div class="q"><span class="n">33.</span>Which principle means every element looks like it belongs to the same website?</div>
   
-  <div class="a">A) Unity and consistency</div><div class="ex">Unity and consistency.</div></div><div class="krow"><div class="q"><span class="n">34.</span>What does white space do?</div>
+  <div class="a">D) Unity and consistency</div><div class="ex">Unity and consistency.</div></div><div class="krow"><div class="q"><span class="n">34.</span>What does white space do?</div>
   
   <div class="a">C) Separates elements and gives the page room to breathe</div><div class="ex">Empty space separates elements and gives the page room to breathe.</div></div><div class="krow"><div class="q"><span class="n">35.</span>Which principle uses the same palette, shape language and spacing rules throughout?</div>
   
   <div class="a">D) Unified colors, shapes and spacing</div><div class="ex">The same palette, shape language and spacing rules are used throughout.</div></div><div class="krow"><div class="q"><span class="n">36.</span>What does a design system gather in one reference?</div>
   
-  <div class="a">C) The grid, colors, buttons, typography, icons and spacing</div><div class="ex">Figure 6: a design system gathers grid, colors, buttons, typography, icons and spacing in one reference.</div></div><div class="krow"><div class="q"><span class="n">37.</span>What is the lecture's conclusion about a good element?</div>
+  <div class="a">A) The grid, colors, buttons, typography, icons and spacing</div><div class="ex">Figure 6: a design system gathers grid, colors, buttons, typography, icons and spacing in one reference.</div></div><div class="krow"><div class="q"><span class="n">37.</span>What is the lecture's conclusion about a good element?</div>
   
-  <div class="a">B) It combines visual clarity with ease of use and looks like part of the website's identity</div><div class="ex">A good element is clear, easy to use and part of the site's identity.</div></div><div class="krow"><div class="q"><span class="n">38.</span>According to the lecture, how are museum website colors chosen?</div>
+  <div class="a">C) It combines visual clarity with ease of use and looks like part of the website's identity</div><div class="ex">A good element is clear, easy to use and part of the site's identity.</div></div><div class="krow"><div class="q"><span class="n">38.</span>According to the lecture, how are museum website colors chosen?</div>
   
-  <div class="a">A) Based on color psychology and the museum's content classification</div><div class="ex">مبني على <b>Color Psychology</b> وتصنيف المتحف.</div></div><div class="krow"><div class="q"><span class="n">39.</span>Which colors suit art museums?</div>
+  <div class="a">C) Based on color psychology and the museum's content classification</div><div class="ex">مبني على <b>Color Psychology</b> وتصنيف المتحف.</div></div><div class="krow"><div class="q"><span class="n">39.</span>Which colors suit art museums?</div>
   
-  <div class="a">C) Black, White, Gray</div><div class="ex">Art = <b>Black, White, Gray</b>: modernity و neutrality.</div></div><div class="krow"><div class="q"><span class="n">40.</span>Which colors suit history and antiquities museums?</div>
+  <div class="a">B) Black, White, Gray</div><div class="ex">Art = <b>Black, White, Gray</b>: modernity و neutrality.</div></div><div class="krow"><div class="q"><span class="n">40.</span>Which colors suit history and antiquities museums?</div>
   
-  <div class="a">B) Brown, Terracotta, Gold, Cream</div><div class="ex">History = <b>Brown, Terracotta, Gold, Cream</b>: heritage و dignity.</div></div><div class="krow"><div class="q"><span class="n">41.</span>Which colors suit natural history museums?</div>
+  <div class="a">C) Brown, Terracotta, Gold, Cream</div><div class="ex">History = <b>Brown, Terracotta, Gold, Cream</b>: heritage و dignity.</div></div><div class="krow"><div class="q"><span class="n">41.</span>Which colors suit natural history museums?</div>
   
   <div class="a">D) Green, Blue, Brown</div><div class="ex">Natural History = <b>Green, Blue, Brown</b>: life و sustainability.</div></div><div class="krow"><div class="q"><span class="n">42.</span>Which colors suit science and technology museums?</div>
   
-  <div class="a">C) Cyan Blue, Neon, Black</div><div class="ex">Science = <b>Cyan, Neon, Black</b>: future و innovation.</div></div><div class="krow"><div class="q"><span class="n">43.</span>Which psychological impression do art museum colors create?</div>
+  <div class="a">B) Cyan Blue, Neon, Black</div><div class="ex">Science = <b>Cyan, Neon, Black</b>: future و innovation.</div></div><div class="krow"><div class="q"><span class="n">43.</span>Which psychological impression do art museum colors create?</div>
   
-  <div class="a">B) Modernity, highlighting exhibits, absolute neutrality</div><div class="ex">Art museums: <b>modernity, neutrality</b>.</div></div><div class="krow"><div class="q"><span class="n">44.</span>What impression do science and technology museum colors aim for?</div>
+  <div class="a">D) Modernity, highlighting exhibits, absolute neutrality</div><div class="ex">Art museums: <b>modernity, neutrality</b>.</div></div><div class="krow"><div class="q"><span class="n">44.</span>What impression do science and technology museum colors aim for?</div>
   
   <div class="a">C) The future, innovation, intelligence and scientific curiosity</div><div class="ex">Science: <b>future &amp; innovation</b>.</div></div><div class="krow"><div class="q"><span class="n">45.</span>What do graphic elements add to the interface?</div>
   
-  <div class="a">D) Personality</div><div class="ex">Graphic elements <b>add personality</b>.</div></div></div></details>
+  <div class="a">C) Personality</div><div class="ex">Graphic elements <b>add personality</b>.</div></div></div></details>
   </div></main>
 <div id="guide"><canvas id="hero" width="48" height="72" aria-label="Ahmed, the pixel guide"></canvas><div id="bubble" role="status"><button class="x" aria-label="Hide message">X</button><span id="say"></span></div></div>
 

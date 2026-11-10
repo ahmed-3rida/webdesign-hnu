@@ -95,7 +95,7 @@ p{margin:.4em 0}
 .coin{width:12px;height:12px;background:var(--b1);border:1px solid #000;box-shadow:inset -3px -3px 0 var(--b1d);display:inline-block}
 #themeB{font-family:var(--f-pixel);font-size:8px;background:var(--panel);color:var(--ink);border:2px solid var(--line);padding:6px 8px;cursor:pointer;white-space:nowrap;box-shadow:2px 2px 0 var(--pxsh);display:flex;align-items:center;gap:6px}
 .swm{width:12px;height:12px;border:1px solid #000;background:linear-gradient(135deg,var(--b1) 50%,var(--b2) 50%)}
-.palp{position:fixed;z-index:30;top:calc(env(safe-area-inset-top,0px) + 58px);right:max(12px,env(safe-area-inset-right,0px));width:min(340px,calc(100vw - 24px));padding:12px;display:grid;gap:12px;direction:ltr}
+.palp.px{position:fixed;z-index:30;top:calc(env(safe-area-inset-top,0px) + 58px);right:max(12px,env(safe-area-inset-right,0px));width:min(340px,calc(100vw - 24px));padding:12px;display:grid;gap:12px;direction:ltr}
 .pmodes{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
 .pmodes button,.pgrid button{font-family:var(--f-pixel);font-size:8px;background:var(--panel2);color:var(--ink);border:2px solid var(--line);padding:8px 6px;cursor:pointer}
 .pmodes button[aria-pressed=true],.pgrid button[aria-pressed=true]{border-color:var(--ink);box-shadow:3px 3px 0 var(--pxsh)}
@@ -249,7 +249,7 @@ kbd{border:1px solid var(--line);border-bottom-width:3px;padding:0 5px;border-ra
 .excode{font-family:var(--f-pixel);font-size:11px;color:var(--acc);border:2px dashed var(--acc);padding:4px 8px;direction:ltr;display:inline-block}
 
 /* guide character */
-#guide{position:fixed;left:max(12px,env(safe-area-inset-left,0px));bottom:max(10px,env(safe-area-inset-bottom,0px));z-index:20;display:flex;align-items:flex-end;gap:8px;pointer-events:none}
+#guide{direction:ltr;position:fixed;left:max(12px,env(safe-area-inset-left,0px));bottom:max(10px,env(safe-area-inset-bottom,0px));z-index:20;display:flex;align-items:flex-end;gap:8px;pointer-events:none}
 #guide canvas{image-rendering:pixelated;pointer-events:auto;cursor:pointer;width:72px;height:108px;filter:drop-shadow(0 0 14px var(--glow))}
 #bubble{pointer-events:auto;max-width:min(300px,64vw);background:var(--b1);color:var(--b1t);font-size:14px;line-height:1.6;padding:10px 12px;
   border:3px solid #000;box-shadow:4px 4px 0 #000;margin-bottom:70px;position:relative;direction:rtl;font-weight:600}
@@ -317,7 +317,7 @@ footer a{color:var(--hl);text-decoration:none;border-bottom:2px solid var(--hl)}
     <div class="eyebrow" dir="ltr">WEB DESIGN · MULTIMEDIA SOFTWARE · BY <a class="me" href="https://dev.uniskills.pro/" target="_blank" rel="noopener">AHMED SALMAN</a></div>
     <h1 dir="ltr">DESIGN THE <span>WEB</span><br>LEVEL BY LEVEL</h1>
     <p>شرح المحاضرات الخمسة بالعربي والمصطلحات إنجليزي، كويز تدريبي على كل محاضرة، واختبار شامل بيتولد مختلف كل مرة من بنك 252 سؤال.</p>
-    <div class="stage" id="stg" dir="ltr"><div class="block" style="left:30%">?</div><div class="block" style="left:62%">?</div><canvas id="walker" width="48" height="72" style="width: 64px; height: 96px; left: 60.2px; transform: none; bottom: 8px;"></canvas></div>
+    <div class="stage" id="stg" dir="ltr"><div class="block" style="left:30%">?</div><div class="block" style="left:62%">?</div><canvas id="walker" width="48" height="72" style="width: 64px; height: 96px; left: 58.8px; transform: none; bottom: 8px;"></canvas></div>
   </section>
   <div class="map">
   <article class="lvl px">

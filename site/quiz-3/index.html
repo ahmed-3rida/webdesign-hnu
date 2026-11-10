@@ -95,7 +95,7 @@ p{margin:.4em 0}
 .coin{width:12px;height:12px;background:var(--b1);border:1px solid #000;box-shadow:inset -3px -3px 0 var(--b1d);display:inline-block}
 #themeB{font-family:var(--f-pixel);font-size:8px;background:var(--panel);color:var(--ink);border:2px solid var(--line);padding:6px 8px;cursor:pointer;white-space:nowrap;box-shadow:2px 2px 0 var(--pxsh);display:flex;align-items:center;gap:6px}
 .swm{width:12px;height:12px;border:1px solid #000;background:linear-gradient(135deg,var(--b1) 50%,var(--b2) 50%)}
-.palp{position:fixed;z-index:30;top:calc(env(safe-area-inset-top,0px) + 58px);right:max(12px,env(safe-area-inset-right,0px));width:min(340px,calc(100vw - 24px));padding:12px;display:grid;gap:12px;direction:ltr}
+.palp.px{position:fixed;z-index:30;top:calc(env(safe-area-inset-top,0px) + 58px);right:max(12px,env(safe-area-inset-right,0px));width:min(340px,calc(100vw - 24px));padding:12px;display:grid;gap:12px;direction:ltr}
 .pmodes{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
 .pmodes button,.pgrid button{font-family:var(--f-pixel);font-size:8px;background:var(--panel2);color:var(--ink);border:2px solid var(--line);padding:8px 6px;cursor:pointer}
 .pmodes button[aria-pressed=true],.pgrid button[aria-pressed=true]{border-color:var(--ink);box-shadow:3px 3px 0 var(--pxsh)}
@@ -249,7 +249,7 @@ kbd{border:1px solid var(--line);border-bottom-width:3px;padding:0 5px;border-ra
 .excode{font-family:var(--f-pixel);font-size:11px;color:var(--acc);border:2px dashed var(--acc);padding:4px 8px;direction:ltr;display:inline-block}
 
 /* guide character */
-#guide{position:fixed;left:max(12px,env(safe-area-inset-left,0px));bottom:max(10px,env(safe-area-inset-bottom,0px));z-index:20;display:flex;align-items:flex-end;gap:8px;pointer-events:none}
+#guide{direction:ltr;position:fixed;left:max(12px,env(safe-area-inset-left,0px));bottom:max(10px,env(safe-area-inset-bottom,0px));z-index:20;display:flex;align-items:flex-end;gap:8px;pointer-events:none}
 #guide canvas{image-rendering:pixelated;pointer-events:auto;cursor:pointer;width:72px;height:108px;filter:drop-shadow(0 0 14px var(--glow))}
 #bubble{pointer-events:auto;max-width:min(300px,64vw);background:var(--b1);color:var(--b1t);font-size:14px;line-height:1.6;padding:10px 12px;
   border:3px solid #000;box-shadow:4px 4px 0 #000;margin-bottom:70px;position:relative;direction:rtl;font-weight:600}
@@ -323,7 +323,7 @@ footer a{color:var(--hl);text-decoration:none;border-bottom:2px solid var(--hl)}
    </div>
    <article class="qcard px fade">
      <div class="qtext"><span class="n">1.</span>Which layer of website design unifies the colors, fonts and elements across the pages?</div>
-     <div class="opts"><button class="opt " data-j="0"><span class="L">A</span><span>Visual hierarchy</span></button><button class="opt " data-j="1"><span class="L">B</span><span>Visual identity</span></button><button class="opt " data-j="2"><span class="L">C</span><span>Visual design</span></button><button class="opt " data-j="3"><span class="L">D</span><span>Visual structure</span></button></div>
+     <div class="opts"><button class="opt " data-j="0"><span class="L">A</span><span>Visual structure</span></button><button class="opt " data-j="1"><span class="L">B</span><span>Visual design</span></button><button class="opt " data-j="2"><span class="L">C</span><span>Visual identity</span></button><button class="opt " data-j="3"><span class="L">D</span><span>Visual hierarchy</span></button></div>
      
    </article>
    <div class="qnav" dir="ltr">
@@ -334,141 +334,141 @@ footer a{color:var(--hl);text-decoration:none;border-bottom:2px solid var(--hl)}
    <div><a class="btn o" href="/lec-3/">BACK</a></div>
    <details class="allq"><summary>كل الأسئلة بالإجابات والشرح (68)</summary><div class="key"><div class="krow"><div class="q"><span class="n">1.</span>Which layer of website design unifies the colors, fonts and elements across the pages?</div>
   
-  <div class="a">B) Visual identity</div><div class="ex">Visual identity unifies colors, fonts and elements. Visual structure sets the places of elements; visual design gives the logo, icons and buttons their shape and function.</div></div><div class="krow"><div class="q"><span class="n">2.</span>Which layer determines the places of the elements on a page?</div>
+  <div class="a">C) Visual identity</div><div class="ex">Visual identity unifies colors, fonts and elements. Visual structure sets the places of elements; visual design gives the logo, icons and buttons their shape and function.</div></div><div class="krow"><div class="q"><span class="n">2.</span>Which layer determines the places of the elements on a page?</div>
   
-  <div class="a">B) Visual structure</div><div class="ex">Visual structure determines where elements are placed.</div></div><div class="krow"><div class="q"><span class="n">3.</span>What is the role of Buttons and Icons in a website interface?</div>
+  <div class="a">A) Visual structure</div><div class="ex">Visual structure determines where elements are placed.</div></div><div class="krow"><div class="q"><span class="n">3.</span>What is the role of Buttons and Icons in a website interface?</div>
   
-  <div class="a">C) Clear signals of action and function</div><div class="ex">Buttons and icons are clear signals of action and function.</div></div><div class="krow"><div class="q"><span class="n">4.</span>Which elements 'organize the content and decide what is read first'?</div>
+  <div class="a">D) Clear signals of action and function</div><div class="ex">Buttons and icons are clear signals of action and function.</div></div><div class="krow"><div class="q"><span class="n">4.</span>Which elements 'organize the content and decide what is read first'?</div>
   
-  <div class="a">A) Cards, Headings and Typography</div><div class="ex">Cards, headings and typography organize content and set reading order.</div></div><div class="krow"><div class="q"><span class="n">5.</span>What is the working rule for designing website elements?</div>
+  <div class="a">C) Cards, Headings and Typography</div><div class="ex">Cards, headings and typography organize content and set reading order.</div></div><div class="krow"><div class="q"><span class="n">5.</span>What is the working rule for designing website elements?</div>
   
-  <div class="a">B) Elements must belong to one system, not only look good alone</div><div class="ex">It is not enough for each element to be beautiful on its own; the elements must belong to one system.</div></div><div class="krow"><div class="q"><span class="n">6.</span>Which principle says 'size and color decide what is seen first'?</div>
+  <div class="a">A) Elements must belong to one system, not only look good alone</div><div class="ex">It is not enough for each element to be beautiful on its own; the elements must belong to one system.</div></div><div class="krow"><div class="q"><span class="n">6.</span>Which principle says 'size and color decide what is seen first'?</div>
   
-  <div class="a">D) Contrast and visual hierarchy</div><div class="ex">Contrast and visual hierarchy control what the eye sees first.</div></div><div class="krow"><div class="q"><span class="n">7.</span>What does white space do, according to the lecture?</div>
+  <div class="a">B) Contrast and visual hierarchy</div><div class="ex">Contrast and visual hierarchy control what the eye sees first.</div></div><div class="krow"><div class="q"><span class="n">7.</span>What does white space do, according to the lecture?</div>
   
-  <div class="a">D) Clarifies the relationship between elements</div><div class="ex">Empty space clarifies the relationship between elements.</div></div><div class="krow"><div class="q"><span class="n">8.</span>Which principle means 'shared edges make the interface readable'?</div>
+  <div class="a">B) Clarifies the relationship between elements</div><div class="ex">Empty space clarifies the relationship between elements.</div></div><div class="krow"><div class="q"><span class="n">8.</span>Which principle means 'shared edges make the interface readable'?</div>
   
   <div class="a">C) Alignment and consistency</div><div class="ex">Shared edges come from alignment and consistency.</div></div><div class="krow"><div class="q"><span class="n">9.</span>In the 12-column grid, what do the gutter and the margin control?</div>
   
   <div class="a">A) Distances between areas of the page and its edges</div><div class="ex">Columns set widths of cards, images and content areas; gutter and margin control the distances between areas and the page edges.</div></div><div class="krow"><div class="q"><span class="n">10.</span>Which 12-column division suits 'three equal cards'?</div>
   
-  <div class="a">B) 4 + 4 + 4</div><div class="ex">4 + 4 + 4 gives three equal cards. 3 + 6 + 3 is content in the middle with side margins.</div></div><div class="krow"><div class="q"><span class="n">11.</span>Which division gives a supporting area beside the main content?</div>
+  <div class="a">A) 4 + 4 + 4</div><div class="ex">4 + 4 + 4 gives three equal cards. 3 + 6 + 3 is content in the middle with side margins.</div></div><div class="krow"><div class="q"><span class="n">11.</span>Which division gives a supporting area beside the main content?</div>
   
-  <div class="a">C) 4 + 8</div><div class="ex">4 + 8 puts a supporting area beside the main content.</div></div><div class="krow"><div class="q"><span class="n">12.</span>What is the gutter?</div>
+  <div class="a">D) 4 + 8</div><div class="ex">4 + 8 puts a supporting area beside the main content.</div></div><div class="krow"><div class="q"><span class="n">12.</span>What is the gutter?</div>
   
-  <div class="a">D) The space between the columns</div><div class="ex">Margin is around the content area, gutter is between columns, padding is inside an element.</div></div><div class="krow"><div class="q"><span class="n">13.</span>What is padding?</div>
+  <div class="a">A) The space between the columns</div><div class="ex">Margin is around the content area, gutter is between columns, padding is inside an element.</div></div><div class="krow"><div class="q"><span class="n">13.</span>What is padding?</div>
   
   <div class="a">B) The inner space around the content of an element</div><div class="ex">Padding is the inner space around an element's content.</div></div><div class="krow"><div class="q"><span class="n">14.</span>Which set of values belongs to the 8px spacing system?</div>
   
   <div class="a">D) 8, 16, 24, 32, 48, 64</div><div class="ex">The scale is multiples of eight: 8, 16, 24, 32, 48 and 64 px. A fixed scale keeps spacing consistent.</div></div><div class="krow"><div class="q"><span class="n">15.</span>What are the indicative desktop values for gutter and margin?</div>
   
-  <div class="a">A) Gutter 24px, margin 32px</div><div class="ex">Desktop: gutter 24px, margin 32px. Mobile: gutter 16px, margin 20px.</div></div><div class="krow"><div class="q"><span class="n">16.</span>Which container width is suggested for reading?</div>
+  <div class="a">C) Gutter 24px, margin 32px</div><div class="ex">Desktop: gutter 24px, margin 32px. Mobile: gutter 16px, margin 20px.</div></div><div class="krow"><div class="q"><span class="n">16.</span>Which container width is suggested for reading?</div>
   
-  <div class="a">A) 1140px</div><div class="ex">1140px for reading, 1280px for general layouts, 1440px for image-dependent designs.</div></div><div class="krow"><div class="q"><span class="n">17.</span>Which breakpoint width is given for Tablet?</div>
+  <div class="a">B) 1140px</div><div class="ex">1140px for reading, 1280px for general layouts, 1440px for image-dependent designs.</div></div><div class="krow"><div class="q"><span class="n">17.</span>Which breakpoint width is given for Tablet?</div>
   
-  <div class="a">B) 768px</div><div class="ex">Mobile 375, Tablet 768, Laptop 1024, Desktop 1280, Large screens 1440.</div></div><div class="krow"><div class="q"><span class="n">18.</span>The container and breakpoint values in the lecture are...</div>
+  <div class="a">A) 768px</div><div class="ex">Mobile 375, Tablet 768, Laptop 1024, Desktop 1280, Large screens 1440.</div></div><div class="krow"><div class="q"><span class="n">18.</span>The container and breakpoint values in the lecture are...</div>
   
-  <div class="a">D) Reference values, not mandatory rules</div><div class="ex">The lecture says they are reference values and not mandatory rules for every project.</div></div><div class="krow"><div class="q"><span class="n">19.</span>Which design intent fits an educational website?</div>
+  <div class="a">C) Reference values, not mandatory rules</div><div class="ex">The lecture says they are reference values and not mandatory rules for every project.</div></div><div class="krow"><div class="q"><span class="n">19.</span>Which design intent fits an educational website?</div>
   
-  <div class="a">A) Clarity, organization and classification</div><div class="ex">Educational: clarity, organization and classification.</div></div><div class="krow"><div class="q"><span class="n">20.</span>Which is a model of educational website with 'a grid of courses with filters'?</div>
+  <div class="a">C) Clarity, organization and classification</div><div class="ex">Educational: clarity, organization and classification.</div></div><div class="krow"><div class="q"><span class="n">20.</span>Which is a model of educational website with 'a grid of courses with filters'?</div>
   
-  <div class="a">D) Marketplace</div><div class="ex">Marketplace is a grid of courses with filters.</div></div><div class="krow"><div class="q"><span class="n">21.</span>Which educational model is 'an interactive path of lessons'?</div>
+  <div class="a">B) Marketplace</div><div class="ex">Marketplace is a grid of courses with filters.</div></div><div class="krow"><div class="q"><span class="n">21.</span>Which educational model is 'an interactive path of lessons'?</div>
   
-  <div class="a">B) Gamified Learning</div><div class="ex">Gamified Learning is an interactive path of lessons.</div></div><div class="krow"><div class="q"><span class="n">22.</span>What does a course card contain in the educational layout?</div>
+  <div class="a">C) Gamified Learning</div><div class="ex">Gamified Learning is an interactive path of lessons.</div></div><div class="krow"><div class="q"><span class="n">22.</span>What does a course card contain in the educational layout?</div>
   
   <div class="a">A) Image, title, instructor and rating</div><div class="ex">Course card: image, title, instructor and rating.</div></div><div class="krow"><div class="q"><span class="n">23.</span>Which container and header height are given for a museum website?</div>
   
   <div class="a">B) About 1440px or full width, about 80px</div><div class="ex">Museum: container about 1440px or full width, header about 80px, gutter 32px, section spacing 120-200px.</div></div><div class="krow"><div class="q"><span class="n">24.</span>Which museum pattern is 'an organized grid for exploring the collection'?</div>
   
-  <div class="a">C) Archive Grid</div><div class="ex">Archive Grid organizes the collection for exploring. Timeline browses works through time.</div></div><div class="krow"><div class="q"><span class="n">25.</span>What is the section spacing for a portfolio website?</div>
+  <div class="a">D) Archive Grid</div><div class="ex">Archive Grid organizes the collection for exploring. Timeline browses works through time.</div></div><div class="krow"><div class="q"><span class="n">25.</span>What is the section spacing for a portfolio website?</div>
   
-  <div class="a">A) 64-80px</div><div class="ex">Portfolio: container 1320-1440px, header 72px, gutter 16-20px, section spacing 64-80px.</div></div><div class="krow"><div class="q"><span class="n">26.</span>In the portfolio layout, how many columns does each project take when two are shown per row?</div>
+  <div class="a">B) 64-80px</div><div class="ex">Portfolio: container 1320-1440px, header 72px, gutter 16-20px, section spacing 64-80px.</div></div><div class="krow"><div class="q"><span class="n">26.</span>In the portfolio layout, how many columns does each project take when two are shown per row?</div>
   
-  <div class="a">D) 6 columns</div><div class="ex">Two projects per row, each taking 6 columns.</div></div><div class="krow"><div class="q"><span class="n">27.</span>Which portfolio pattern uses an asymmetric 8 + 4 division?</div>
+  <div class="a">C) 6 columns</div><div class="ex">Two projects per row, each taking 6 columns.</div></div><div class="krow"><div class="q"><span class="n">27.</span>Which portfolio pattern uses an asymmetric 8 + 4 division?</div>
   
   <div class="a">A) Masonry / Brutalist</div><div class="ex">Masonry / Brutalist is an asymmetric distribution with an 8 + 4 column division.</div></div><div class="krow"><div class="q"><span class="n">28.</span>According to the checklist, what comes first?</div>
   
-  <div class="a">A) Choose the layout before the elements</div><div class="ex">The checklist's System group ends with: choose the layout before the elements.</div></div><div class="krow"><div class="q"><span class="n">29.</span>Which item belongs to the checklist's Verification group?</div>
+  <div class="a">C) Choose the layout before the elements</div><div class="ex">The checklist's System group ends with: choose the layout before the elements.</div></div><div class="krow"><div class="q"><span class="n">29.</span>Which item belongs to the checklist's Verification group?</div>
   
-  <div class="a">D) Basic screen sizes</div><div class="ex">Verification: basic screen sizes, consistency between pages, review of alignment and rhythm.</div></div><div class="krow"><div class="q"><span class="n">30.</span>In Illustrator's New Document dialog, which tab holds presets for web page design?</div>
+  <div class="a">A) Basic screen sizes</div><div class="ex">Verification: basic screen sizes, consistency between pages, review of alignment and rhythm.</div></div><div class="krow"><div class="q"><span class="n">30.</span>In Illustrator's New Document dialog, which tab holds presets for web page design?</div>
   
-  <div class="a">B) Web</div><div class="ex">The Web tab has screen presets such as Web-Large (1920 x 1080 px) and 1440 x 900 px.</div></div><div class="krow"><div class="q"><span class="n">31.</span>What size is the Web-Large preset used for HD screens?</div>
+  <div class="a">A) Web</div><div class="ex">The Web tab has screen presets such as Web-Large (1920 x 1080 px) and 1440 x 900 px.</div></div><div class="krow"><div class="q"><span class="n">31.</span>What size is the Web-Large preset used for HD screens?</div>
   
   <div class="a">D) 1920 x 1080 px</div><div class="ex">Web-Large is 1920 x 1080 px (Full HD).</div></div><div class="krow"><div class="q"><span class="n">32.</span>What is the other web preset in the image, used for smaller laptop screens?</div>
   
   <div class="a">B) 1440 x 900 px</div><div class="ex">The second preset is 1440 x 900 px, with a smaller artboard than Web-Large.</div></div><div class="krow"><div class="q"><span class="n">33.</span>Which unit is used when creating a web page artboard?</div>
   
-  <div class="a">D) Pixels (px)</div><div class="ex">Web layouts are measured in pixels. Print uses mm, inches or points.</div></div><div class="krow"><div class="q"><span class="n">34.</span>Which color mode should the new web document use?</div>
+  <div class="a">C) Pixels (px)</div><div class="ex">Web layouts are measured in pixels. Print uses mm, inches or points.</div></div><div class="krow"><div class="q"><span class="n">34.</span>Which color mode should the new web document use?</div>
   
-  <div class="a">A) RGB</div><div class="ex">Web designs are for screens, so RGB. (The Web presets already use RGB.)</div></div><div class="krow"><div class="q"><span class="n">35.</span>Which Raster Effects resolution is set for screen design?</div>
+  <div class="a">D) RGB</div><div class="ex">Web designs are for screens, so RGB. (The Web presets already use RGB.)</div></div><div class="krow"><div class="q"><span class="n">35.</span>Which Raster Effects resolution is set for screen design?</div>
   
-  <div class="a">D) 72 ppi</div><div class="ex">Screen (72 ppi) is used for web. 300 ppi (High) is for print.</div></div><div class="krow"><div class="q"><span class="n">36.</span>How many artboards does a single-page web layout need to start with?</div>
+  <div class="a">C) 72 ppi</div><div class="ex">Screen (72 ppi) is used for web. 300 ppi (High) is for print.</div></div><div class="krow"><div class="q"><span class="n">36.</span>How many artboards does a single-page web layout need to start with?</div>
   
-  <div class="a">A) One artboard for each screen size you design (for example desktop and smaller laptop)</div><div class="ex">You can create one artboard per screen size, or separate files, to design each version.</div></div><div class="krow"><div class="q"><span class="n">37.</span>What is the shortcut to show or hide rulers?</div>
+  <div class="a">C) One artboard for each screen size you design (for example desktop and smaller laptop)</div><div class="ex">You can create one artboard per screen size, or separate files, to design each version.</div></div><div class="krow"><div class="q"><span class="n">37.</span>What is the shortcut to show or hide rulers?</div>
   
-  <div class="a">D) Ctrl/Cmd + R</div><div class="ex">Ctrl/Cmd + R toggles rulers (View &gt; Rulers &gt; Show Rulers). Guides are pulled out of them.</div></div><div class="krow"><div class="q"><span class="n">38.</span>How do you create a guide from a ruler?</div>
+  <div class="a">B) Ctrl/Cmd + R</div><div class="ex">Ctrl/Cmd + R toggles rulers (View &gt; Rulers &gt; Show Rulers). Guides are pulled out of them.</div></div><div class="krow"><div class="q"><span class="n">38.</span>How do you create a guide from a ruler?</div>
   
-  <div class="a">B) Click and drag from the top or left ruler onto the artboard</div><div class="ex">Drag from the horizontal ruler for horizontal guides and from the vertical ruler for vertical guides.</div></div><div class="krow"><div class="q"><span class="n">39.</span>How do you turn a drawn rectangle into a guide?</div>
+  <div class="a">A) Click and drag from the top or left ruler onto the artboard</div><div class="ex">Drag from the horizontal ruler for horizontal guides and from the vertical ruler for vertical guides.</div></div><div class="krow"><div class="q"><span class="n">39.</span>How do you turn a drawn rectangle into a guide?</div>
   
-  <div class="a">D) Select it, then View &gt; Guides &gt; Make Guides</div><div class="ex">View &gt; Guides &gt; Make Guides converts a selected object into a guide. Release Guides turns it back into an object.</div></div><div class="krow"><div class="q"><span class="n">40.</span>Which tool creates evenly spaced columns with gutters in one step?</div>
+  <div class="a">B) Select it, then View &gt; Guides &gt; Make Guides</div><div class="ex">View &gt; Guides &gt; Make Guides converts a selected object into a guide. Release Guides turns it back into an object.</div></div><div class="krow"><div class="q"><span class="n">40.</span>Which tool creates evenly spaced columns with gutters in one step?</div>
   
-  <div class="a">A) Object &gt; Path &gt; Split Into Grid</div><div class="ex">Draw a rectangle for the content area, choose Split Into Grid, set the columns and gutter, then make guides from them.</div></div><div class="krow"><div class="q"><span class="n">41.</span>In Split Into Grid, what does the Gutter value set?</div>
+  <div class="a">D) Object &gt; Path &gt; Split Into Grid</div><div class="ex">Draw a rectangle for the content area, choose Split Into Grid, set the columns and gutter, then make guides from them.</div></div><div class="krow"><div class="q"><span class="n">41.</span>In Split Into Grid, what does the Gutter value set?</div>
   
   <div class="a">C) The space between columns</div><div class="ex">Gutter is the space between columns (or rows). Margin is the space between the content area and the page edge.</div></div><div class="krow"><div class="q"><span class="n">42.</span>A 12-column grid has how many gutters between the columns?</div>
   
-  <div class="a">B) 11</div><div class="ex">Gutters sit between columns, so 12 columns have 11 gutters.</div></div><div class="krow"><div class="q"><span class="n">43.</span>According to the lecture, which gutter and margin are indicative for desktop?</div>
+  <div class="a">A) 11</div><div class="ex">Gutters sit between columns, so 12 columns have 11 gutters.</div></div><div class="krow"><div class="q"><span class="n">43.</span>According to the lecture, which gutter and margin are indicative for desktop?</div>
   
-  <div class="a">C) Gutter 24px, margin 32px</div><div class="ex">Desktop: gutter 24px, margin 32px. Mobile: gutter 16px, margin 20px.</div></div><div class="krow"><div class="q"><span class="n">44.</span>Which command shows the document grid in Illustrator?</div>
+  <div class="a">A) Gutter 24px, margin 32px</div><div class="ex">Desktop: gutter 24px, margin 32px. Mobile: gutter 16px, margin 20px.</div></div><div class="krow"><div class="q"><span class="n">44.</span>Which command shows the document grid in Illustrator?</div>
   
-  <div class="a">D) View &gt; Show Grid (Ctrl/Cmd + ')</div><div class="ex">View &gt; Show Grid displays the grid; Snap to Grid makes objects stick to it.</div></div><div class="krow"><div class="q"><span class="n">45.</span>Where do you change the grid spacing (Gridline every, Subdivisions)?</div>
+  <div class="a">C) View &gt; Show Grid (Ctrl/Cmd + ')</div><div class="ex">View &gt; Show Grid displays the grid; Snap to Grid makes objects stick to it.</div></div><div class="krow"><div class="q"><span class="n">45.</span>Where do you change the grid spacing (Gridline every, Subdivisions)?</div>
   
-  <div class="a">C) Preferences &gt; Guides &amp; Grid</div><div class="ex">Preferences &gt; Guides &amp; Grid, for example 8px with subdivisions to follow the 8px system.</div></div><div class="krow"><div class="q"><span class="n">46.</span>What does Smart Guides (Ctrl/Cmd + U) help with?</div>
+  <div class="a">A) Preferences &gt; Guides &amp; Grid</div><div class="ex">Preferences &gt; Guides &amp; Grid, for example 8px with subdivisions to follow the 8px system.</div></div><div class="krow"><div class="q"><span class="n">46.</span>What does Smart Guides (Ctrl/Cmd + U) help with?</div>
   
-  <div class="a">C) Aligning objects to others and the artboard while you move them</div><div class="ex">Smart Guides show alignment lines and measurements as you move objects.</div></div><div class="krow"><div class="q"><span class="n">47.</span>Why lock guides after creating them?</div>
+  <div class="a">D) Aligning objects to others and the artboard while you move them</div><div class="ex">Smart Guides show alignment lines and measurements as you move objects.</div></div><div class="krow"><div class="q"><span class="n">47.</span>Why lock guides after creating them?</div>
   
-  <div class="a">C) So you do not move them by accident while drawing</div><div class="ex">View &gt; Guides &gt; Lock Guides prevents accidental moves.</div></div><div class="krow"><div class="q"><span class="n">48.</span>Why is a web layout often first drawn in shades of gray?</div>
+  <div class="a">D) So you do not move them by accident while drawing</div><div class="ex">View &gt; Guides &gt; Lock Guides prevents accidental moves.</div></div><div class="krow"><div class="q"><span class="n">48.</span>Why is a web layout often first drawn in shades of gray?</div>
   
-  <div class="a">D) To focus on structure, spacing and hierarchy before colors and images</div><div class="ex">A grayscale wireframe separates structure from visual identity. Color is added later.</div></div><div class="krow"><div class="q"><span class="n">49.</span>Which basic shape would you use for the header, hero and footer blocks?</div>
+  <div class="a">A) To focus on structure, spacing and hierarchy before colors and images</div><div class="ex">A grayscale wireframe separates structure from visual identity. Color is added later.</div></div><div class="krow"><div class="q"><span class="n">49.</span>Which basic shape would you use for the header, hero and footer blocks?</div>
   
   <div class="a">D) Rectangle Tool</div><div class="ex">Rectangles for the main blocks such as header, hero, cards and footer.</div></div><div class="krow"><div class="q"><span class="n">50.</span>Which shape suits a button in a wireframe?</div>
   
-  <div class="a">A) Rounded Rectangle</div><div class="ex">A rounded rectangle with a darker gray fill reads as a button.</div></div><div class="krow"><div class="q"><span class="n">51.</span>Which basic shape is usually used for a profile picture or avatar?</div>
+  <div class="a">C) Rounded Rectangle</div><div class="ex">A rounded rectangle with a darker gray fill reads as a button.</div></div><div class="krow"><div class="q"><span class="n">51.</span>Which basic shape is usually used for a profile picture or avatar?</div>
   
-  <div class="a">B) Ellipse (circle with Shift)</div><div class="ex">A circle (Ellipse Tool + Shift) is the standard avatar shape.</div></div><div class="krow"><div class="q"><span class="n">52.</span>How do you make a gray fill from the Color panel?</div>
+  <div class="a">A) Ellipse (circle with Shift)</div><div class="ex">A circle (Ellipse Tool + Shift) is the standard avatar shape.</div></div><div class="krow"><div class="q"><span class="n">52.</span>How do you make a gray fill from the Color panel?</div>
   
-  <div class="a">D) Set the mode to Grayscale and move the K slider, or pick a gray swatch</div><div class="ex">Use gray swatches or the Grayscale slider. Light grays for backgrounds, mid-grays for image placeholders, dark grays for text and buttons.</div></div><div class="krow"><div class="q"><span class="n">53.</span>In a grayscale wireframe, how is visual hierarchy shown?</div>
+  <div class="a">C) Set the mode to Grayscale and move the K slider, or pick a gray swatch</div><div class="ex">Use gray swatches or the Grayscale slider. Light grays for backgrounds, mid-grays for image placeholders, dark grays for text and buttons.</div></div><div class="krow"><div class="q"><span class="n">53.</span>In a grayscale wireframe, how is visual hierarchy shown?</div>
   
-  <div class="a">A) By differences in size and tone (lighter vs darker gray)</div><div class="ex">Size and tone create contrast: darker and larger elements draw the eye first.</div></div><div class="krow"><div class="q"><span class="n">54.</span>How do you mark an image placeholder in a wireframe?</div>
+  <div class="a">D) By differences in size and tone (lighter vs darker gray)</div><div class="ex">Size and tone create contrast: darker and larger elements draw the eye first.</div></div><div class="krow"><div class="q"><span class="n">54.</span>How do you mark an image placeholder in a wireframe?</div>
   
-  <div class="a">A) A gray rectangle, optionally with two crossing lines</div><div class="ex">A gray rectangle (with a cross) is the usual placeholder for images.</div></div><div class="krow"><div class="q"><span class="n">55.</span>Which panel helps keep header, hero, content and footer organized as separate sections?</div>
+  <div class="a">B) A gray rectangle, optionally with two crossing lines</div><div class="ex">A gray rectangle (with a cross) is the usual placeholder for images.</div></div><div class="krow"><div class="q"><span class="n">55.</span>Which panel helps keep header, hero, content and footer organized as separate sections?</div>
   
-  <div class="a">C) Layers panel</div><div class="ex">Create named layers (Header, Hero, Content, Footer) and lock the ones you finished.</div></div><div class="krow"><div class="q"><span class="n">56.</span>Which panel evenly aligns and distributes the cards?</div>
+  <div class="a">D) Layers panel</div><div class="ex">Create named layers (Header, Hero, Content, Footer) and lock the ones you finished.</div></div><div class="krow"><div class="q"><span class="n">56.</span>Which panel evenly aligns and distributes the cards?</div>
   
   <div class="a">B) Align panel</div><div class="ex">The Align panel aligns to the artboard or a key object and distributes spacing evenly.</div></div><div class="krow"><div class="q"><span class="n">57.</span>How should the spacing between blocks be chosen?</div>
   
-  <div class="a">B) From the 8px scale (8, 16, 24, 32, 48, 64)</div><div class="ex">Use the fixed 8px scale to keep spacing consistent.</div></div><div class="krow"><div class="q"><span class="n">58.</span>Which is the best order when building the wireframe?</div>
+  <div class="a">A) From the 8px scale (8, 16, 24, 32, 48, 64)</div><div class="ex">Use the fixed 8px scale to keep spacing consistent.</div></div><div class="krow"><div class="q"><span class="n">58.</span>Which is the best order when building the wireframe?</div>
   
   <div class="a">D) Place guides and grid first, then draw the large blocks, then details</div><div class="ex">Layout before elements: grid and guides, big shapes (header, hero, sections), then cards, buttons and text.</div></div><div class="krow"><div class="q"><span class="n">59.</span>Which breakpoint width is given for Laptop?</div>
   
-  <div class="a">B) 1024px</div><div class="ex">Mobile 375، Tablet 768، <b>Laptop 1024</b>، Desktop 1280، Large 1440.</div></div><div class="krow"><div class="q"><span class="n">60.</span>Which container width is suggested for general layouts?</div>
+  <div class="a">C) 1024px</div><div class="ex">Mobile 375، Tablet 768، <b>Laptop 1024</b>، Desktop 1280، Large 1440.</div></div><div class="krow"><div class="q"><span class="n">60.</span>Which container width is suggested for general layouts?</div>
   
-  <div class="a">D) 1280px</div><div class="ex">1140 reading، <b>1280 general</b>، 1440 image-dependent.</div></div><div class="krow"><div class="q"><span class="n">61.</span>Which educational model is 'a fixed curriculum list'?</div>
+  <div class="a">C) 1280px</div><div class="ex">1140 reading، <b>1280 general</b>، 1440 image-dependent.</div></div><div class="krow"><div class="q"><span class="n">61.</span>Which educational model is 'a fixed curriculum list'?</div>
   
-  <div class="a">A) LMS Dashboard</div><div class="ex"><b>LMS Dashboard</b>.</div></div><div class="krow"><div class="q"><span class="n">62.</span>Which museum layout pattern presents image and text in a gradual visual narrative?</div>
+  <div class="a">D) LMS Dashboard</div><div class="ex"><b>LMS Dashboard</b>.</div></div><div class="krow"><div class="q"><span class="n">62.</span>Which museum layout pattern presents image and text in a gradual visual narrative?</div>
   
-  <div class="a">B) Editorial</div><div class="ex"><b>Editorial</b>.</div></div><div class="krow"><div class="q"><span class="n">63.</span>Which museum pattern browses works and events through time?</div>
+  <div class="a">D) Editorial</div><div class="ex"><b>Editorial</b>.</div></div><div class="krow"><div class="q"><span class="n">63.</span>Which museum pattern browses works and events through time?</div>
   
-  <div class="a">A) Timeline</div><div class="ex"><b>Timeline</b>.</div></div><div class="krow"><div class="q"><span class="n">64.</span>What is the section spacing of a museum website?</div>
+  <div class="a">D) Timeline</div><div class="ex"><b>Timeline</b>.</div></div><div class="krow"><div class="q"><span class="n">64.</span>What is the section spacing of a museum website?</div>
   
-  <div class="a">D) 120–200px</div><div class="ex">Museum: <b>120–200px</b>. Portfolio: 64–80px.</div></div><div class="krow"><div class="q"><span class="n">65.</span>Which portfolio pattern lets one work fill the screen?</div>
+  <div class="a">A) 120–200px</div><div class="ex">Museum: <b>120–200px</b>. Portfolio: 64–80px.</div></div><div class="krow"><div class="q"><span class="n">65.</span>Which portfolio pattern lets one work fill the screen?</div>
   
-  <div class="a">A) Full-Screen</div><div class="ex"><b>Full-Screen</b>.</div></div><div class="krow"><div class="q"><span class="n">66.</span>What is the sidebar width in the educational website reference layout?</div>
+  <div class="a">C) Full-Screen</div><div class="ex"><b>Full-Screen</b>.</div></div><div class="krow"><div class="q"><span class="n">66.</span>What is the sidebar width in the educational website reference layout?</div>
   
-  <div class="a">C) 280px</div><div class="ex">Sidebar حوالي <b>280px</b>.</div></div><div class="krow"><div class="q"><span class="n">67.</span>Which layer of a website design gives the logo, icons and buttons their shape and function?</div>
+  <div class="a">B) 280px</div><div class="ex">Sidebar حوالي <b>280px</b>.</div></div><div class="krow"><div class="q"><span class="n">67.</span>Which layer of a website design gives the logo, icons and buttons their shape and function?</div>
   
-  <div class="a">C) Visual design</div><div class="ex"><b>Visual design</b>.</div></div><div class="krow"><div class="q"><span class="n">68.</span>What is the content structure of a portfolio website?</div>
+  <div class="a">A) Visual design</div><div class="ex"><b>Visual design</b>.</div></div><div class="krow"><div class="q"><span class="n">68.</span>What is the content structure of a portfolio website?</div>
   
-  <div class="a">D) Work / About / Contact</div><div class="ex"><b>Work / About / Contact</b>.</div></div></div></details>
+  <div class="a">C) Work / About / Contact</div><div class="ex"><b>Work / About / Contact</b>.</div></div></div></details>
   </div></main>
 <div id="guide"><canvas id="hero" width="48" height="72" aria-label="Ahmed, the pixel guide"></canvas><div id="bubble" role="status"><button class="x" aria-label="Hide message">X</button><span id="say"></span></div></div>
 
